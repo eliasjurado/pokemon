@@ -4,7 +4,99 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Álbum de Stickers Pokémon</title>
-  <link rel="stylesheet" href="styles.css?v=4">
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #0a0a1a; --surface: #16162a; --surface2: #1e1e3a; --surface3: #2a2a4a;
+  --text: #f0f0f8; --text2: #9999bb; --text3: #666688;
+  --border: rgba(255,255,255,0.07); --glass: rgba(22,22,42,0.92);
+  --radius: 14px; --radius-sm: 8px; --radius-xl: 20px;
+  --accent: #6390f0; --accent-glow: rgba(99,144,240,0.15);
+  --success: #4ade80; --transition: 0.2s ease;
+}
+html { font-size: 16px; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; -webkit-font-smoothing: antialiased; line-height: 1.4; }
+header { position: sticky; top: 0; z-index: 100; background: var(--glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+.header-inner { max-width: 1400px; margin: 0 auto; padding: 10px 12px 8px; }
+h1 { font-size: 1.1rem; font-weight: 700; background: linear-gradient(135deg, #f7d02c, #ee8130, #6390f0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -0.3px; margin-bottom: 8px; }
+.progress-wrap { margin-bottom: 10px; }
+.progress-info { display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: var(--text2); margin-bottom: 4px; }
+.progress-track { height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--success), #22d3ee); transition: width 0.5s ease; }
+.filter-bar { display: flex; gap: 6px; align-items: center; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 4px; }
+.filter-bar::-webkit-scrollbar { display: none; }
+.filter-bar select, .filter-bar button { min-height: 40px; padding: 6px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border); background: rgba(255,255,255,0.07); color: var(--text); font-size: 0.82rem; cursor: pointer; outline: none; transition: background var(--transition), border-color var(--transition); -webkit-appearance: none; appearance: none; white-space: nowrap; flex-shrink: 0; }
+.filter-bar select:active, .filter-bar button:active { transform: scale(0.97); }
+.filter-bar select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23888'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 8px center; padding-right: 26px; }
+.filter-bar select:hover, .filter-bar button:hover { background: rgba(255,255,255,0.12); }
+.filter-bar select:focus, .filter-bar button:focus { border-color: var(--accent); }
+.filter-bar label { font-size: 0.7rem; color: var(--text2); display: block; margin-bottom: 1px; white-space: nowrap; }
+.filter-group { display: flex; flex-direction: column; gap: 0; flex-shrink: 0; }
+#sortDirBtn { font-size: 1rem; line-height: 1; min-width: 36px; text-align: center; padding: 6px 8px; }
+.reset-btn { background: rgba(255,255,255,0.04) !important; font-size: 0.78rem !important; padding: 6px 10px !important; }
+.reset-btn:hover { background: rgba(255,255,255,0.1) !important; }
+.result-count { font-size: 0.72rem; color: var(--text3); flex-shrink: 0; white-space: nowrap; margin-left: auto; }
+main { max-width: 1400px; margin: 0 auto; padding: 12px; }
+.grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+@media (min-width: 500px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 768px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1024px) { .grid { grid-template-columns: repeat(4, 1fr); gap: 16px; } }
+@media (min-width: 1400px) { .grid { grid-template-columns: repeat(5, 1fr); gap: 18px; } }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition); }
+.card:active { transform: scale(0.98); }
+@media (hover: hover) { .card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px var(--accent-glow); border-color: rgba(99,144,240,0.25); } }
+.card-img-wrap { width: 100%; aspect-ratio: 1; background: var(--surface2); display: flex; align-items: center; justify-content: center; padding: 8px; position: relative; }
+.card-img-wrap img { width: 100%; height: 100%; object-fit: contain; border-radius: var(--radius-sm); background: var(--surface2); }
+.card-origin { position: absolute; top: 6px; right: 6px; background: rgba(0,0,0,0.65); backdrop-filter: blur(4px); padding: 2px 7px; border-radius: 20px; font-size: 0.6rem; color: var(--text2); border: 1px solid var(--border); font-weight: 600; pointer-events: none; }
+.card-body { padding: 10px 12px 12px; }
+.card-name { font-size: 0.95rem; font-weight: 600; margin-bottom: 2px; }
+.card-id { font-size: 0.7rem; color: var(--text2); margin-bottom: 8px; }
+.badges { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; }
+.badge { display: inline-block; padding: 2px 7px; border-radius: 20px; font-size: 0.65rem; font-weight: 600; color: #fff; letter-spacing: 0.3px; text-transform: uppercase; }
+.badge-region { background: rgba(255,255,255,0.08); color: var(--text2); border: 1px solid var(--border); }
+.stats { display: flex; flex-direction: column; gap: 3px; }
+.stat-row { display: flex; align-items: center; gap: 6px; font-size: 0.72rem; }
+.stat-label { width: 30px; color: var(--text2); font-weight: 500; flex-shrink: 0; }
+.stat-bar { flex: 1; height: 5px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; }
+.stat-fill { height: 100%; border-radius: 3px; transition: width 0.4s ease; }
+.stat-val { width: 26px; text-align: right; font-weight: 600; flex-shrink: 0; font-size: 0.7rem; }
+.empty-state { grid-column: 1 / -1; text-align: center; padding: 48px 16px; color: var(--text2); }
+.empty-state p { font-size: 1.1rem; }
+.empty-state p:last-child { font-size: 0.9rem; margin-top: 8px; }
+.pagination { display: flex; align-items: center; justify-content: center; gap: 5px; margin-top: 20px; padding: 0 12px 16px; flex-wrap: wrap; }
+.pagination button { min-height: 38px; min-width: 38px; padding: 6px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border); background: rgba(255,255,255,0.07); color: var(--text); font-size: 0.82rem; cursor: pointer; outline: none; transition: background var(--transition), border-color var(--transition); display: flex; align-items: center; justify-content: center; }
+.pagination button:active { transform: scale(0.95); }
+@media (hover: hover) { .pagination button:hover { background: rgba(255,255,255,0.12); } }
+.pagination button:disabled { opacity: 0.3; cursor: default; transform: none; }
+.pagination button.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.page-info { font-size: 0.75rem; color: var(--text3); margin: 0 4px; }
+.modal { display: none; position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,0.6); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); align-items: flex-end; justify-content: center; padding: 0; }
+.modal.open { display: flex; }
+@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+.modal-content { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-xl) var(--radius-xl) 0 0; max-width: 100%; width: 100%; max-height: 92vh; overflow-y: auto; animation: slideUp 0.25s ease; }
+.modal-img-wrap { background: var(--surface2); display: flex; align-items: center; justify-content: center; padding: 16px; }
+.modal-img-wrap img { max-width: 100%; max-height: 40vh; object-fit: contain; border-radius: var(--radius-sm); }
+.modal-body { padding: 16px 20px 24px; position: relative; }
+.modal-close { position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.4); border: none; color: var(--text2); font-size: 1.2rem; cursor: pointer; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background var(--transition); line-height: 1; z-index: 1; }
+.modal-close:hover { background: rgba(255,255,255,0.15); color: var(--text); }
+@media (min-width: 768px) { .modal { align-items: center; padding: 16px; } .modal-content { max-width: 420px; border-radius: var(--radius); animation: modalIn 0.2s ease; } @keyframes modalIn { from { transform: scale(0.92); opacity: 0; } to { transform: scale(1); opacity: 1; } } .modal-close { position: static; float: right; background: none; width: auto; height: auto; border-radius: 6px; padding: 4px 8px; font-size: 1.4rem; } }
+.modal .card-name { font-size: 1.2rem; }
+.modal .card-id { font-size: 0.82rem; margin-bottom: 12px; }
+.modal .badges { margin-bottom: 12px; }
+.modal .badge { font-size: 0.78rem; padding: 3px 11px; }
+.modal .stat-row { font-size: 0.85rem; }
+.modal .stat-label { width: 40px; }
+.modal .stat-val { width: 32px; }
+.modal .stat-bar { height: 8px; }
+.collected-badge { display: inline-flex; align-items: center; gap: 4px; margin-top: 12px; padding: 8px 16px; border-radius: 20px; font-size: 0.82rem; font-weight: 600; width: 100%; justify-content: center; transition: background var(--transition), border-color var(--transition); }
+.collected-badge.clickable { background: rgba(74,222,128,0.12); border: 1px solid rgba(74,222,128,0.25); color: var(--success); cursor: pointer; }
+.collected-badge.interactive { background: rgba(255,255,255,0.06); border: 1px solid var(--border); color: var(--text2); cursor: pointer; }
+.collected-badge:active { transform: scale(0.97); }
+footer { text-align: center; padding: 20px 16px; font-size: 0.78rem; color: var(--text3); border-top: 1px solid var(--border); margin-top: 8px; }
+footer a { color: var(--accent); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+  </style>
 </head>
 <body>
 
@@ -85,10 +177,398 @@
   </div>
 </div>
 
-<button id="installBtn" class="install-btn" hidden>
-  📥 Instalar App
-</button>
+<script>
+'use strict';
 
-<script type="module" src="src/presentation/main.js?v=4"></script>
+const CONFIG = Object.freeze({
+  itemsPerPage: 30,
+  maxStatValue: 180,
+  maxTotalValue: 720,
+  localStorageKey: 'pokemonCollected',
+});
+
+const POKEMON_TYPES = Object.freeze([
+  'Normal', 'Fire', 'Water', 'Electric', 'Grass', 'Ice',
+  'Fighting', 'Poison', 'Ground', 'Flying', 'Psychic', 'Bug',
+  'Rock', 'Ghost', 'Dragon', 'Dark', 'Steel', 'Fairy',
+]);
+
+const POKEMON_REGIONS = Object.freeze([
+  'Kanto', 'Johto', 'Hoenn', 'Sinnoh', 'Unova', 'Kalos',
+  'Alola', 'Galar', 'Paldea',
+]);
+
+const TYPE_COLORS = Object.freeze({
+  Normal: '#A8A77A', Fire: '#EE8130', Water: '#6390F0',
+  Electric: '#F7D02C', Grass: '#7AC74C', Ice: '#96D9D6',
+  Fighting: '#C22E28', Poison: '#A33EA1', Ground: '#E2BF65',
+  Flying: '#A98FF3', Psychic: '#F95587', Bug: '#A6B91A',
+  Rock: '#B6A136', Ghost: '#735797', Dragon: '#6F35FC',
+  Dark: '#705746', Steel: '#B7B7CE', Fairy: '#D685AD',
+});
+
+const ORIGINS = Object.freeze([
+  { id: 'pokemon-1', label: 'Lámina 1' },
+  { id: 'pokemon-2', label: 'Lámina 2' },
+  { id: 'pokemon-3', label: 'Lámina 3' },
+  { id: 'pokemon-4', label: 'Lámina 4' },
+  { id: 'sheet5', label: 'Lámina 5' },
+  { id: 'sheet6', label: 'Lámina 6' },
+  { id: 'sheet7', label: 'Lámina 7' },
+]);
+
+const STICKER_SOURCES = Object.freeze([
+  { prefix: 'pokemon-1', originId: 'pokemon-1', count: 32 },
+  { prefix: 'pokemon-2', originId: 'pokemon-2', count: 32 },
+  { prefix: 'pokemon-3', originId: 'pokemon-3', count: 32 },
+  { prefix: 'pokemon-4', originId: 'pokemon-4', count: 32 },
+  { prefix: 'sheet5', originId: 'sheet5', count: 32 },
+  { prefix: 'sheet6', originId: 'sheet6', count: 32 },
+  { prefix: 'sheet7', originId: 'sheet7', count: 32 },
+]);
+
+const KNOWN_POKEMON = Object.freeze({
+  1:  { name: 'Pikachu', type: 'Electric', region: 'Kanto', hp: 60, attack: 55, defense: 40, speed: 90 },
+  2:  { name: 'Charizard', type: 'Fire,Flying', region: 'Kanto', hp: 108, attack: 130, defense: 111, speed: 100 },
+  3:  { name: 'Mewtwo', type: 'Psychic', region: 'Kanto', hp: 160, attack: 150, defense: 106, speed: 130 },
+  4:  { name: 'Gengar', type: 'Ghost,Poison', region: 'Kanto', hp: 110, attack: 130, defense: 100, speed: 130 },
+  5:  { name: 'Eevee', type: 'Normal', region: 'Kanto', hp: 55, attack: 55, defense: 50, speed: 55 },
+  6:  { name: 'Snorlax', type: 'Normal', region: 'Kanto', hp: 190, attack: 130, defense: 110, speed: 30 },
+  7:  { name: 'Lucario', type: 'Fighting,Steel', region: 'Sinnoh', hp: 120, attack: 145, defense: 110, speed: 112 },
+  8:  { name: 'Greninja', type: 'Water,Dark', region: 'Kalos', hp: 112, attack: 145, defense: 101, speed: 141 },
+  9:  { name: 'Scyther', type: 'Bug,Flying', region: 'Kanto', hp: 110, attack: 130, defense: 100, speed: 105 },
+  10: { name: 'Lapras', type: 'Water,Ice', region: 'Kanto', hp: 150, attack: 95, defense: 100, speed: 60 },
+  11: { name: 'Dragonite', type: 'Dragon,Flying', region: 'Kanto', hp: 131, attack: 154, defense: 105, speed: 100 },
+  12: { name: 'Alakazam', type: 'Psychic', region: 'Kanto', hp: 75, attack: 135, defense: 100, speed: 145 },
+  13: { name: 'Mew', type: 'Psychic', region: 'Kanto', hp: 150, attack: 130, defense: 110, speed: 130 },
+  14: { name: 'Noctowl', type: 'Normal,Flying', region: 'Johto', hp: 150, attack: 100, defense: 80, speed: 100 },
+  15: { name: 'Ampharos', type: 'Electric', region: 'Johto', hp: 150, attack: 115, defense: 110, speed: 85 },
+  16: { name: 'Espeon', type: 'Psychic', region: 'Johto', hp: 95, attack: 130, defense: 110, speed: 130 },
+  17: { name: 'Umbreon', type: 'Dark', region: 'Johto', hp: 145, attack: 115, defense: 130, speed: 85 },
+  18: { name: 'Tyranitar', type: 'Rock,Dark', region: 'Johto', hp: 175, attack: 154, defense: 130, speed: 71 },
+  19: { name: 'Gardevoir', type: 'Psychic,Fairy', region: 'Hoenn', hp: 108, attack: 125, defense: 115, speed: 120 },
+  20: { name: 'Salamence', type: 'Dragon,Flying', region: 'Hoenn', hp: 135, attack: 155, defense: 110, speed: 120 },
+  21: { name: 'Metagross', type: 'Steel,Psychic', region: 'Hoenn', hp: 140, attack: 145, defense: 140, speed: 80 },
+  22: { name: 'Rayquaza', type: 'Dragon,Flying', region: 'Hoenn', hp: 175, attack: 170, defense: 110, speed: 145 },
+  23: { name: 'Garchomp', type: 'Dragon,Ground', region: 'Sinnoh', hp: 158, attack: 160, defense: 125, speed: 112 },
+  24: { name: 'Infernape', type: 'Fire,Fighting', region: 'Sinnoh', hp: 116, attack: 154, defense: 101, speed: 128 },
+});
+
+class Pokemon {
+  constructor({ id, originId, image, name, type, region, hp, attack, defense, speed }) {
+    this.id = id;
+    this.originId = originId;
+    this.image = image;
+    this.name = name;
+    this.type = type;
+    this.region = region;
+    this.hp = hp;
+    this.attack = attack;
+    this.defense = defense;
+    this.speed = speed;
+  }
+  get types() { return this.type.split(','); }
+  get totalStats() { return this.hp + this.attack + this.defense + this.speed; }
+}
+
+class SeededRandom {
+  constructor(seed) { this.seed = seed; }
+  next(index) {
+    let t = (index + this.seed) >>> 0;
+    t = (t += 0x6D2B79F5) >>> 0;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  }
+}
+
+class PokemonFactory {
+  constructor() { this.rng = new SeededRandom(0xDEADBEEF); }
+  buildAll() {
+    const pokemonList = [];
+    let id = 1;
+    for (const source of STICKER_SOURCES) {
+      for (let n = 1; n <= source.count; n++) {
+        pokemonList.push(this.createEntry(id, source, n));
+        id++;
+      }
+    }
+    return pokemonList;
+  }
+  createEntry(id, source, stickerIndex) {
+    const known = KNOWN_POKEMON[id];
+    const image = `stickers/${source.prefix}_${String(stickerIndex).padStart(2, '0')}.png`;
+    if (known) return new Pokemon({ id, originId: source.originId, image, ...known });
+    return new Pokemon({
+      id, originId: source.originId, image,
+      name: `Mystery #${id}`,
+      type: this.randomType(id),
+      region: this.randomRegion(id),
+      hp: this.randomStat(id, 0, 40, 150),
+      attack: this.randomStat(id, 1, 30, 180),
+      defense: this.randomStat(id, 2, 30, 180),
+      speed: this.randomStat(id, 3, 30, 180),
+    });
+  }
+  randomStat(index, offset, min, max) {
+    return Math.floor(min + this.rng.next(index * 7 + offset * 13) * (max - min + 1));
+  }
+  randomType(index) {
+    if (this.rng.next(index * 3 + 1) > 0.65) {
+      const t1 = this.pickRandom(POKEMON_TYPES, index * 2);
+      let t2;
+      do { t2 = this.pickRandom(POKEMON_TYPES, index * 2 + 1); } while (t2 === t1);
+      return [t1, t2].sort().join(',');
+    }
+    return this.pickRandom(POKEMON_TYPES, index * 2);
+  }
+  randomRegion(index) { return this.pickRandom(POKEMON_REGIONS, index * 5 + 3); }
+  pickRandom(list, seed) { return list[Math.floor(this.rng.next(seed) * list.length)]; }
+}
+
+class PokemonService {
+  constructor() { this.allPokemon = []; }
+  loadAll() { this.allPokemon = new PokemonFactory().buildAll(); return this.allPokemon; }
+  findById(id) { return this.allPokemon.find((p) => p.id === id) || null; }
+  getAllTypes() {
+    const s = new Set();
+    for (const p of this.allPokemon) for (const t of p.types) s.add(t);
+    return [...s].sort();
+  }
+  getAllRegions() {
+    const s = new Set();
+    for (const p of this.allPokemon) s.add(p.region);
+    return [...s].sort();
+  }
+  filter(list, f) {
+    return list.filter((p) =>
+      (f.type === 'all' || p.types.includes(f.type)) &&
+      (f.region === 'all' || p.region === f.region) &&
+      (f.origin === 'all' || p.originId === f.origin) &&
+      (f.collected === 'all' || (f.isCollected(p.id) === (f.collected === 'collected')))
+    );
+  }
+  sort(list, field, dir) {
+    return [...list].sort((a, b) => {
+      const va = this.getSortValue(a, field);
+      const vb = this.getSortValue(b, field);
+      return va < vb ? -1 * dir : va > vb ? 1 * dir : 0;
+    });
+  }
+  getSortValue(p, field) {
+    switch (field) {
+      case 'id': return p.id;
+      case 'name': return p.name.toLowerCase();
+      case 'hp': return p.hp;
+      case 'attack': return p.attack;
+      case 'defense': return p.defense;
+      case 'speed': return p.speed;
+      case 'total': return p.totalStats;
+      default: return p.id;
+    }
+  }
+}
+
+class CollectionService {
+  constructor(storage) { this.storage = storage; }
+  getAll() { return this.storage.getItem(CONFIG.localStorageKey) || {}; }
+  isCollected(id) { return !!this.getAll()[id]; }
+  toggle(id) {
+    const c = this.getAll();
+    if (c[id]) delete c[id]; else c[id] = true;
+    this.storage.setItem(CONFIG.localStorageKey, c);
+    return c;
+  }
+  countCollected(list) {
+    const c = this.getAll();
+    return list.filter((p) => c[p.id]).length;
+  }
+}
+
+class PaginationService {
+  getTotalPages(total) { return Math.max(1, Math.ceil(total / CONFIG.itemsPerPage)); }
+  getPageItems(list, page) {
+    const start = (page - 1) * CONFIG.itemsPerPage;
+    return list.slice(start, start + CONFIG.itemsPerPage);
+  }
+  clampPage(page, total) { return Math.min(page, total); }
+}
+
+class StorageService {
+  getItem(key) { try { const r = localStorage.getItem(key); return r ? JSON.parse(r) : null; } catch { return null; } }
+  setItem(key, v) { try { localStorage.setItem(key, JSON.stringify(v)); } catch {} }
+}
+
+class Components {
+  constructor() { this.cache = {}; }
+  $(sel) { if (!this.cache[sel]) this.cache[sel] = document.querySelector(sel); return this.cache[sel]; }
+  originLabel(id) { const o = ORIGINS.find((x) => x.id === id); return o ? o.label : id; }
+  statColor(v) { if (v >= 110) return '#4ade80'; if (v >= 70) return '#facc15'; return '#f87171'; }
+  statRowHtml(label, value) {
+    const pct = Math.min(100, Math.round((value / CONFIG.maxStatValue) * 100));
+    const c = this.statColor(value);
+    return `<div class="stat-row"><span class="stat-label">${label}</span><div class="stat-bar"><div class="stat-fill" style="width:${pct}%;background:${c}"></div></div><span class="stat-val" style="color:${c}">${value}</span></div>`;
+  }
+  cardHtml(p, isCollected) {
+    const badges = p.types.map((t) => `<span class="badge" style="background:${TYPE_COLORS[t] || '#888'}">${t}</span>`).join('');
+    return `<div class="card" data-id="${p.id}"><div class="card-img-wrap"><img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.style.opacity=0.2"><span class="card-origin">${this.originLabel(p.originId)}</span></div><div class="card-body"><div class="card-name">${isCollected ? '✅ ' : ''}${p.name}</div><div class="card-id">#${String(p.id).padStart(3, '0')} · ${this.originLabel(p.originId)}</div><div class="badges">${badges}<span class="badge badge-region">${p.region}</span></div><div class="stats">${this.statRowHtml('HP', p.hp)}${this.statRowHtml('ATK', p.attack)}${this.statRowHtml('DEF', p.defense)}${this.statRowHtml('SPD', p.speed)}</div></div></div>`;
+  }
+  renderGallery(container, list, isCollectedFn, onClick) {
+    container.innerHTML = list.map((p) => this.cardHtml(p, isCollectedFn(p.id))).join('');
+    container.querySelectorAll('.card').forEach((el) => {
+      el.addEventListener('click', () => onClick(parseInt(el.dataset.id)));
+    });
+  }
+  renderEmptyState(c) { c.innerHTML = `<div class="empty-state"><p>No hay Pokémon que coincidan con los filtros 😅</p><p>¡Prueba quitando algunos filtros!</p></div>`; }
+  renderResultCount(el, total, coll, page, pages) { el.textContent = `${coll}/${total} coleccionados · Pág ${page}/${pages}`; }
+  renderClearResultCount(el) { el.textContent = '0 resultados'; }
+  renderPagination(container, page, total, onChange) {
+    if (total <= 1) { container.innerHTML = ''; return; }
+    const btn = (p, l, e = '') => `<button data-page="${p}" ${e}>${l}</button>`;
+    const MAX = 7;
+    const half = Math.floor(MAX / 2);
+    let start = Math.max(1, page - half);
+    let end = Math.min(total, start + MAX - 1);
+    if (end - start + 1 < MAX) start = Math.max(1, end - MAX + 1);
+    let html = btn(page - 1, '‹ Ant', page <= 1 ? 'disabled' : '');
+    if (start > 1) { html += btn(1, '1'); if (start > 2) html += '<span class="page-info">…</span>'; }
+    for (let p = start; p <= end; p++) html += btn(p, p, `class="${p === page ? 'active' : ''}"`);
+    if (end < total) { if (end < total - 1) html += '<span class="page-info">…</span>'; html += btn(total, total); }
+    html += btn(page + 1, 'Sig ›', page >= total ? 'disabled' : '');
+    container.innerHTML = html;
+    container.querySelectorAll('button[data-page]').forEach((b) => {
+      b.addEventListener('click', () => { if (!b.disabled) onChange(parseInt(b.dataset.page)); });
+    });
+  }
+  populateSelect(el, values) {
+    const frag = document.createDocumentFragment();
+    for (const v of values) {
+      const opt = document.createElement('option');
+      opt.value = v.id || v;
+      opt.textContent = v.label || v;
+      frag.appendChild(opt);
+    }
+    el.appendChild(frag);
+  }
+}
+
+class ModalController {
+  constructor(ui, ps, cs) { this.ui = ui; this.pokemonService = ps; this.collectionService = cs; }
+  open(p, onToggle) {
+    const isCollected = this.collectionService.isCollected(p.id);
+    this.ui.$('#modalImg').src = p.image;
+    this.ui.$('#modalImg').alt = p.name;
+    this.ui.$('#modalName').textContent = p.name;
+    this.ui.$('#modalId').textContent = `#${String(p.id).padStart(3, '0')} · ${this.ui.originLabel(p.originId)}`;
+    const badges = p.types.map((t) => `<span class="badge" style="background:${TYPE_COLORS[t] || '#888'}">${t}</span>`).join('');
+    this.ui.$('#modalBadges').innerHTML = badges + `<span class="badge badge-region">${p.region}</span>`;
+    const totalPct = Math.min(100, Math.round((p.totalStats / CONFIG.maxTotalValue) * 100));
+    this.ui.$('#modalStats').innerHTML = `${this.ui.statRowHtml('HP', p.hp)}${this.ui.statRowHtml('ATK', p.attack)}${this.ui.statRowHtml('DEF', p.defense)}${this.ui.statRowHtml('SPD', p.speed)}<div class="stat-row" style="margin-top:4px;border-top:1px solid var(--border);padding-top:6px"><span class="stat-label" style="width:40px;font-weight:700">TOT</span><div class="stat-bar"><div class="stat-fill" style="width:${totalPct}%;background:linear-gradient(90deg,#4ade80,#22d3ee)"></div></div><span class="stat-val" style="color:#22d3ee;font-weight:700;width:32px">${p.totalStats}</span></div>`;
+    this.ui.$('#modalCollected').innerHTML = isCollected ? '<div class="collected-badge clickable" id="toggleCollectedBtn">✅ ¡Coleccionado! (tocar para quitar)</div>' : '<div class="collected-badge interactive" id="toggleCollectedBtn">⬜ Marcar como coleccionado</div>';
+    this.ui.$('#modal').classList.add('open');
+    setTimeout(() => {
+      const b = document.getElementById('toggleCollectedBtn');
+      if (b) b.addEventListener('click', (e) => { e.stopPropagation(); onToggle(p.id); });
+    }, 0);
+  }
+  close() { this.ui.$('#modal').classList.remove('open'); }
+  bindEvents() {
+    const m = this.ui.$('#modal');
+    this.ui.$('#modalClose').addEventListener('click', () => this.close());
+    m.addEventListener('click', (e) => { if (e.target === m) this.close(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') this.close(); });
+  }
+}
+
+class App {
+  constructor() {
+    this.state = { filterType: 'all', filterRegion: 'all', filterOrigin: 'all', filterCollected: 'all', sortBy: 'id', sortDir: 1, page: 1 };
+    this.pokemonService = new PokemonService();
+    this.paginationService = new PaginationService();
+    this.storageService = new StorageService();
+    this.collectionService = new CollectionService(this.storageService);
+    this.ui = new Components();
+    this.modal = new ModalController(this.ui, this.pokemonService, this.collectionService);
+  }
+  init() {
+    this.pokemonService.loadAll();
+    this.ui.populateSelect(this.ui.$('#filterType'), this.pokemonService.getAllTypes());
+    this.ui.populateSelect(this.ui.$('#filterRegion'), this.pokemonService.getAllRegions());
+    this.ui.populateSelect(this.ui.$('#filterOrigin'), ORIGINS);
+    this.modal.bindEvents();
+    const onChange = () => { this.syncStateFromDOM(); this.state.page = 1; this.render(); };
+    this.ui.$('#filterType').addEventListener('change', onChange);
+    this.ui.$('#filterRegion').addEventListener('change', onChange);
+    this.ui.$('#filterOrigin').addEventListener('change', onChange);
+    this.ui.$('#filterCollected').addEventListener('change', onChange);
+    this.ui.$('#sortBy').addEventListener('change', onChange);
+    this.ui.$('#sortDirBtn').addEventListener('click', () => {
+      this.state.sortDir *= -1;
+      this.ui.$('#sortDirBtn').textContent = this.state.sortDir === 1 ? '↑' : '↓';
+      this.state.page = 1;
+      this.render();
+    });
+    this.ui.$('#resetFiltersBtn').addEventListener('click', () => this.resetFilters());
+    this.render();
+  }
+  syncStateFromDOM() {
+    this.state.filterType = this.ui.$('#filterType').value;
+    this.state.filterRegion = this.ui.$('#filterRegion').value;
+    this.state.filterOrigin = this.ui.$('#filterOrigin').value;
+    this.state.filterCollected = this.ui.$('#filterCollected').value;
+    this.state.sortBy = this.ui.$('#sortBy').value;
+  }
+  resetFilters() {
+    this.state = { filterType: 'all', filterRegion: 'all', filterOrigin: 'all', filterCollected: 'all', sortBy: 'id', sortDir: 1, page: 1 };
+    this.ui.$('#filterType').value = 'all';
+    this.ui.$('#filterRegion').value = 'all';
+    this.ui.$('#filterOrigin').value = 'all';
+    this.ui.$('#filterCollected').value = 'all';
+    this.ui.$('#sortBy').value = 'id';
+    this.ui.$('#sortDirBtn').textContent = '↑';
+    this.render();
+  }
+  render() {
+    const all = this.pokemonService.allPokemon;
+    const isColl = (id) => this.collectionService.isCollected(id);
+    const filters = { type: this.state.filterType, region: this.state.filterRegion, origin: this.state.filterOrigin, collected: this.state.filterCollected, isCollected: isColl };
+    const filtered = this.pokemonService.filter(all, filters);
+    const sorted = this.pokemonService.sort(filtered, this.state.sortBy, this.state.sortDir);
+    const totalPages = this.paginationService.getTotalPages(sorted.length);
+    this.state.page = this.paginationService.clampPage(this.state.page, totalPages);
+    const pageItems = this.paginationService.getPageItems(sorted, this.state.page);
+    const totalCount = all.length;
+    const totalCollected = this.collectionService.countCollected(all);
+    this.ui.$('#progressText').textContent = `${totalCollected}/${totalCount} coleccionados`;
+    this.ui.$('#progressPct').textContent = `${Math.round((totalCollected / totalCount) * 100)}%`;
+    this.ui.$('#progressFill').style.width = `${(totalCollected / totalCount) * 100}%`;
+    const gallery = this.ui.$('#gallery');
+    const resultCount = this.ui.$('#resultCount');
+    if (sorted.length === 0) {
+      this.ui.renderEmptyState(gallery);
+      this.ui.renderPagination(this.ui.$('#pagination'), 0, 0, () => {});
+      this.ui.renderClearResultCount(resultCount);
+      return;
+    }
+    this.ui.renderGallery(gallery, pageItems, isColl, (id) => {
+      const p = this.pokemonService.findById(id);
+      if (p) this.modal.open(p, (pid) => {
+        this.collectionService.toggle(pid);
+        this.render();
+        const u = this.pokemonService.findById(pid);
+        if (u) this.modal.open(u, () => {});
+      });
+    });
+    this.ui.renderResultCount(resultCount, filtered.length, this.collectionService.countCollected(filtered), this.state.page, totalPages);
+    this.ui.renderPagination(this.ui.$('#pagination'), this.state.page, totalPages, (np) => {
+      this.state.page = np;
+      this.render();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => { new App().init(); });
+</script>
 </body>
 </html>
