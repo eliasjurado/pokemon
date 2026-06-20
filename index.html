@@ -15,10 +15,12 @@ h1{font-size:1.1rem;background:linear-gradient(135deg,#f7d02c,#ee8130,#6390f0);-
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:12px}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;cursor:pointer}
 .card:hover{border-color:var(--accent)}
-.card-img-wrap{aspect-ratio:1;background:var(--surface2);display:flex;align-items:center;justify-content:center;padding:6px}
+.card-img-wrap{aspect-ratio:1;background:var(--surface2);display:flex;align-items:center;justify-content:center;padding:6px;position:relative}
 .card-img-wrap img{width:100%;height:100%;object-fit:contain}
+.card-flag{position:absolute;top:4px;right:4px;font-size:.9rem;background:rgba(0,0,0,.5);border-radius:4px;padding:1px 3px}
+
 .card-body{padding:6px 8px}
-.card-name{font-size:.8rem;font-weight:600;margin-bottom:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card-name{font-size:.8rem;font-weight:600;margin-bottom:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:uppercase}
 .card-id{font-size:.65rem;color:var(--text2)}
 .pagination{display:flex;justify-content:center;gap:4px;margin-top:16px;flex-wrap:wrap}
 .pagination button{background:var(--surface2);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:6px 10px;font-size:.8rem;min-width:36px;min-height:36px}
@@ -26,129 +28,141 @@ h1{font-size:1.1rem;background:linear-gradient(135deg,#f7d02c,#ee8130,#6390f0);-
 .pagination button:disabled{opacity:.3}
 #status{position:fixed;top:10px;right:10px;background:#000;color:#0f0;padding:4px 8px;font-family:monospace;font-size:11px;z-index:9999;border-radius:4px}
 #count{font-size:.75rem;color:var(--text2);margin-left:auto}
+.modal{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.7);backdrop-filter:blur(6px);align-items:flex-end;justify-content:center}
+.modal.open{display:flex}
+.modal-content{background:var(--surface);border-radius:20px 20px 0 0;width:100%;max-height:90vh;overflow-y:auto}
+.modal-img{background:var(--surface2);padding:20px;display:flex;align-items:center;justify-content:center}
+.modal-img img{max-width:100%;max-height:40vh;object-fit:contain;border-radius:8px}
+.modal-body{padding:16px 20px 24px;position:relative}
+.modal-close{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.4);border:none;color:#fff;font-size:1.2rem;width:32px;height:32px;border-radius:50%;cursor:pointer}
+.modal-name{font-size:1.3rem;font-weight:700;margin-bottom:4px;text-transform:uppercase}
+.modal-id{font-size:.85rem;color:var(--text2);margin-bottom:10px}
+@media(min-width:768px){.modal{align-items:center;padding:16px}.modal-content{max-width:420px;border-radius:14px}}
 </style>
 </head>
 <body>
-<div id="status">OK</div>
 <h1>Album de Stickers Pokemon</h1>
 <div class="bar">
 <select id="fType"><option value="all">Tipo: Todos</option></select>
 <select id="fRegion"><option value="all">Region: Todas</option></select>
-<select id="fOrigin"><option value="all">Origen: Todos</option></select>
-<select id="fColl"><option value="all">Estado: Todos</option><option value="collected">Coleccionados</option><option value="missing">Faltantes</option></select>
+<select id="fCountry"><option value="all">Pais: Todos</option></select>
 <button id="resetBtn">Limpiar</button>
 <span id="count"></span>
 </div>
 <div class="grid" id="gallery"></div>
 <div class="pagination" id="pagination"></div>
+<div class="modal" id="modal"><div class="modal-content" id="modalContent"></div></div>
 <script>
-const s = document.getElementById('status');
-const ITEMS_PER_PAGE = 12;
+const ITEMS = window.innerWidth < 768 ? 4 : 16;
+const s = document.createElement('div');
+s.id = 'status';
+s.style.cssText = 'position:fixed;top:10px;right:10px;background:#000;color:#0f0;padding:4px 8px;font-family:monospace;font-size:11px;z-index:9999;border-radius:4px';
+document.body.appendChild(s);
 
-try {
-  const TYPES = ['Normal','Fire','Water','Electric','Grass','Ice','Fighting','Poison','Ground','Flying','Psychic','Bug','Rock','Ghost','Dragon','Dark','Steel','Fairy'];
-  const REGIONS = ['Kanto','Johto','Hoenn','Sinnoh','Unova','Kalos','Alola','Galar','Paldea'];
-  const ORIGINS = [
-    {id:'pokemon-1',label:'Lamina 1'},{id:'pokemon-2',label:'Lamina 2'},
-    {id:'pokemon-3',label:'Lamina 3'},{id:'pokemon-4',label:'Lamina 4'},
-    {id:'sheet5',label:'Lamina 5'},{id:'sheet6',label:'Lamina 6'},{id:'sheet7',label:'Lamina 7'}
-  ];
-  const PREFIXES = ['pokemon-1','pokemon-2','pokemon-3','pokemon-4','sheet5','sheet6','sheet7'];
-  const KNOWN = {1:['Pikachu','Electric','Kanto'],2:['Charizard','Fire','Kanto'],3:['Mewtwo','Psychic','Kanto'],4:['Gengar','Ghost','Kanto'],5:['Eevee','Normal','Kanto'],6:['Snorlax','Normal','Kanto'],7:['Lucario','Fighting','Sinnoh'],8:['Greninja','Water','Kalos']};
+const TYPES = ['Normal','Fire','Water','Electric','Grass','Ice','Fighting','Poison','Ground','Flying','Psychic','Bug','Rock','Ghost','Dragon','Dark','Steel','Fairy'];
+const REGIONS = ['Kanto','Johto','Hoenn','Sinnoh','Unova','Kalos','Alola','Galar','Paldea'];
+const ALL_COUNTRIES = [
+  {flag:'🇯🇵',name:'Japon'},{flag:'🇺🇸',name:'Estados Unidos'},
+  {flag:'🇫🇷',name:'Francia'},{flag:'🇬🇧',name:'Reino Unido'},
+  {flag:'🇪🇸',name:'Espana'},{flag:'🇲🇽',name:'Mexico'},
+  {flag:'🇦🇷',name:'Argentina'},{flag:'🇨🇴',name:'Colombia'},
+  {flag:'🇨🇱',name:'Chile'},{flag:'🇵🇪',name:'Peru'},
+  {flag:'🇧🇷',name:'Brasil'},{flag:'🇩🇪',name:'Alemania'},
+  {flag:'🇮🇹',name:'Italia'},{flag:'🇨🇳',name:'China'},
+  {flag:'🇰🇷',name:'Corea del Sur'},{flag:'🇦🇺',name:'Australia'},
+  {flag:'🇨🇦',name:'Canada'},{flag:'🇮🇳',name:'India'},
+  {flag:'🇿🇦',name:'Sudafrica'},{flag:'🇪🇬',name:'Egipto'}
+];
 
-  const all = [];
-  let id = 1;
-  for (let pi = 0; pi < PREFIXES.length; pi++) {
-    const prefix = PREFIXES[pi];
-    for (let n = 1; n <= 32; n++) {
-      const img = 'stickers/' + prefix + '_' + (n < 10 ? '0' + n : n) + '.png';
-      const k = KNOWN[id];
-      const name = k ? k[0] : 'Mystery #' + id;
-      const type = k ? k[1] : TYPES[id % TYPES.length];
-      const region = k ? k[2] : REGIONS[id % REGIONS.length];
-      all.push({id:id, img:img, name:name, type:type, region:region, origin:prefix});
-      id++;
-    }
-  }
+s.textContent = 'loading...';
+
+fetch('pokemon.json').then(r => r.json()).then(all => {
   s.textContent = 'gen ' + all.length;
 
   const sel = document.getElementById('fType');
   TYPES.forEach(t => { const o = document.createElement('option'); o.value=t; o.textContent='Tipo: '+t; sel.appendChild(o); });
   const selR = document.getElementById('fRegion');
   REGIONS.forEach(r => { const o = document.createElement('option'); o.value=r; o.textContent='Region: '+r; selR.appendChild(o); });
-  const selO = document.getElementById('fOrigin');
-  ORIGINS.forEach(o => { const opt = document.createElement('option'); opt.value=o.id; opt.textContent='Origen: '+o.label; selO.appendChild(opt); });
+  const selC = document.getElementById('fCountry');
+  ALL_COUNTRIES.forEach(c => { const o = document.createElement('option'); o.value=c.flag; o.textContent=c.flag+' '+c.name; selC.appendChild(o); });
 
   function getColl() { try { return JSON.parse(localStorage.getItem('pokemonCollected')||'{}'); } catch(e) { return {}; } }
   function isColl(id) { return !!getColl()[id]; }
   function toggleColl(id) { const c = getColl(); if (c[id]) delete c[id]; else c[id]=1; localStorage.setItem('pokemonCollected', JSON.stringify(c)); }
 
-  let currentPage = 1;
-  let state = {type:'all', region:'all', origin:'all', coll:'all'};
+  let page = 1;
+  let state = {type:'all', region:'all', country:'all'};
 
   function render() {
     const coll = getColl();
     const filtered = all.filter(p =>
       (state.type==='all' || p.type===state.type) &&
       (state.region==='all' || p.region===state.region) &&
-      (state.origin==='all' || p.origin===state.origin) &&
-      (state.coll==='all' || (state.coll==='collected') === !!coll[p.id])
+      (state.country==='all' || p.country===state.country)
     );
-    const totalPages = Math.max(1, Math.ceil(filtered.length / ITEMS_PER_PAGE));
-    if (currentPage > totalPages) currentPage = totalPages;
-    const start = (currentPage - 1) * ITEMS_PER_PAGE;
-    const page = filtered.slice(start, start + ITEMS_PER_PAGE);
+    const totalP = Math.max(1, Math.ceil(filtered.length / ITEMS));
+    if (page > totalP) page = totalP;
+    const start = (page-1) * ITEMS;
+    const slice = filtered.slice(start, start+ITEMS);
     let html = '';
-    for (let i = 0; i < page.length; i++) {
-      const p = page[i];
+    for (let i = 0; i < slice.length; i++) {
+      const p = slice[i];
       const c = !!coll[p.id];
-      html += '<div class="card" data-id="'+p.id+'"><div class="card-img-wrap"><img src="'+p.img+'" loading="lazy"></div><div class="card-body"><div class="card-name">'+(c?'✓ ':'')+p.name+'</div><div class="card-id">#'+p.id+' - '+p.type+'</div></div></div>';
+      html += '<div class="card" data-id="'+p.id+'"><div class="card-img-wrap"><img src="'+p.img+'" loading="lazy"><span class="card-flag">'+p.country+'</span></div><div class="card-body"><div class="card-name">'+(c?'✓ ':'')+p.name+'</div><div class="card-id">'+p.type+'</div></div></div>';
     }
     document.getElementById('gallery').innerHTML = html;
-    document.getElementById('count').textContent = filtered.length+' resultados, ' + Object.keys(coll).length + '/' + all.length + ' coleccionados';
+    const collCount = Object.keys(coll).length;
+    document.getElementById('count').textContent = filtered.length+' resultados, '+collCount+'/'+all.length+' coleccionados';
 
-    let pagHtml = '';
-    pagHtml += '<button '+(currentPage<=1?'disabled':'')+' data-p="'+(currentPage-1)+'">‹</button>';
-    const maxBtns = 5;
-    let s2 = Math.max(1, currentPage - 2);
-    let e2 = Math.min(totalPages, s2 + maxBtns - 1);
-    if (e2 - s2 < maxBtns - 1) s2 = Math.max(1, e2 - maxBtns + 1);
-    for (let i = s2; i <= e2; i++) {
-      pagHtml += '<button class="'+(i===currentPage?'active':'')+'" data-p="'+i+'">'+i+'</button>';
-    }
-    pagHtml += '<button '+(currentPage>=totalPages?'disabled':'')+' data-p="'+(currentPage+1)+'">›</button>';
-    document.getElementById('pagination').innerHTML = pagHtml;
+    let ph = '<button '+(page<=1?'disabled':'')+' data-p="'+(page-1)+'">‹</button>';
+    const mx = 5; let s2 = Math.max(1, page-2); let e2 = Math.min(totalP, s2+mx-1);
+    if (e2-s2<mx-1) s2 = Math.max(1, e2-mx+1);
+    for (let i=s2;i<=e2;i++) ph += '<button class="'+(i===page?'active':'')+'" data-p="'+i+'">'+i+'</button>';
+    ph += '<button '+(page>=totalP?'disabled':'')+' data-p="'+(page+1)+'">›</button>';
+    document.getElementById('pagination').innerHTML = ph;
     document.querySelectorAll('.pagination button').forEach(b => {
       if (b.disabled) return;
-      b.addEventListener('click', () => { currentPage = parseInt(b.dataset.p); render(); window.scrollTo(0,0); });
+      b.addEventListener('click', () => { page = parseInt(b.dataset.p); render(); window.scrollTo(0,0); });
     });
     document.querySelectorAll('.card').forEach(c => {
-      c.addEventListener('click', () => {
-        toggleColl(parseInt(c.dataset.id));
-        render();
-      });
+      c.addEventListener('click', () => { openModal(parseInt(c.dataset.id)); });
     });
-    s.textContent = 'p' + currentPage + '/' + totalPages + ' (' + page.length + ' cards)';
+    s.textContent = 'p'+page+'/'+totalP+' ('+slice.length+')';
   }
 
-  document.getElementById('fType').addEventListener('change', e => { state.type = e.target.value; currentPage = 1; render(); });
-  document.getElementById('fRegion').addEventListener('change', e => { state.region = e.target.value; currentPage = 1; render(); });
-  document.getElementById('fOrigin').addEventListener('change', e => { state.origin = e.target.value; currentPage = 1; render(); });
-  document.getElementById('fColl').addEventListener('change', e => { state.coll = e.target.value; currentPage = 1; render(); });
+  function openModal(id) {
+    const p = all.find(x => x.id === id);
+    if (!p) return;
+    document.getElementById('modalContent').innerHTML =
+      '<button class="modal-close" id="mClose">✕</button>'+
+      '<div class="modal-img"><img src="'+p.img+'"></div>'+
+      '<div class="modal-body">'+
+        '<div class="modal-name">'+p.name+'</div>'+
+        '<div class="modal-id">#'+String(p.id).padStart(3,'0')+' · '+p.region+' '+p.country+'</div>'+
+        '<div style="font-size:.85rem;color:var(--text2);margin-bottom:6px">Tipo: '+p.type+'</div>'+
+        '<div style="font-size:.85rem;color:var(--text2);margin-bottom:6px">Pais: '+p.countryName+'</div>'+
+      '</div>';
+    document.getElementById('modal').classList.add('open');
+    document.getElementById('mClose').addEventListener('click', closeModal);
+  }
+  function closeModal() { document.getElementById('modal').classList.remove('open'); }
+  document.getElementById('modal').addEventListener('click', e => { if (e.target.id==='modal') closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key==='Escape') closeModal(); });
+
+  document.getElementById('fType').addEventListener('change', e => { state.type = e.target.value; page=1; render(); });
+  document.getElementById('fRegion').addEventListener('change', e => { state.region = e.target.value; page=1; render(); });
+  document.getElementById('fCountry').addEventListener('change', e => { state.country = e.target.value; page=1; render(); });
   document.getElementById('resetBtn').addEventListener('click', () => {
-    state = {type:'all', region:'all', origin:'all', coll:'all'};
+    state = {type:'all', region:'all', country:'all'};
     document.getElementById('fType').value = 'all';
     document.getElementById('fRegion').value = 'all';
-    document.getElementById('fOrigin').value = 'all';
-    document.getElementById('fColl').value = 'all';
-    currentPage = 1;
+    document.getElementById('fCountry').value = 'all';
+    page = 1;
     render();
   });
 
   render();
-} catch(e) {
-  s.textContent = 'ERROR: ' + e.message;
-}
+}).catch(e => { s.textContent = 'ERROR: ' + e.message; });
 </script>
 </body>
 </html>
