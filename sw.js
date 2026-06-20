@@ -1,4 +1,4 @@
-const CACHE = 'pokestickers-v1';
+const CACHE = 'pokestickers-v2';
 
 self.addEventListener('install', () => {
   self.skipWaiting();
@@ -6,9 +6,13 @@ self.addEventListener('install', () => {
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((keys) =>
-      Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k)))
-    )
+    (async () => {
+      const keys = await caches.keys();
+      await Promise.all(
+        keys.filter((k) => k !== CACHE).map((k) => caches.delete(k))
+      );
+      await self.clients.claim();
+    })()
   );
 });
 
@@ -19,12 +23,6 @@ self.addEventListener('fetch', (event) => {
 
   if (url.pathname.includes('/stickers/') && url.pathname.endsWith('.png')) {
     event.respondWith(cacheFirst(request));
-    return;
-  }
-
-  if (url.pathname.endsWith('/') || url.pathname.endsWith('index.html')) {
-    event.respondWith(networkFirst(request));
-    return;
   }
 });
 
@@ -40,19 +38,5 @@ async function cacheFirst(request) {
     return res;
   } catch {
     return new Response('', { status: 408 });
-  }
-}
-
-async function networkFirst(request) {
-  try {
-    const res = await fetch(request);
-    if (res.ok) {
-      const copy = res.clone();
-      caches.open(CACHE).then((cache) => cache.put(request, copy));
-    }
-    return res;
-  } catch {
-    const cached = await caches.match(request);
-    return cached || new Response('', { status: 408 });
   }
 }
