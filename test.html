@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+  <style>body{font-family:sans-serif;background:#0a0a1a;color:#fff;padding:20px;} img{width:200px;border:2px solid red;}</style>
+</head>
+<body>
+  <h1>TEST: si ves esto, el HTML carga</h1>
+  <p id="status">JS no ejecutado</p>
+  <img src="stickers/pokemon-1_01.png" alt="test" onload="document.getElementById('imgStatus').textContent='IMG OK'" onerror="document.getElementById('imgStatus').textContent='IMG FAIL'">
+  <p>Estado imagen: <span id="imgStatus">cargando...</span></p>
+  <script>
+    document.getElementById('status').textContent = 'JS EJECUTADO OK';
+  </script>
+</body>
+</html>
