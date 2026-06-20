@@ -1,10 +1,10 @@
-import { PokemonService } from '../application/pokemonService.js';
-import { CollectionService } from '../application/collectionService.js';
-import { PaginationService } from '../application/paginationService.js';
-import { StorageService } from '../infrastructure/storageService.js';
-import { Components } from './components.js';
-import { ModalController } from './modalController.js';
-import { ORIGINS } from '../domain/constants.js';
+import { PokemonService } from '../application/pokemonService.js?v=4';
+import { CollectionService } from '../application/collectionService.js?v=4';
+import { PaginationService } from '../application/paginationService.js?v=4';
+import { StorageService } from '../infrastructure/storageService.js?v=4';
+import { Components } from './components.js?v=4';
+import { ModalController } from './modalController.js?v=4';
+import { ORIGINS } from '../domain/constants.js?v=4';
 
 class App {
   constructor() {
