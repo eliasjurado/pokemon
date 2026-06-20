@@ -1,0 +1,5 @@
+node_modules/
+.serve/
+*.log
+cloudflared.exe
+cloudflared-windows-amd64.exe

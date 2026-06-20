@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Álbum de Stickers Pokémon</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <h1>⭐ Álbum de Stickers Pokémon</h1>
+    <div class="progress-wrap">
+      <div class="progress-info">
+        <span id="progressText">0/224 coleccionados</span>
+        <span id="progressPct">0%</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+    </div>
+    <div class="filter-bar">
+      <div class="filter-group">
+        <label for="filterType">Tipo</label>
+        <select id="filterType"><option value="all">Todos</option></select>
+      </div>
+      <div class="filter-group">
+        <label for="filterRegion">Región</label>
+        <select id="filterRegion"><option value="all">Todas</option></select>
+      </div>
+      <div class="filter-group">
+        <label for="filterOrigin">Origen</label>
+        <select id="filterOrigin"><option value="all">Todos</option></select>
+      </div>
+      <div class="filter-group">
+        <label for="filterCollected">Estado</label>
+        <select id="filterCollected">
+          <option value="all">Todos</option>
+          <option value="collected">Coleccionados</option>
+          <option value="missing">Faltantes</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="sortBy">Ordenar</label>
+        <select id="sortBy">
+          <option value="id">N.°</option>
+          <option value="name">Nombre</option>
+          <option value="attack">Ataque</option>
+          <option value="defense">Defensa</option>
+          <option value="speed">Velocidad</option>
+          <option value="hp">HP</option>
+          <option value="total">Poder total</option>
+        </select>
+      </div>
+      <button id="sortDirBtn" title="Cambiar orden">↑</button>
+      <button id="resetFiltersBtn" class="reset-btn" title="Limpiar filtros">✕ Limpiar</button>
+      <span class="result-count" id="resultCount"></span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="grid" id="gallery"></div>
+  <div class="pagination" id="pagination"></div>
+</main>
+
+<footer>
+  Hecho con ❤️ para mi hijo · <a href="https://eliasjurado.com" target="_blank" rel="noopener">Elias Jurado</a>
+</footer>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <div class="modal-img-wrap">
+      <img id="modalImg" src="" alt="">
+    </div>
+    <div class="modal-body">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="card-name" id="modalName"></div>
+      <div class="card-id" id="modalId"></div>
+      <div class="badges" id="modalBadges"></div>
+      <div class="stats" id="modalStats"></div>
+      <div id="modalCollected"></div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="src/presentation/main.js"></script>
+</body>
+</html>
