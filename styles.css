@@ -104,6 +104,7 @@ h1 {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   padding-bottom: 4px;
+  touch-action: pan-x;
 }
 
 .filter-bar::-webkit-scrollbar {
@@ -126,6 +127,7 @@ h1 {
   appearance: none;
   white-space: nowrap;
   flex-shrink: 0;
+  touch-action: manipulation;
 }
 
 .filter-bar select:active,
