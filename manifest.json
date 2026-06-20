@@ -1,0 +1,24 @@
+{
+  "name": "Álbum de Stickers Pokémon",
+  "short_name": "PokéStickers",
+  "description": "Álbum de stickers Pokémon para coleccionar",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0a0a1a",
+  "theme_color": "#16162a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "stickers/pokemon-1_01.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "stickers/pokemon-1_01.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
