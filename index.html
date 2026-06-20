@@ -11,107 +11,50 @@ html{font-size:16px}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding:12px}
 h1{font-size:1.1rem;background:linear-gradient(135deg,#f7d02c,#ee8130,#6390f0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:10px}
 .bar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;align-items:center}
-.bar select,.bar button{background:var(--surface2);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:6px 10px;font-size:.8rem;min-height:36px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:12px}
+.bar select,.bar button{background:var(--surface2);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:6px 10px;font-size:.82rem;min-height:36px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:12px}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;cursor:pointer}
-.card:active{transform:scale(.98)}
 .card:hover{border-color:var(--accent)}
-.card-img-wrap{aspect-ratio:1;background:var(--surface2);display:flex;align-items:center;justify-content:center;padding:6px;position:relative}
+.card-img-wrap{aspect-ratio:1;background:var(--surface2);display:flex;align-items:center;justify-content:center;padding:6px}
 .card-img-wrap img{width:100%;height:100%;object-fit:contain}
-.card-flag{position:absolute;top:4px;right:4px;font-size:1rem;background:rgba(0,0,0,.5);border-radius:6px;padding:1px 4px}
 .card-body{padding:6px 8px}
-.card-name{font-size:.78rem;font-weight:600;margin-bottom:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.card-id{font-size:.62rem;color:var(--text2);margin-bottom:4px}
-.card-types{display:flex;gap:2px;flex-wrap:wrap;margin-bottom:4px}
-.card-type{font-size:.55rem;padding:1px 5px;border-radius:8px;color:#fff;font-weight:600;text-transform:uppercase}
-.card-stats{display:flex;flex-direction:column;gap:1px}
-.card-stat{display:flex;align-items:center;gap:3px;font-size:.6rem}
-.card-stat-label{width:22px;color:var(--text2);flex-shrink:0}
-.card-stat-bar{flex:1;height:3px;background:rgba(255,255,255,.08);border-radius:2px;overflow:hidden}
-.card-stat-fill{height:100%;border-radius:2px}
-.card-stat-val{width:18px;text-align:right;font-weight:600;flex-shrink:0}
+.card-name{font-size:.8rem;font-weight:600;margin-bottom:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card-id{font-size:.65rem;color:var(--text2)}
 .pagination{display:flex;justify-content:center;gap:4px;margin-top:16px;flex-wrap:wrap}
 .pagination button{background:var(--surface2);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:6px 10px;font-size:.8rem;min-width:36px;min-height:36px}
 .pagination button.active{background:var(--accent);border-color:var(--accent)}
 .pagination button:disabled{opacity:.3}
+#status{position:fixed;top:10px;right:10px;background:#000;color:#0f0;padding:4px 8px;font-family:monospace;font-size:11px;z-index:9999;border-radius:4px}
 #count{font-size:.75rem;color:var(--text2);margin-left:auto}
-.modal{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.7);backdrop-filter:blur(6px);align-items:flex-end;justify-content:center}
-.modal.open{display:flex}
-.modal-content{background:var(--surface);border-radius:20px 20px 0 0;width:100%;max-height:90vh;overflow-y:auto;animation:slideUp .25s ease}
-@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
-.modal-img{background:var(--surface2);padding:20px;display:flex;align-items:center;justify-content:center}
-.modal-img img{max-width:100%;max-height:35vh;object-fit:contain;border-radius:8px}
-.modal-body{padding:16px 20px 24px;position:relative}
-.modal-close{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.4);border:none;color:#fff;font-size:1.2rem;width:32px;height:32px;border-radius:50%;cursor:pointer}
-.modal-name{font-size:1.3rem;font-weight:700;margin-bottom:2px}
-.modal-id{font-size:.85rem;color:var(--text2);margin-bottom:10px}
-.modal-types{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
-.modal-type{font-size:.75rem;padding:3px 10px;border-radius:10px;color:#fff;font-weight:600;text-transform:uppercase}
-.modal-stats{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
-.modal-stat{display:flex;align-items:center;gap:8px;font-size:.85rem}
-.modal-stat-label{width:32px;color:var(--text2);font-weight:500}
-.modal-stat-bar{flex:1;height:7px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden}
-.modal-stat-fill{height:100%;border-radius:3px}
-.modal-stat-val{width:28px;text-align:right;font-weight:600}
-.modal-total{border-top:1px solid var(--border);padding-top:8px;margin-top:4px;font-weight:700}
-.modal-coll-btn{display:block;width:100%;padding:10px;border-radius:20px;border:1px solid var(--border);background:rgba(255,255,255,.06);color:var(--text2);font-size:.85rem;font-weight:600;cursor:pointer;margin-top:12px}
-.modal-coll-btn.collected{background:rgba(74,222,128,.12);border-color:rgba(74,222,128,.3);color:var(--success)}
-@media (min-width:768px){.modal{align-items:center;padding:16px}.modal-content{max-width:420px;border-radius:14px;animation:zoomIn .2s ease}@keyframes zoomIn{from{transform:scale(.92);opacity:0}to{transform:scale(1);opacity:1}}}}
 </style>
 </head>
 <body>
+<div id="status">OK</div>
 <h1>Album de Stickers Pokemon</h1>
 <div class="bar">
 <select id="fType"><option value="all">Tipo: Todos</option></select>
-<select id="fCountry"><option value="all">Pais: Todos</option></select>
-<select id="fSort">
-<option value="id">N.°</option>
-<option value="name">Nombre</option>
-<option value="hp">HP</option>
-<option value="atk">Ataque</option>
-<option value="def">Defensa</option>
-<option value="spd">Velocidad</option>
-<option value="total">Poder total</option>
-</select>
-<button id="sortDir">↓</button>
+<select id="fRegion"><option value="all">Region: Todas</option></select>
+<select id="fOrigin"><option value="all">Origen: Todos</option></select>
+<select id="fColl"><option value="all">Estado: Todos</option><option value="collected">Coleccionados</option><option value="missing">Faltantes</option></select>
 <button id="resetBtn">Limpiar</button>
 <span id="count"></span>
 </div>
 <div class="grid" id="gallery"></div>
 <div class="pagination" id="pagination"></div>
-<div class="modal" id="modal"><div class="modal-content" id="modalContent"></div></div>
 <script>
+const s = document.getElementById('status');
+const ITEMS_PER_PAGE = 12;
+
 try {
   const TYPES = ['Normal','Fire','Water','Electric','Grass','Ice','Fighting','Poison','Ground','Flying','Psychic','Bug','Rock','Ghost','Dragon','Dark','Steel','Fairy'];
-  const TC = {Normal:'#A8A77A',Fire:'#EE8130',Water:'#6390F0',Electric:'#F7D02C',Grass:'#7AC74C',Ice:'#96D9D6',Fighting:'#C22E28',Poison:'#A33EA1',Ground:'#E2BF65',Flying:'#A98FF3',Psychic:'#F95587',Bug:'#A6B91A',Rock:'#B6A136',Ghost:'#735797',Dragon:'#6F35FC',Dark:'#705746',Steel:'#B7B7CE',Fairy:'#D685AD'};
-  const COUNTRIES = {
-    'Kanto':'🇯🇵','Johto':'🇯🇵','Hoenn':'🇯🇵',
-    'Sinnoh':'🇺🇸','Unova':'🇺🇸','Alola':'🇺🇸',
-    'Kalos':'🇫🇷','Galar':'🇬🇧','Paldea':'🇪🇸'
-  };
+  const REGIONS = ['Kanto','Johto','Hoenn','Sinnoh','Unova','Kalos','Alola','Galar','Paldea'];
+  const ORIGINS = [
+    {id:'pokemon-1',label:'Lamina 1'},{id:'pokemon-2',label:'Lamina 2'},
+    {id:'pokemon-3',label:'Lamina 3'},{id:'pokemon-4',label:'Lamina 4'},
+    {id:'sheet5',label:'Lamina 5'},{id:'sheet6',label:'Lamina 6'},{id:'sheet7',label:'Lamina 7'}
+  ];
   const PREFIXES = ['pokemon-1','pokemon-2','pokemon-3','pokemon-4','sheet5','sheet6','sheet7'];
-  const KNOWN = {
-    1:['Pikachu','Electric','Kanto',60,55,40,90],
-    2:['Charizard','Fire,Flying','Kanto',108,130,111,100],
-    3:['Mewtwo','Psychic','Kanto',160,150,106,130],
-    4:['Gengar','Ghost,Poison','Kanto',110,130,100,130],
-    5:['Eevee','Normal','Kanto',55,55,50,55],
-    6:['Snorlax','Normal','Kanto',190,130,110,30],
-    7:['Lucario','Fighting,Steel','Sinnoh',120,145,110,112],
-    8:['Greninja','Water,Dark','Kalos',112,145,101,141]
-  };
-
-  function rng(s){let t=s>>>0;t=(t+0x6D2B79F5)>>>0;t=Math.imul(t^(t>>>15),t|1);t^=t+Math.imul(t^(t>>>7),t|61);return((t^(t>>>14))>>>0)/4294967296;}
-  function rstat(i,o,mn,mx){return Math.floor(mn+rng(i*7+o*13)*(mx-mn+1));}
-  function rtype(i){
-    if(rng(i*3+1)>.65){
-      const a=TYPES[Math.floor(rng(i*2)*TYPES.length)];
-      let b; do { b=TYPES[Math.floor(rng(i*2+1)*TYPES.length)]; } while(b===a);
-      return [a,b].sort().join(',');
-    }
-    return TYPES[Math.floor(rng(i*2)*TYPES.length)];
-  }
-  const REGION_LIST = Object.keys(COUNTRIES);
+  const KNOWN = {1:['Pikachu','Electric','Kanto'],2:['Charizard','Fire','Kanto'],3:['Mewtwo','Psychic','Kanto'],4:['Gengar','Ghost','Kanto'],5:['Eevee','Normal','Kanto'],6:['Snorlax','Normal','Kanto'],7:['Lucario','Fighting','Sinnoh'],8:['Greninja','Water','Kalos']};
 
   const all = [];
   let id = 1;
@@ -121,147 +64,90 @@ try {
       const img = 'stickers/' + prefix + '_' + (n < 10 ? '0' + n : n) + '.png';
       const k = KNOWN[id];
       const name = k ? k[0] : 'Mystery #' + id;
-      const type = k ? k[1] : rtype(id);
-      const region = k ? k[2] : REGION_LIST[id % REGION_LIST.length];
-      const hp = k ? k[3] : rstat(id, 0, 40, 150);
-      const atk = k ? k[4] : rstat(id, 1, 30, 180);
-      const def = k ? k[5] : rstat(id, 2, 30, 180);
-      const spd = k ? k[6] : rstat(id, 3, 30, 180);
-      all.push({id:id, img:img, name:name, type:type, region:region, country:COUNTRIES[region]||'🌍', hp:hp, atk:atk, def:def, spd:spd});
+      const type = k ? k[1] : TYPES[id % TYPES.length];
+      const region = k ? k[2] : REGIONS[id % REGIONS.length];
+      all.push({id:id, img:img, name:name, type:type, region:region, origin:prefix});
       id++;
     }
   }
+  s.textContent = 'gen ' + all.length;
 
   const sel = document.getElementById('fType');
   TYPES.forEach(t => { const o = document.createElement('option'); o.value=t; o.textContent='Tipo: '+t; sel.appendChild(o); });
-  const selC = document.getElementById('fCountry');
-  REGION_LIST.forEach(r => { const o = document.createElement('option'); o.value=r; o.textContent=(COUNTRIES[r]||'')+' '+r; selC.appendChild(o); });
+  const selR = document.getElementById('fRegion');
+  REGIONS.forEach(r => { const o = document.createElement('option'); o.value=r; o.textContent='Region: '+r; selR.appendChild(o); });
+  const selO = document.getElementById('fOrigin');
+  ORIGINS.forEach(o => { const opt = document.createElement('option'); opt.value=o.id; opt.textContent='Origen: '+o.label; selO.appendChild(opt); });
 
   function getColl() { try { return JSON.parse(localStorage.getItem('pokemonCollected')||'{}'); } catch(e) { return {}; } }
   function isColl(id) { return !!getColl()[id]; }
   function toggleColl(id) { const c = getColl(); if (c[id]) delete c[id]; else c[id]=1; localStorage.setItem('pokemonCollected', JSON.stringify(c)); }
 
-  const ITEMS = 12;
-  let page = 1;
-  let dir = 1;
-  let state = {type:'all', country:'all', sort:'id'};
-
-  function statColor(v) { return v >= 110 ? '#4ade80' : v >= 70 ? '#facc15' : '#f87171'; }
-  function statBar(v, m, lbl, sz) {
-    sz = sz || 'sm';
-    const pct = Math.min(100, Math.round((v/m)*100));
-    const c = statColor(v);
-    if (sz === 'lg') {
-      return '<div class="modal-stat"><span class="modal-stat-label">'+lbl+'</span><div class="modal-stat-bar"><div class="modal-stat-fill" style="width:'+pct+'%;background:'+c+'"></div></div><span class="modal-stat-val" style="color:'+c+'">'+v+'</span></div>';
-    }
-    return '<div class="card-stat"><span class="card-stat-label">'+lbl+'</span><div class="card-stat-bar"><div class="card-stat-fill" style="width:'+pct+'%;background:'+c+'"></div></div><span class="card-stat-val" style="color:'+c+'">'+v+'</span></div>';
-  }
-  function typesHtml(t, cls) {
-    return t.split(',').map(x => '<span class="'+cls+'" style="background:'+(TC[x]||'#888')+'">'+x+'</span>').join('');
-  }
+  let currentPage = 1;
+  let state = {type:'all', region:'all', origin:'all', coll:'all'};
 
   function render() {
     const coll = getColl();
-    let list = all.filter(p =>
-      (state.type==='all' || p.type.split(',').includes(state.type)) &&
-      (state.country==='all' || p.region===state.country)
+    const filtered = all.filter(p =>
+      (state.type==='all' || p.type===state.type) &&
+      (state.region==='all' || p.region===state.region) &&
+      (state.origin==='all' || p.origin===state.origin) &&
+      (state.coll==='all' || (state.coll==='collected') === !!coll[p.id])
     );
-    list.sort((a,b) => {
-      let va, vb;
-      switch(state.sort) {
-        case 'name': va=a.name.toLowerCase(); vb=b.name.toLowerCase(); break;
-        case 'hp': va=a.hp; vb=b.hp; break;
-        case 'atk': va=a.atk; vb=b.atk; break;
-        case 'def': va=a.def; vb=b.def; break;
-        case 'spd': va=a.spd; vb=b.spd; break;
-        case 'total': va=a.hp+a.atk+a.def+a.spd; vb=b.hp+b.atk+b.def+b.spd; break;
-        default: va=a.id; vb=b.id;
-      }
-      if (va<vb) return -1*dir;
-      if (va>vb) return 1*dir;
-      return 0;
-    });
-    const totalP = Math.max(1, Math.ceil(list.length / ITEMS));
-    if (page > totalP) page = totalP;
-    const start = (page-1) * ITEMS;
-    const slice = list.slice(start, start+ITEMS);
+    const totalPages = Math.max(1, Math.ceil(filtered.length / ITEMS_PER_PAGE));
+    if (currentPage > totalPages) currentPage = totalPages;
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    const page = filtered.slice(start, start + ITEMS_PER_PAGE);
     let html = '';
-    for (let i = 0; i < slice.length; i++) {
-      const p = slice[i];
+    for (let i = 0; i < page.length; i++) {
+      const p = page[i];
       const c = !!coll[p.id];
-      const tot = p.hp+p.atk+p.def+p.spd;
-      html += '<div class="card" data-id="'+p.id+'"><div class="card-img-wrap"><img src="'+p.img+'" loading="lazy"><span class="card-flag">'+p.country+'</span></div><div class="card-body"><div class="card-name">'+(c?'✓ ':'')+p.name+'</div><div class="card-id">#'+p.id+'</div><div class="card-types">'+typesHtml(p.type,'card-type')+'</div><div class="card-stats">'+statBar(p.hp,180,'HP')+statBar(p.atk,180,'ATK')+statBar(p.def,180,'DEF')+statBar(p.spd,180,'SPD')+'</div></div></div>';
+      html += '<div class="card" data-id="'+p.id+'"><div class="card-img-wrap"><img src="'+p.img+'" loading="lazy"></div><div class="card-body"><div class="card-name">'+(c?'✓ ':'')+p.name+'</div><div class="card-id">#'+p.id+' - '+p.type+'</div></div></div>';
     }
     document.getElementById('gallery').innerHTML = html;
-    const collCount = Object.keys(coll).length;
-    document.getElementById('count').textContent = list.length+' resultados · '+collCount+'/'+all.length+' coleccionados';
+    document.getElementById('count').textContent = filtered.length+' resultados, ' + Object.keys(coll).length + '/' + all.length + ' coleccionados';
 
-    let ph = '<button '+(page<=1?'disabled':'')+' data-p="'+(page-1)+'">‹</button>';
-    const mx = 5; let s2 = Math.max(1, page-2); let e2 = Math.min(totalP, s2+mx-1);
-    if (e2-s2<mx-1) s2 = Math.max(1, e2-mx+1);
-    for (let i=s2;i<=e2;i++) ph += '<button class="'+(i===page?'active':'')+'" data-p="'+i+'">'+i+'</button>';
-    ph += '<button '+(page>=totalP?'disabled':'')+' data-p="'+(page+1)+'">›</button>';
-    document.getElementById('pagination').innerHTML = ph;
+    let pagHtml = '';
+    pagHtml += '<button '+(currentPage<=1?'disabled':'')+' data-p="'+(currentPage-1)+'">‹</button>';
+    const maxBtns = 5;
+    let s2 = Math.max(1, currentPage - 2);
+    let e2 = Math.min(totalPages, s2 + maxBtns - 1);
+    if (e2 - s2 < maxBtns - 1) s2 = Math.max(1, e2 - maxBtns + 1);
+    for (let i = s2; i <= e2; i++) {
+      pagHtml += '<button class="'+(i===currentPage?'active':'')+'" data-p="'+i+'">'+i+'</button>';
+    }
+    pagHtml += '<button '+(currentPage>=totalPages?'disabled':'')+' data-p="'+(currentPage+1)+'">›</button>';
+    document.getElementById('pagination').innerHTML = pagHtml;
     document.querySelectorAll('.pagination button').forEach(b => {
       if (b.disabled) return;
-      b.addEventListener('click', () => { page = parseInt(b.dataset.p); render(); window.scrollTo(0,0); });
+      b.addEventListener('click', () => { currentPage = parseInt(b.dataset.p); render(); window.scrollTo(0,0); });
     });
     document.querySelectorAll('.card').forEach(c => {
-      c.addEventListener('click', () => openModal(parseInt(c.dataset.id)));
+      c.addEventListener('click', () => {
+        toggleColl(parseInt(c.dataset.id));
+        render();
+      });
     });
+    s.textContent = 'p' + currentPage + '/' + totalPages + ' (' + page.length + ' cards)';
   }
 
-  function openModal(id) {
-    const p = all.find(x => x.id === id);
-    if (!p) return;
-    const tot = p.hp+p.atk+p.def+p.spd;
-    const isC = isColl(id);
-    document.getElementById('modalContent').innerHTML =
-      '<button class="modal-close" id="mClose">✕</button>'+
-      '<div class="modal-img"><img src="'+p.img+'"></div>'+
-      '<div class="modal-body">'+
-        '<div class="modal-name">'+p.name+'</div>'+
-        '<div class="modal-id">#'+String(p.id).padStart(3,'0')+' · '+p.region+' '+p.country+'</div>'+
-        '<div class="modal-types">'+typesHtml(p.type,'modal-type')+'</div>'+
-        '<div class="modal-stats">'+
-          statBar(p.hp,180,'HP','lg')+
-          statBar(p.atk,180,'ATK','lg')+
-          statBar(p.def,180,'DEF','lg')+
-          statBar(p.spd,180,'SPD','lg')+
-          '<div class="modal-stat modal-total"><span class="modal-stat-label">TOT</span><div class="modal-stat-bar"><div class="modal-stat-fill" style="width:'+Math.min(100,Math.round((tot/720)*100))+'%;background:linear-gradient(90deg,#4ade80,#22d3ee)"></div></div><span class="modal-stat-val" style="color:#22d3ee">'+tot+'</span></div>'+
-        '</div>'+
-        '<button class="modal-coll-btn'+(isC?' collected':'')+'" id="collBtn">'+(isC?'✓ Coleccionado (tap para quitar)':'Marcar como coleccionado')+'</button>'+
-      '</div>';
-    document.getElementById('modal').classList.add('open');
-    document.getElementById('mClose').addEventListener('click', closeModal);
-    document.getElementById('collBtn').addEventListener('click', () => {
-      toggleColl(id);
-      openModal(id);
-      render();
-    });
-  }
-  function closeModal() { document.getElementById('modal').classList.remove('open'); }
-  document.getElementById('modal').addEventListener('click', e => { if (e.target.id==='modal') closeModal(); });
-  document.addEventListener('keydown', e => { if (e.key==='Escape') closeModal(); });
-
-  document.getElementById('fType').addEventListener('change', e => { state.type = e.target.value; page=1; render(); });
-  document.getElementById('fCountry').addEventListener('change', e => { state.country = e.target.value; page=1; render(); });
-  document.getElementById('fSort').addEventListener('change', e => { state.sort = e.target.value; page=1; render(); });
-  document.getElementById('sortDir').addEventListener('click', () => { dir *= -1; document.getElementById('sortDir').textContent = dir===1?'↓':'↑'; render(); });
+  document.getElementById('fType').addEventListener('change', e => { state.type = e.target.value; currentPage = 1; render(); });
+  document.getElementById('fRegion').addEventListener('change', e => { state.region = e.target.value; currentPage = 1; render(); });
+  document.getElementById('fOrigin').addEventListener('change', e => { state.origin = e.target.value; currentPage = 1; render(); });
+  document.getElementById('fColl').addEventListener('change', e => { state.coll = e.target.value; currentPage = 1; render(); });
   document.getElementById('resetBtn').addEventListener('click', () => {
-    state = {type:'all', country:'all', sort:'id'};
-    document.getElementById('fType').value='all';
-    document.getElementById('fCountry').value='all';
-    document.getElementById('fSort').value='id';
-    dir = 1;
-    document.getElementById('sortDir').textContent='↓';
-    page = 1;
+    state = {type:'all', region:'all', origin:'all', coll:'all'};
+    document.getElementById('fType').value = 'all';
+    document.getElementById('fRegion').value = 'all';
+    document.getElementById('fOrigin').value = 'all';
+    document.getElementById('fColl').value = 'all';
+    currentPage = 1;
     render();
   });
 
   render();
 } catch(e) {
-  document.body.innerHTML = '<pre style="color:red;padding:20px">ERROR: '+e.message+'\n'+e.stack+'</pre>';
+  s.textContent = 'ERROR: ' + e.message;
 }
 </script>
 </body>
