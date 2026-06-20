@@ -59,7 +59,7 @@ export class PokemonFactory {
 
   createEntry(id, source, stickerIndex) {
     const known = KNOWN_POKEMON[id];
-    const image = `stickers/${source.prefix}_${String(stickerIndex).padStart(2, '0')}.png`;
+    const image = `stickers/${source.prefix}_${String(stickerIndex).padStart(2, '0')}.png?v=4`;
 
     if (known) {
       return new Pokemon({ id, originId: source.originId, image, ...known });
