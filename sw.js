@@ -1,4 +1,4 @@
-const CACHE = 'pokemon-v1';
+const CACHE = 'pokemon-v2';
 const STATIC = [
   '.',
   'index.html',
