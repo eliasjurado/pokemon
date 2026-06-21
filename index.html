@@ -89,6 +89,14 @@ s.textContent = 'loading...';
 fetch('pokemon.json').then(r => r.json()).then(all => {
   s.textContent = 'gen ' + all.length;
 
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem('pokemonState')||'{}'); } catch(e) {}
+  let state = saved.state || {type:'all', region:'all', country:'all'};
+  let page = saved.page || 1;
+  let pageDir = 0;
+  let totalP = 1;
+  function saveState() { localStorage.setItem('pokemonState', JSON.stringify({state, page})); }
+
   const sel = document.getElementById('fType');
   TYPES.forEach(t => { const o = document.createElement('option'); o.value=t; o.textContent='Tipo: '+t; sel.appendChild(o); });
   const selR = document.getElementById('fRegion');
@@ -102,15 +110,6 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
   function getColl() { try { return JSON.parse(localStorage.getItem('pokemonCollected')||'{}'); } catch(e) { return {}; } }
   function isColl(id) { return !!getColl()[id]; }
   function toggleColl(id) { const c = getColl(); if (c[id]) delete c[id]; else c[id]=1; localStorage.setItem('pokemonCollected', JSON.stringify(c)); }
-
-  let page = 1;
-  let pageDir = 0;
-  let saved = {};
-  try { saved = JSON.parse(localStorage.getItem('pokemonState')||'{}'); } catch(e) {}
-  let state = saved.state || {type:'all', region:'all', country:'all'};
-  page = saved.page || 1;
-  let totalP = 1;
-  function saveState() { localStorage.setItem('pokemonState', JSON.stringify({state, page})); }
 
   function render() {
     const coll = getColl();
