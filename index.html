@@ -77,7 +77,7 @@ const s = document.createElement('div');
 s.id = 'status';
 s.style.cssText = 'position:fixed;top:10px;right:10px;background:#000;color:#0f0;padding:4px 8px;font-family:monospace;font-size:11px;z-index:9999;border-radius:4px';
 document.body.appendChild(s);
-function adjustPad() { const h = document.querySelector('header').offsetHeight; document.body.style.paddingTop = (h + 20) + 'px'; }
+function adjustPad() { const h = document.querySelector('header').offsetHeight; document.body.style.paddingTop = (h + 17) + 'px'; }
 setTimeout(adjustPad, 50); window.addEventListener('resize', adjustPad);
 
 const TYPES = ['Normal','Fire','Water','Electric','Grass','Ice','Fighting','Poison','Ground','Flying','Psychic','Bug','Rock','Ghost','Dragon','Dark','Steel','Fairy'];
