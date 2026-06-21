@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Album de Stickers Pokemon</title>
+<link rel="manifest" href="manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#0a0a1a;--surface:#16162a;--surface2:#1e1e3a;--text:#f0f0f8;--text2:#9999bb;--border:rgba(255,255,255,.07);--accent:#6390f0;--success:#4ade80;--radius:14px;--radius-sm:8px}
@@ -58,6 +60,10 @@ h1{font-size:1.1rem;background:linear-gradient(135deg,#f7d02c,#ee8130,#6390f0);-
 <div class="grid" id="gallery"></div>
 <div class="pagination" id="pagination"></div>
 <div class="modal" id="modal"><div class="modal-content" id="modalContent"></div></div>
+<footer style="text-align:center;padding:24px 12px;font-size:.8rem;color:var(--text2);margin-top:20px;border-top:1px solid var(--border)">
+  Con amor ❤️ para mis hijos por <a href="https://eliasjurado.com" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">Elias Jurado</a>
+</footer>
+<button id="pwaBtn" style="display:none;position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;border:none;border-radius:24px;padding:10px 20px;font-size:.85rem;font-weight:600;z-index:300;box-shadow:0 4px 16px rgba(0,0,0,.5);cursor:pointer">📲 Instalar App</button>
 <script>
 const ITEMS = window.innerWidth < 768 ? 4 : 16;
 const s = document.createElement('div');
@@ -89,6 +95,7 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
 
   let page = 1;
   let state = {type:'all', region:'all', country:'all'};
+  let totalP = 1;
 
   function render() {
     const coll = getColl();
@@ -97,7 +104,7 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
       (state.region==='all' || p.region===state.region) &&
       (state.country==='all' || p.country===state.country)
     );
-    const totalP = Math.max(1, Math.ceil(filtered.length / ITEMS));
+    totalP = Math.max(1, Math.ceil(filtered.length / ITEMS));
     if (page > totalP) page = totalP;
     const start = (page-1) * ITEMS;
     const slice = filtered.slice(start, start+ITEMS);
@@ -164,6 +171,48 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
   });
 
   render();
+
+  // --- Swipe gesture for pagination ---
+  let x0 = 0;
+  document.addEventListener('touchstart', e => { x0 = e.changedTouches[0].screenX; }, {passive:true});
+  document.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].screenX - x0;
+    if (Math.abs(dx) > 60) {
+      if (dx < 0 && page < totalP) { page++; render(); }
+      else if (dx > 0 && page > 1) { page--; render(); }
+    }
+  }, {passive:true});
+
+  // --- ServiceWorker ---
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+  }
+
+  // --- PWA Install Button ---
+  let installPrompt = null;
+  const pwaBtn = document.getElementById('pwaBtn');
+  window.addEventListener('beforeinstallprompt', e => {
+    e.preventDefault();
+    installPrompt = e;
+    pwaBtn.style.display = 'block';
+    pwaBtn.textContent = '📲 Instalar App';
+  });
+  pwaBtn.addEventListener('click', async () => {
+    if (installPrompt) {
+      installPrompt.prompt();
+      const res = await installPrompt.userChoice;
+      if (res.outcome === 'accepted') pwaBtn.style.display = 'none';
+      installPrompt = null;
+    }
+  });
+  window.addEventListener('appinstalled', () => { pwaBtn.style.display = 'none'; });
+  if (navigator.serviceWorker) {
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      pwaBtn.style.display = 'block';
+      pwaBtn.textContent = '🔄 Actualizar';
+      pwaBtn.onclick = () => { window.location.reload(); };
+    });
+  }
 }).catch(e => { s.textContent = 'ERROR: ' + e.message; });
 </script>
 </body>

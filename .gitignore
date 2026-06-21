@@ -3,3 +3,10 @@ node_modules/
 *.log
 cloudflared.exe
 cloudflared-windows-amd64.exe
+
+# Temp / archive
+_temp_*
+_archive/
+
+# Origin processed cache at root (process.py recreates as needed)
+_origin_processed.json

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "pikachu",
-    "type": "Fire",
+    "type": "Electric",
     "origin": "pokemon-1",
     "region": "Kanto",
     "img": "stickers/pikachu_001.png",
@@ -16,7 +16,7 @@
   {
     "id": 2,
     "name": "charizard",
-    "type": "Water",
+    "type": "Fire",
     "origin": "pokemon-1",
     "region": "Kanto",
     "img": "stickers/charizard_002.png",
@@ -30,7 +30,7 @@
   {
     "id": 3,
     "name": "bulbasaur",
-    "type": "Electric",
+    "type": "Grass",
     "origin": "pokemon-1",
     "region": "Kanto",
     "img": "stickers/bulbasaur_003.png",
@@ -44,7 +44,7 @@
   {
     "id": 4,
     "name": "mewtwo",
-    "type": "Grass",
+    "type": "Psychic",
     "origin": "pokemon-1",
     "region": "Kanto",
     "img": "stickers/mewtwo_004.png",
@@ -58,7 +58,7 @@
   {
     "id": 5,
     "name": "scorbunny",
-    "type": "Ice",
+    "type": "Fire",
     "origin": "pokemon-1",
     "region": "Galar",
     "img": "stickers/scorbunny_005.png",
@@ -72,7 +72,7 @@
   {
     "id": 6,
     "name": "fuecoco",
-    "type": "Fighting",
+    "type": "Fire",
     "origin": "pokemon-1",
     "region": "Paldea",
     "img": "stickers/fuecoco_006.png",
@@ -86,7 +86,7 @@
   {
     "id": 7,
     "name": "lucario",
-    "type": "Poison",
+    "type": "Fighting",
     "origin": "pokemon-1",
     "region": "Sinnoh",
     "img": "stickers/lucario_007.png",
@@ -100,7 +100,7 @@
   {
     "id": 8,
     "name": "gardevoir",
-    "type": "Ground",
+    "type": "Psychic",
     "origin": "pokemon-1",
     "region": "Hoenn",
     "img": "stickers/gardevoir_008.png",
@@ -114,7 +114,7 @@
   {
     "id": 9,
     "name": "meowscarada",
-    "type": "Flying",
+    "type": "Grass",
     "origin": "pokemon-1",
     "region": "Paldea",
     "img": "stickers/meowscarada_009.png",
@@ -128,7 +128,7 @@
   {
     "id": 10,
     "name": "dragonite",
-    "type": "Psychic",
+    "type": "Dragon",
     "origin": "pokemon-1",
     "region": "Kanto",
     "img": "stickers/dragonite_010.png",
@@ -142,7 +142,7 @@
   {
     "id": 11,
     "name": "gyarados",
-    "type": "Bug",
+    "type": "Water",
     "origin": "pokemon-1",
     "region": "Kanto",
     "img": "stickers/gyarados_011.png",
@@ -156,7 +156,7 @@
   {
     "id": 12,
     "name": "empoleon",
-    "type": "Rock",
+    "type": "Water",
     "origin": "pokemon-1",
     "region": "Sinnoh",
     "img": "stickers/empoleon_012.png",
@@ -170,7 +170,7 @@
   {
     "id": 13,
     "name": "sirfetchd",
-    "type": "Ghost",
+    "type": "Fighting",
     "origin": "pokemon-1",
     "region": "Galar",
     "img": "stickers/sirfetchd_013.png",
@@ -184,7 +184,7 @@
   {
     "id": 14,
     "name": "gengar",
-    "type": "Dragon",
+    "type": "Ghost",
     "origin": "pokemon-1",
     "region": "Kanto",
     "img": "stickers/gengar_014.png",
@@ -198,7 +198,7 @@
   {
     "id": 15,
     "name": "lapras",
-    "type": "Dark",
+    "type": "Water",
     "origin": "pokemon-1",
     "region": "Kanto",
     "img": "stickers/lapras_015.png",
@@ -212,7 +212,7 @@
   {
     "id": 16,
     "name": "infernape",
-    "type": "Steel",
+    "type": "Fire",
     "origin": "pokemon-1",
     "region": "Sinnoh",
     "img": "stickers/infernape_016.png",
@@ -226,7 +226,7 @@
   {
     "id": 17,
     "name": "lycanroc",
-    "type": "Fairy",
+    "type": "Rock",
     "origin": "pokemon-1",
     "region": "Alola",
     "img": "stickers/lycanroc_017.png",
@@ -240,7 +240,7 @@
   {
     "id": 18,
     "name": "tsareena",
-    "type": "Normal",
+    "type": "Grass",
     "origin": "pokemon-1",
     "region": "Alola",
     "img": "stickers/tsareena_018.png",
@@ -254,7 +254,7 @@
   {
     "id": 19,
     "name": "haxorus",
-    "type": "Fire",
+    "type": "Dragon",
     "origin": "pokemon-1",
     "region": "Unova",
     "img": "stickers/haxorus_019.png",
@@ -268,7 +268,7 @@
   {
     "id": 20,
     "name": "toxtricity",
-    "type": "Water",
+    "type": "Electric",
     "origin": "pokemon-1",
     "region": "Galar",
     "img": "stickers/toxtricity_020.png",
@@ -282,7 +282,7 @@
   {
     "id": 21,
     "name": "aegislash",
-    "type": "Electric",
+    "type": "Steel",
     "origin": "pokemon-1",
     "region": "Kalos",
     "img": "stickers/aegislash_021.png",
@@ -296,7 +296,7 @@
   {
     "id": 22,
     "name": "gallade",
-    "type": "Grass",
+    "type": "Psychic",
     "origin": "pokemon-1",
     "region": "Sinnoh",
     "img": "stickers/gallade_022.png",
@@ -310,7 +310,7 @@
   {
     "id": 23,
     "name": "zeraora",
-    "type": "Ice",
+    "type": "Electric",
     "origin": "pokemon-1",
     "region": "Alola",
     "img": "stickers/zeraora_023.png",
@@ -324,7 +324,7 @@
   {
     "id": 24,
     "name": "luxray",
-    "type": "Fighting",
+    "type": "Electric",
     "origin": "pokemon-1",
     "region": "Sinnoh",
     "img": "stickers/luxray_024.png",
@@ -338,7 +338,7 @@
   {
     "id": 25,
     "name": "noivern",
-    "type": "Poison",
+    "type": "Flying",
     "origin": "pokemon-1",
     "region": "Kalos",
     "img": "stickers/noivern_025.png",
@@ -352,7 +352,7 @@
   {
     "id": 26,
     "name": "kommo-o",
-    "type": "Ground",
+    "type": "Dragon",
     "origin": "pokemon-1",
     "region": "Alola",
     "img": "stickers/kommo-o_026.png",
@@ -366,7 +366,7 @@
   {
     "id": 27,
     "name": "inteleon",
-    "type": "Flying",
+    "type": "Water",
     "origin": "pokemon-1",
     "region": "Galar",
     "img": "stickers/inteleon_027.png",
@@ -380,7 +380,7 @@
   {
     "id": 28,
     "name": "decidueye",
-    "type": "Psychic",
+    "type": "Grass",
     "origin": "pokemon-1",
     "region": "Alola",
     "img": "stickers/decidueye_028.png",
@@ -394,7 +394,7 @@
   {
     "id": 29,
     "name": "bisharp",
-    "type": "Bug",
+    "type": "Dark",
     "origin": "pokemon-1",
     "region": "Unova",
     "img": "stickers/bisharp_029.png",
@@ -408,7 +408,7 @@
   {
     "id": 30,
     "name": "hydreigon",
-    "type": "Rock",
+    "type": "Dark",
     "origin": "pokemon-1",
     "region": "Unova",
     "img": "stickers/hydreigon_030.png",
@@ -422,7 +422,7 @@
   {
     "id": 31,
     "name": "alcremie",
-    "type": "Ghost",
+    "type": "Fairy",
     "origin": "pokemon-1",
     "region": "Galar",
     "img": "stickers/alcremie_031.png",
@@ -436,7 +436,7 @@
   {
     "id": 32,
     "name": "toxapex",
-    "type": "Dragon",
+    "type": "Poison",
     "origin": "pokemon-1",
     "region": "Alola",
     "img": "stickers/toxapex_032.png",
@@ -450,7 +450,7 @@
   {
     "id": 33,
     "name": "eevee",
-    "type": "Steel",
+    "type": "Normal",
     "origin": "pokemon-2",
     "region": "Kanto",
     "img": "stickers/eevee_033.png",
@@ -464,7 +464,7 @@
   {
     "id": 34,
     "name": "treecko",
-    "type": "Fairy",
+    "type": "Grass",
     "origin": "pokemon-2",
     "region": "Hoenn",
     "img": "stickers/treecko_034.png",
@@ -478,7 +478,7 @@
   {
     "id": 35,
     "name": "milotic",
-    "type": "Normal",
+    "type": "Water",
     "origin": "pokemon-2",
     "region": "Hoenn",
     "img": "stickers/milotic_035.png",
@@ -492,7 +492,7 @@
   {
     "id": 36,
     "name": "aggron",
-    "type": "Fire",
+    "type": "Steel",
     "origin": "pokemon-2",
     "region": "Hoenn",
     "img": "stickers/aggron_036.png",
@@ -506,7 +506,7 @@
   {
     "id": 37,
     "name": "blaziken",
-    "type": "Water",
+    "type": "Fire",
     "origin": "pokemon-2",
     "region": "Hoenn",
     "img": "stickers/blaziken_037.png",
@@ -520,7 +520,7 @@
   {
     "id": 38,
     "name": "tyranitar",
-    "type": "Electric",
+    "type": "Rock",
     "origin": "pokemon-2",
     "region": "Johto",
     "img": "stickers/tyranitar_038.png",
@@ -534,7 +534,7 @@
   {
     "id": 39,
     "name": "Samurott",
-    "type": "Grass",
+    "type": "Water",
     "origin": "pokemon-2",
     "region": "Unova",
     "img": "stickers/samurott_039.png",
@@ -548,7 +548,7 @@
   {
     "id": 40,
     "name": "rillaboom",
-    "type": "Ice",
+    "type": "Grass",
     "origin": "pokemon-2",
     "region": "Galar",
     "img": "stickers/rillaboom_040.png",
@@ -562,7 +562,7 @@
   {
     "id": 41,
     "name": "talonflame",
-    "type": "Ground",
+    "type": "Fire",
     "origin": "pokemon-2",
     "region": "Kalos",
     "img": "stickers/talonflame_041.png",
@@ -576,7 +576,7 @@
   {
     "id": 42,
     "name": "zacian",
-    "type": "Flying",
+    "type": "Fairy",
     "origin": "pokemon-2",
     "region": "Galar",
     "img": "stickers/zacian_042.png",
@@ -590,7 +590,7 @@
   {
     "id": 43,
     "name": "garchomp",
-    "type": "Bug",
+    "type": "Dragon",
     "origin": "pokemon-2",
     "region": "Sinnoh",
     "img": "stickers/garchomp_043.png",
@@ -604,7 +604,7 @@
   {
     "id": 44,
     "name": "cinderace",
-    "type": "Ghost",
+    "type": "Fire",
     "origin": "pokemon-2",
     "region": "Galar",
     "img": "stickers/cinderace_044.png",
@@ -618,7 +618,7 @@
   {
     "id": 45,
     "name": "shaymin",
-    "type": "Dragon",
+    "type": "Grass",
     "origin": "pokemon-2",
     "region": "Sinnoh",
     "img": "stickers/shaymin_045.png",
@@ -632,7 +632,7 @@
   {
     "id": 46,
     "name": "volcarona",
-    "type": "Dark",
+    "type": "Bug",
     "origin": "pokemon-2",
     "region": "Unova",
     "img": "stickers/volcarona_046.png",
@@ -646,7 +646,7 @@
   {
     "id": 47,
     "name": "donphan",
-    "type": "Steel",
+    "type": "Ground",
     "origin": "pokemon-2",
     "region": "Johto",
     "img": "stickers/donphan_047.png",
@@ -660,7 +660,7 @@
   {
     "id": 48,
     "name": "aurorus",
-    "type": "Fairy",
+    "type": "Rock",
     "origin": "pokemon-2",
     "region": "Kalos",
     "img": "stickers/aurorus_048.png",
@@ -674,7 +674,7 @@
   {
     "id": 49,
     "name": "togekiss",
-    "type": "Fire",
+    "type": "Fairy",
     "origin": "pokemon-2",
     "region": "Sinnoh",
     "img": "stickers/togekiss_049.png",
@@ -688,7 +688,7 @@
   {
     "id": 50,
     "name": "excadrill",
-    "type": "Water",
+    "type": "Ground",
     "origin": "pokemon-2",
     "region": "Unova",
     "img": "stickers/excadrill_050.png",
@@ -702,7 +702,7 @@
   {
     "id": 51,
     "name": "dragapult",
-    "type": "Electric",
+    "type": "Dragon",
     "origin": "pokemon-2",
     "region": "Galar",
     "img": "stickers/dragapult_051.png",
@@ -716,7 +716,7 @@
   {
     "id": 52,
     "name": "kingdra",
-    "type": "Grass",
+    "type": "Water",
     "origin": "pokemon-2",
     "region": "Johto",
     "img": "stickers/kingdra_052.png",
@@ -730,7 +730,7 @@
   {
     "id": 53,
     "name": "salamence",
-    "type": "Ice",
+    "type": "Dragon",
     "origin": "pokemon-2",
     "region": "Hoenn",
     "img": "stickers/salamence_053.png",
@@ -744,7 +744,7 @@
   {
     "id": 54,
     "name": "mimikyu",
-    "type": "Ground",
+    "type": "Ghost",
     "origin": "pokemon-2",
     "region": "Alola",
     "img": "stickers/mimikyu_054.png",
@@ -758,7 +758,7 @@
   {
     "id": 55,
     "name": "bewear",
-    "type": "Flying",
+    "type": "Normal",
     "origin": "pokemon-2",
     "region": "Alola",
     "img": "stickers/bewear_055.png",
@@ -772,7 +772,7 @@
   {
     "id": 56,
     "name": "urshifu",
-    "type": "Psychic",
+    "type": "Fighting",
     "origin": "pokemon-2",
     "region": "Galar",
     "img": "stickers/urshifu_056.png",
@@ -786,7 +786,7 @@
   {
     "id": 57,
     "name": "squirtle",
-    "type": "Bug",
+    "type": "Water",
     "origin": "pokemon-3",
     "region": "Kanto",
     "img": "stickers/squirtle_057.png",
@@ -800,7 +800,7 @@
   {
     "id": 58,
     "name": "piplup",
-    "type": "Rock",
+    "type": "Water",
     "origin": "pokemon-3",
     "region": "Sinnoh",
     "img": "stickers/piplup_058.png",
@@ -814,7 +814,7 @@
   {
     "id": 59,
     "name": "turtwig",
-    "type": "Ghost",
+    "type": "Grass",
     "origin": "pokemon-3",
     "region": "Sinnoh",
     "img": "stickers/turtwig_059.png",
@@ -828,7 +828,7 @@
   {
     "id": 60,
     "name": "riolu",
-    "type": "Dragon",
+    "type": "Fighting",
     "origin": "pokemon-3",
     "region": "Sinnoh",
     "img": "stickers/riolu_060.png",
@@ -842,7 +842,7 @@
   {
     "id": 61,
     "name": "wooloo",
-    "type": "Dark",
+    "type": "Normal",
     "origin": "pokemon-3",
     "region": "Galar",
     "img": "stickers/wooloo_061.png",
@@ -856,7 +856,7 @@
   {
     "id": 62,
     "name": "absol",
-    "type": "Fairy",
+    "type": "Dark",
     "origin": "pokemon-3",
     "region": "Hoenn",
     "img": "stickers/absol_062.png",
@@ -870,7 +870,7 @@
   {
     "id": 63,
     "name": "sobble",
-    "type": "Normal",
+    "type": "Water",
     "origin": "pokemon-3",
     "region": "Galar",
     "img": "stickers/sobble_063.png",
@@ -884,7 +884,7 @@
   {
     "id": 64,
     "name": "rowlet",
-    "type": "Fire",
+    "type": "Grass",
     "origin": "pokemon-3",
     "region": "Alola",
     "img": "stickers/rowlet_064.png",
@@ -912,7 +912,7 @@
   {
     "id": 66,
     "name": "dreepy",
-    "type": "Electric",
+    "type": "Dragon",
     "origin": "pokemon-3",
     "region": "Galar",
     "img": "stickers/dreepy_066.png",
@@ -954,7 +954,7 @@
   {
     "id": 69,
     "name": "drizzile",
-    "type": "Fighting",
+    "type": "Water",
     "origin": "pokemon-3",
     "region": "Galar",
     "img": "stickers/drizzile_069.png",
@@ -968,7 +968,7 @@
   {
     "id": 70,
     "name": "froslass",
-    "type": "Poison",
+    "type": "Ice",
     "origin": "pokemon-3",
     "region": "Sinnoh",
     "img": "stickers/froslass_070.png",
@@ -982,7 +982,7 @@
   {
     "id": 71,
     "name": "raboot",
-    "type": "Flying",
+    "type": "Fire",
     "origin": "pokemon-3",
     "region": "Galar",
     "img": "stickers/raboot_071.png",
@@ -996,7 +996,7 @@
   {
     "id": 72,
     "name": "helioptile",
-    "type": "Psychic",
+    "type": "Electric",
     "origin": "pokemon-3",
     "region": "Kalos",
     "img": "stickers/helioptile_072.png",
@@ -1010,7 +1010,7 @@
   {
     "id": 73,
     "name": "skorupi",
-    "type": "Bug",
+    "type": "Poison",
     "origin": "pokemon-3",
     "region": "Sinnoh",
     "img": "stickers/skorupi_073.png",
@@ -1024,7 +1024,7 @@
   {
     "id": 74,
     "name": "litwick",
-    "type": "Rock",
+    "type": "Ghost",
     "origin": "pokemon-3",
     "region": "Unova",
     "img": "stickers/litwick_074.png",
@@ -1038,7 +1038,7 @@
   {
     "id": 75,
     "name": "falinks",
-    "type": "Ghost",
+    "type": "Fighting",
     "origin": "pokemon-3",
     "region": "Galar",
     "img": "stickers/falinks_075.png",
@@ -1052,7 +1052,7 @@
   {
     "id": 76,
     "name": "kleavor",
-    "type": "Dragon",
+    "type": "Bug",
     "origin": "pokemon-3",
     "region": "Galar",
     "img": "stickers/kleavor_076.png",
@@ -1066,7 +1066,7 @@
   {
     "id": 77,
     "name": "bellibolt",
-    "type": "Dark",
+    "type": "Electric",
     "origin": "pokemon-3",
     "region": "Paldea",
     "img": "stickers/bellibolt_077.png",
@@ -1080,7 +1080,7 @@
   {
     "id": 78,
     "name": "tropius",
-    "type": "Fairy",
+    "type": "Grass",
     "origin": "pokemon-3",
     "region": "Hoenn",
     "img": "stickers/tropius_078.png",
@@ -1094,7 +1094,7 @@
   {
     "id": 79,
     "name": "corviknight",
-    "type": "Normal",
+    "type": "Flying",
     "origin": "pokemon-3",
     "region": "Galar",
     "img": "stickers/corviknight_079.png",
@@ -1108,7 +1108,7 @@
   {
     "id": 80,
     "name": "zorua",
-    "type": "Fire",
+    "type": "Dark",
     "origin": "pokemon-3",
     "region": "Unova",
     "img": "stickers/zorua_080.png",
@@ -1122,7 +1122,7 @@
   {
     "id": 81,
     "name": "gossifleur",
-    "type": "Water",
+    "type": "Grass",
     "origin": "pokemon-3",
     "region": "Galar",
     "img": "stickers/gossifleur_081.png",
@@ -1136,7 +1136,7 @@
   {
     "id": 82,
     "name": "sandygast",
-    "type": "Electric",
+    "type": "Ghost",
     "origin": "pokemon-3",
     "region": "Alola",
     "img": "stickers/sandygast_082.png",
@@ -1150,7 +1150,7 @@
   {
     "id": 83,
     "name": "salazzle",
-    "type": "Grass",
+    "type": "Poison",
     "origin": "pokemon-3",
     "region": "Alola",
     "img": "stickers/salazzle_083.png",
@@ -1164,7 +1164,7 @@
   {
     "id": 84,
     "name": "greedent",
-    "type": "Ice",
+    "type": "Normal",
     "origin": "pokemon-3",
     "region": "Galar",
     "img": "stickers/greedent_084.png",
@@ -1178,7 +1178,7 @@
   {
     "id": 85,
     "name": "serperior",
-    "type": "Dark",
+    "type": "Grass",
     "origin": "pokemon-4",
     "region": "Unova",
     "img": "stickers/serperior_085.png",
@@ -1192,7 +1192,7 @@
   {
     "id": 86,
     "name": "grimmsnarl",
-    "type": "Fire",
+    "type": "Dark",
     "origin": "pokemon-4",
     "region": "Galar",
     "img": "stickers/grimmsnarl_086.png",
@@ -1206,7 +1206,7 @@
   {
     "id": 87,
     "name": "armarouge",
-    "type": "Grass",
+    "type": "Fire",
     "origin": "pokemon-4",
     "region": "Paldea",
     "img": "stickers/armarouge_087.png",
@@ -1220,7 +1220,7 @@
   {
     "id": 88,
     "name": "annihilape",
-    "type": "Ice",
+    "type": "Fighting",
     "origin": "pokemon-4",
     "region": "Paldea",
     "img": "stickers/annihilape_088.png",
@@ -1234,7 +1234,7 @@
   {
     "id": 89,
     "name": "kingambit",
-    "type": "Fighting",
+    "type": "Dark",
     "origin": "pokemon-4",
     "region": "Paldea",
     "img": "stickers/kingambit_089.png",
@@ -1248,7 +1248,7 @@
   {
     "id": 90,
     "name": "braviary",
-    "type": "Poison",
+    "type": "Normal",
     "origin": "pokemon-4",
     "region": "Unova",
     "img": "stickers/braviary_090.png",
@@ -1262,7 +1262,7 @@
   {
     "id": 91,
     "name": "baxcalibur",
-    "type": "Psychic",
+    "type": "Dragon",
     "origin": "pokemon-4",
     "region": "Paldea",
     "img": "stickers/baxcalibur_091.png",
@@ -1276,7 +1276,7 @@
   {
     "id": 92,
     "name": "heliolisk",
-    "type": "Bug",
+    "type": "Electric",
     "origin": "pokemon-4",
     "region": "Kalos",
     "img": "stickers/heliolisk_092.png",
@@ -1290,7 +1290,7 @@
   {
     "id": 93,
     "name": "zoroark",
-    "type": "Rock",
+    "type": "Dark",
     "origin": "pokemon-4",
     "region": "Unova",
     "img": "stickers/zoroark_093.png",
@@ -1304,7 +1304,7 @@
   {
     "id": 94,
     "name": "leafeon",
-    "type": "Ghost",
+    "type": "Grass",
     "origin": "pokemon-4",
     "region": "Sinnoh",
     "img": "stickers/leafeon_094.png",
@@ -1318,7 +1318,7 @@
   {
     "id": 95,
     "name": "ninetales",
-    "type": "Steel",
+    "type": "Fire",
     "origin": "pokemon-4",
     "region": "Kanto",
     "img": "stickers/ninetales_095.png",
@@ -1332,7 +1332,7 @@
   {
     "id": 96,
     "name": "flygon",
-    "type": "Fairy",
+    "type": "Ground",
     "origin": "pokemon-4",
     "region": "Hoenn",
     "img": "stickers/flygon_096.png",
@@ -1346,7 +1346,7 @@
   {
     "id": 97,
     "name": "vaporeon",
-    "type": "Electric",
+    "type": "Water",
     "origin": "sheet5",
     "region": "Kanto",
     "img": "stickers/vaporeon_097.png",
@@ -1360,7 +1360,7 @@
   {
     "id": 98,
     "name": "greninja",
-    "type": "Fighting",
+    "type": "Water",
     "origin": "sheet5",
     "region": "Kalos",
     "img": "stickers/greninja_098.png",
@@ -1374,7 +1374,7 @@
   {
     "id": 99,
     "name": "delphox",
-    "type": "Ground",
+    "type": "Fire",
     "origin": "sheet5",
     "region": "Kalos",
     "img": "stickers/delphox_099.png",
@@ -1388,7 +1388,7 @@
   {
     "id": 100,
     "name": "rapidash",
-    "type": "Psychic",
+    "type": "Fire",
     "origin": "sheet5",
     "region": "Kanto",
     "img": "stickers/rapidash_100.png",
@@ -1402,7 +1402,7 @@
   {
     "id": 101,
     "name": "feraligatr",
-    "type": "Rock",
+    "type": "Water",
     "origin": "sheet5",
     "region": "Johto",
     "img": "stickers/feraligatr_101.png",
@@ -1416,7 +1416,7 @@
   {
     "id": 102,
     "name": "roserade",
-    "type": "Dragon",
+    "type": "Grass",
     "origin": "sheet5",
     "region": "Sinnoh",
     "img": "stickers/roserade_102.png",
@@ -1430,7 +1430,7 @@
   {
     "id": 103,
     "name": "staraptor",
-    "type": "Steel",
+    "type": "Normal",
     "origin": "sheet5",
     "region": "Sinnoh",
     "img": "stickers/staraptor_103.png",
@@ -1444,7 +1444,7 @@
   {
     "id": 104,
     "name": "arcanine",
-    "type": "Fairy",
+    "type": "Fire",
     "origin": "sheet5",
     "region": "Kanto",
     "img": "stickers/arcanine_104.png",
@@ -1458,7 +1458,7 @@
   {
     "id": 105,
     "name": "toxicroak",
-    "type": "Normal",
+    "type": "Poison",
     "origin": "sheet5",
     "region": "Sinnoh",
     "img": "stickers/toxicroak_105.png",
@@ -1472,7 +1472,7 @@
   {
     "id": 106,
     "name": "hawlucha",
-    "type": "Water",
+    "type": "Fighting",
     "origin": "sheet5",
     "region": "Kalos",
     "img": "stickers/hawlucha_106.png",
@@ -1486,7 +1486,7 @@
   {
     "id": 107,
     "name": "magnezone",
-    "type": "Poison",
+    "type": "Electric",
     "origin": "sheet5",
     "region": "Sinnoh",
     "img": "stickers/magnezone_107.png",
@@ -1500,7 +1500,7 @@
   {
     "id": 108,
     "name": "weavile",
-    "type": "Ground",
+    "type": "Dark",
     "origin": "sheet5",
     "region": "Sinnoh",
     "img": "stickers/weavile_108.png",
@@ -1514,7 +1514,7 @@
   {
     "id": 109,
     "name": "darmanitan",
-    "type": "Ghost",
+    "type": "Fire",
     "origin": "sheet5",
     "region": "Unova",
     "img": "stickers/darmanitan_109.png",
@@ -1542,7 +1542,7 @@
   {
     "id": 111,
     "name": "crustle",
-    "type": "Steel",
+    "type": "Bug",
     "origin": "sheet5",
     "region": "Unova",
     "img": "stickers/crustle_111.png",
@@ -1556,7 +1556,7 @@
   {
     "id": 112,
     "name": "charmander",
-    "type": "Normal",
+    "type": "Fire",
     "origin": "sheet6",
     "region": "Kanto",
     "img": "stickers/charmander_112.png",
@@ -1570,7 +1570,7 @@
   {
     "id": 113,
     "name": "sceptile",
-    "type": "Fire",
+    "type": "Grass",
     "origin": "sheet6",
     "region": "Hoenn",
     "img": "stickers/sceptile_113.png",
@@ -1584,7 +1584,7 @@
   {
     "id": 114,
     "name": "ampharos",
-    "type": "Ice",
+    "type": "Electric",
     "origin": "sheet6",
     "region": "Johto",
     "img": "stickers/ampharos_114.png",
@@ -1598,7 +1598,7 @@
   {
     "id": 115,
     "name": "breloom",
-    "type": "Poison",
+    "type": "Grass",
     "origin": "sheet6",
     "region": "Hoenn",
     "img": "stickers/breloom_115.png",
@@ -1612,7 +1612,7 @@
   {
     "id": 116,
     "name": "tinkatuff",
-    "type": "Ground",
+    "type": "Fairy",
     "origin": "sheet6",
     "region": "Paldea",
     "img": "stickers/tinkatuff_116.png",
@@ -1626,7 +1626,7 @@
   {
     "id": 117,
     "name": "primarina",
-    "type": "Ghost",
+    "type": "Water",
     "origin": "sheet6",
     "region": "Alola",
     "img": "stickers/primarina_117.png",
@@ -1640,7 +1640,7 @@
   {
     "id": 118,
     "name": "lurantis",
-    "type": "Steel",
+    "type": "Grass",
     "origin": "sheet6",
     "region": "Alola",
     "img": "stickers/lurantis_118.png",
@@ -1654,7 +1654,7 @@
   {
     "id": 119,
     "name": "dragalge",
-    "type": "Fairy",
+    "type": "Poison",
     "origin": "sheet6",
     "region": "Kalos",
     "img": "stickers/dragalge_119.png",
@@ -1668,7 +1668,7 @@
   {
     "id": 120,
     "name": "gholdengo",
-    "type": "Water",
+    "type": "Steel",
     "origin": "sheet6",
     "region": "Paldea",
     "img": "stickers/gholdengo_120.png",
@@ -1696,7 +1696,7 @@
   {
     "id": 122,
     "name": "floatzel",
-    "type": "Fighting",
+    "type": "Water",
     "origin": "sheet6",
     "region": "Sinnoh",
     "img": "stickers/floatzel_122.png",
@@ -1710,7 +1710,7 @@
   {
     "id": 123,
     "name": "ursaluna",
-    "type": "Flying",
+    "type": "Ground",
     "origin": "sheet6",
     "region": "Galar",
     "img": "stickers/ursaluna_123.png",
@@ -1724,7 +1724,7 @@
   {
     "id": 124,
     "name": "ceruledge",
-    "type": "Psychic",
+    "type": "Fire",
     "origin": "sheet6",
     "region": "Paldea",
     "img": "stickers/ceruledge_124.png",
@@ -1738,7 +1738,7 @@
   {
     "id": 125,
     "name": "mawile",
-    "type": "Bug",
+    "type": "Steel",
     "origin": "sheet6",
     "region": "Hoenn",
     "img": "stickers/mawile_125.png",
@@ -1752,7 +1752,7 @@
   {
     "id": 126,
     "name": "tapukoko",
-    "type": "Rock",
+    "type": "Electric",
     "origin": "sheet6",
     "region": "Alola",
     "img": "stickers/tapukoko_126.png",
@@ -1766,7 +1766,7 @@
   {
     "id": 127,
     "name": "quagsire",
-    "type": "Ghost",
+    "type": "Water",
     "origin": "sheet7",
     "region": "Johto",
     "img": "stickers/quagsire_127.png",
@@ -1780,7 +1780,7 @@
   {
     "id": 128,
     "name": "bellossom",
-    "type": "Dragon",
+    "type": "Grass",
     "origin": "sheet7",
     "region": "Johto",
     "img": "stickers/bellossom_128.png",
@@ -1794,7 +1794,7 @@
   {
     "id": 129,
     "name": "hatterene",
-    "type": "Water",
+    "type": "Psychic",
     "origin": "sheet7",
     "region": "Galar",
     "img": "stickers/hatterene_129.png",
@@ -1808,7 +1808,7 @@
   {
     "id": 130,
     "name": "jellicent",
-    "type": "Grass",
+    "type": "Water",
     "origin": "sheet7",
     "region": "Unova",
     "img": "stickers/jellicent_130.png",
@@ -1822,7 +1822,7 @@
   {
     "id": 131,
     "name": "conkeldurr",
-    "type": "Ice",
+    "type": "Fighting",
     "origin": "sheet7",
     "region": "Unova",
     "img": "stickers/conkeldurr_131.png",
@@ -1836,7 +1836,7 @@
   {
     "id": 132,
     "name": "dusknoir",
-    "type": "Poison",
+    "type": "Ghost",
     "origin": "sheet7",
     "region": "Sinnoh",
     "img": "stickers/dusknoir_132.png",
@@ -1850,7 +1850,7 @@
   {
     "id": 133,
     "name": "vikavolt",
-    "type": "Fairy",
+    "type": "Bug",
     "origin": "sheet7",
     "region": "Alola",
     "img": "stickers/vikavolt_133.png",
@@ -1864,7 +1864,7 @@
   {
     "id": 134,
     "name": "komala",
-    "type": "Water",
+    "type": "Normal",
     "origin": "sheet7",
     "region": "Alola",
     "img": "stickers/komala_134.png",
@@ -1878,7 +1878,7 @@
   {
     "id": 135,
     "name": "reuniclus",
-    "type": "Ice",
+    "type": "Psychic",
     "origin": "sheet7",
     "region": "Unova",
     "img": "stickers/reuniclus_135.png",
@@ -1892,7 +1892,7 @@
   {
     "id": 136,
     "name": "pangoro",
-    "type": "Poison",
+    "type": "Fighting",
     "origin": "sheet7",
     "region": "Kalos",
     "img": "stickers/pangoro_136.png",
@@ -1902,5 +1902,930 @@
     "def": 85,
     "vel": 55,
     "countryCode": "CAN"
+  },
+  {
+    "id": 137,
+    "name": "Pokkemoy",
+    "img": "stickers/pokkemoy_137.png",
+    "ata": 88,
+    "def": 58,
+    "vel": 40,
+    "country": "🇵🇹",
+    "countryName": "Portugal",
+    "countryCode": "POR"
+  },
+  {
+    "id": 138,
+    "name": "Lilligant",
+    "img": "stickers/lilligant_138.png",
+    "ata": 88,
+    "def": 25,
+    "vel": 85,
+    "country": "🇧🇷",
+    "countryName": "Brazil",
+    "countryCode": "BRA",
+    "region": "Unova",
+    "type": "Grass"
+  },
+  {
+    "id": 139,
+    "name": "Groudon",
+    "img": "stickers/groudon_139.png",
+    "ata": 88,
+    "def": 80,
+    "vel": 45,
+    "country": "🇰🇷",
+    "countryName": "South Korea",
+    "countryCode": "KOR",
+    "region": "Hoenn",
+    "type": "Ground"
+  },
+  {
+    "id": 140,
+    "name": "Trevenant",
+    "img": "stickers/trevenant_140.png",
+    "ata": 88,
+    "def": 70,
+    "vel": 45,
+    "region": "Kalos",
+    "type": "Ghost"
+  },
+  {
+    "id": 141,
+    "name": "Mandibuzz",
+    "img": "stickers/mandibuzz_141.png",
+    "ata": 88,
+    "def": 70,
+    "vel": 105,
+    "country": "🇲🇽",
+    "countryName": "Mexico",
+    "countryCode": "MEX",
+    "region": "Unova",
+    "type": "Dark"
+  },
+  {
+    "id": 142,
+    "name": "Whimsicott",
+    "img": "stickers/whimsicott_142.png",
+    "ata": 88,
+    "def": 75,
+    "vel": 70,
+    "region": "Unova",
+    "type": "Grass"
+  },
+  {
+    "id": 143,
+    "name": "Krookodile",
+    "img": "stickers/krookodile_143.png",
+    "ata": 85,
+    "def": 70,
+    "vel": 65,
+    "country": "🇰🇷",
+    "countryName": "South Korea",
+    "countryCode": "KOR",
+    "region": "Unova",
+    "type": "Ground"
+  },
+  {
+    "id": 144,
+    "name": "Victreebel",
+    "img": "stickers/victreebel_144.png",
+    "ata": 88,
+    "def": 75,
+    "vel": 70,
+    "region": "Kanto",
+    "type": "Grass"
+  },
+  {
+    "id": 145,
+    "name": "Rokemoy",
+    "img": "stickers/rokemoy_145.png",
+    "ata": 88,
+    "def": 80,
+    "vel": 65,
+    "country": "🇲🇦",
+    "countryName": "Morocco",
+    "countryCode": "MAR"
+  },
+  {
+    "id": 146,
+    "name": "Macs",
+    "img": "stickers/macs_146.png",
+    "ata": 88,
+    "def": 81,
+    "vel": 75,
+    "country": "🇺🇦",
+    "countryName": "Ukraine",
+    "countryCode": "UKR"
+  },
+  {
+    "id": 147,
+    "name": "Forretress",
+    "img": "stickers/forretress_147.png",
+    "ata": 70,
+    "def": 120,
+    "vel": 40,
+    "region": "Johto",
+    "type": "Bug"
+  },
+  {
+    "id": 148,
+    "name": "Klang",
+    "img": "stickers/klang_148.png",
+    "ata": 65,
+    "def": 85,
+    "vel": 60,
+    "region": "Unova",
+    "type": "Steel"
+  },
+  {
+    "id": 149,
+    "name": "Honedge",
+    "img": "stickers/honedge_149.png",
+    "ata": 60,
+    "def": 90,
+    "vel": 45,
+    "country": "🇰🇷",
+    "countryName": "South Korea",
+    "countryCode": "KOR",
+    "region": "Kalos",
+    "type": "Steel"
+  },
+  {
+    "id": 150,
+    "name": "Palossand",
+    "img": "stickers/palossand_150.png",
+    "ata": 70,
+    "def": 110,
+    "vel": 35,
+    "country": "🇸🇦",
+    "countryName": "Saudi Arabia",
+    "countryCode": "KSA",
+    "region": "Alola",
+    "type": "Ghost"
+  },
+  {
+    "id": 151,
+    "name": "Krokorok",
+    "img": "stickers/krokorok_151.png",
+    "ata": 80,
+    "def": 70,
+    "vel": 35,
+    "country": "🇹🇳",
+    "countryName": "Tunisia",
+    "countryCode": "TUN",
+    "region": "Unova",
+    "type": "Ground"
+  },
+  {
+    "id": 152,
+    "name": "Avern",
+    "img": "stickers/avern_152.png",
+    "ata": 88,
+    "def": 85,
+    "vel": 90
+  },
+  {
+    "id": 153,
+    "name": "Stantler",
+    "img": "stickers/stantler_153.png",
+    "ata": 70,
+    "def": 55,
+    "vel": 60,
+    "country": "🇨🇦",
+    "countryName": "Canada",
+    "countryCode": "CAN",
+    "region": "Johto",
+    "type": "Normal"
+  },
+  {
+    "id": 154,
+    "name": "Aonetes",
+    "img": "stickers/aonetes_154.png",
+    "ata": 80,
+    "def": 60,
+    "vel": 75,
+    "country": "🇳🇿",
+    "countryName": "New Zealand",
+    "countryCode": "NZL"
+  },
+  {
+    "id": 155,
+    "name": "Duosion",
+    "img": "stickers/duosion_155.png",
+    "ata": 88,
+    "def": 85,
+    "vel": 70,
+    "country": "🇦🇷",
+    "countryName": "Argentina",
+    "countryCode": "ARG",
+    "region": "Unova",
+    "type": "Psychic"
+  },
+  {
+    "id": 156,
+    "name": "Cinccino",
+    "img": "stickers/cinccino_156.png",
+    "ata": 70,
+    "def": 60,
+    "vel": 95,
+    "region": "Unova",
+    "type": "Normal"
+  },
+  {
+    "id": 157,
+    "name": "Esrooenss",
+    "img": "stickers/esrooenss_157.png",
+    "ata": 75,
+    "def": 80,
+    "vel": 60,
+    "country": "🇪🇸",
+    "countryName": "Spain",
+    "countryCode": "ESP"
+  },
+  {
+    "id": 158,
+    "name": "Irash",
+    "img": "stickers/irash_158.png",
+    "ata": 88,
+    "def": 90,
+    "vel": 60,
+    "country": "🇩🇪",
+    "countryName": "Germany",
+    "countryCode": "GER"
+  },
+  {
+    "id": 159,
+    "name": "Galvantula",
+    "img": "stickers/galvantula_159.png",
+    "ata": 88,
+    "def": 90,
+    "vel": 60,
+    "region": "Unova",
+    "type": "Bug"
+  },
+  {
+    "id": 160,
+    "name": "Voirn",
+    "img": "stickers/voirn_160.png",
+    "ata": 88,
+    "def": 95,
+    "vel": 70,
+    "country": "🇲🇽",
+    "countryName": "Mexico",
+    "countryCode": "MEX"
+  },
+  {
+    "id": 161,
+    "name": "Suancnce",
+    "img": "stickers/suancnce_161.png",
+    "ata": 88,
+    "def": 100,
+    "vel": 70,
+    "country": "🇭🇷",
+    "countryName": "Croatia",
+    "countryCode": "CRO"
+  },
+  {
+    "id": 162,
+    "name": "Aeoba",
+    "img": "stickers/aeoba_162.png",
+    "ata": 80,
+    "def": 70,
+    "vel": 60,
+    "country": "🇵🇪",
+    "countryName": "Peru",
+    "countryCode": "PER"
+  },
+  {
+    "id": 163,
+    "name": "Typhlosion",
+    "img": "stickers/typhlosion_163.png",
+    "ata": 88,
+    "def": 90,
+    "vel": 60,
+    "country": "🇺🇸",
+    "countryName": "USA",
+    "countryCode": "USA",
+    "region": "Johto",
+    "type": "Fire"
+  },
+  {
+    "id": 164,
+    "name": "Hariyama",
+    "img": "stickers/hariyama_164.png",
+    "ata": 88,
+    "def": 90,
+    "vel": 60,
+    "country": "🇩🇰",
+    "countryName": "Denmark",
+    "countryCode": "DEN",
+    "region": "Hoenn",
+    "type": "Fighting"
+  },
+  {
+    "id": 165,
+    "name": "Bronzong",
+    "img": "stickers/bronzong_165.png",
+    "ata": 70,
+    "def": 110,
+    "vel": 25,
+    "region": "Sinnoh",
+    "type": "Steel"
+  },
+  {
+    "id": 166,
+    "name": "Eiscue",
+    "img": "stickers/eiscue_166.png",
+    "ata": 60,
+    "def": 80,
+    "vel": 30,
+    "country": "🇸🇪",
+    "countryName": "Sweden",
+    "countryCode": "SWE",
+    "region": "Galar",
+    "type": "Ice"
+  },
+  {
+    "id": 167,
+    "name": "Snover",
+    "img": "stickers/snover_167.png",
+    "ata": 75,
+    "def": 80,
+    "vel": 75,
+    "country": "🇺🇦",
+    "countryName": "Ukraine",
+    "countryCode": "UKR",
+    "region": "Sinnoh",
+    "type": "Grass"
+  },
+  {
+    "id": 168,
+    "name": "Majette",
+    "img": "stickers/majette_168.png",
+    "ata": 95,
+    "def": 65,
+    "vel": 30,
+    "country": "🇪🇨",
+    "countryName": "Ecuador",
+    "countryCode": "ECU"
+  },
+  {
+    "id": 169,
+    "name": "Crabominable",
+    "img": "stickers/crabominable_169.png",
+    "ata": 85,
+    "def": 70,
+    "vel": 50,
+    "region": "Alola",
+    "type": "Fighting"
+  },
+  {
+    "id": 170,
+    "name": "Passimian",
+    "img": "stickers/passimian_170.png",
+    "ata": 80,
+    "def": 60,
+    "vel": 70,
+    "country": "🇰🇷",
+    "countryName": "South Korea",
+    "countryCode": "KOR",
+    "region": "Alola",
+    "type": "Fighting"
+  },
+  {
+    "id": 171,
+    "name": "Drampa",
+    "img": "stickers/drampa_171.png",
+    "ata": 60,
+    "def": 70,
+    "vel": 45,
+    "country": "🇹🇳",
+    "countryName": "Tunisia",
+    "countryCode": "TUN",
+    "region": "Alola",
+    "type": "Normal"
+  },
+  {
+    "id": 172,
+    "name": "Copperajah",
+    "img": "stickers/copperajah_172.png",
+    "ata": 90,
+    "def": 90,
+    "vel": 40,
+    "country": "🇨🇦",
+    "countryName": "Canada",
+    "countryCode": "CAN",
+    "region": "Galar",
+    "type": "Steel"
+  },
+  {
+    "id": 173,
+    "name": "Pron",
+    "img": "stickers/pron_173.png",
+    "ata": 85,
+    "def": 90,
+    "vel": 60,
+    "country": "🇦🇷",
+    "countryName": "Argentina",
+    "countryCode": "ARG"
+  },
+  {
+    "id": 174,
+    "name": "Heracross",
+    "img": "stickers/heracross_174.png",
+    "ata": 88,
+    "def": 85,
+    "vel": 80,
+    "country": "🇧🇷",
+    "countryName": "Brazil",
+    "countryCode": "BRA",
+    "region": "Johto",
+    "type": "Bug"
+  },
+  {
+    "id": 175,
+    "name": "Stoutland",
+    "img": "stickers/stoutland_175.png",
+    "ata": 80,
+    "def": 70,
+    "vel": 60,
+    "region": "Unova",
+    "type": "Normal"
+  },
+  {
+    "id": 176,
+    "name": "Chandelure",
+    "img": "stickers/chandelure_176.png",
+    "ata": 95,
+    "def": 60,
+    "vel": 65,
+    "country": "🏴\u000e0067\u000e0062\u000e0065\u000e006e\u000e0067\u000e007f",
+    "countryName": "England",
+    "countryCode": "ENG",
+    "region": "Unova",
+    "type": "Ghost"
+  },
+  {
+    "id": 177,
+    "name": "Alakazam",
+    "img": "stickers/alakazam_177.png",
+    "ata": 88,
+    "def": 75,
+    "vel": 45,
+    "country": "🇩🇪",
+    "countryName": "Germany",
+    "countryCode": "GER",
+    "region": "Kanto",
+    "type": "Psychic"
+  },
+  {
+    "id": 178,
+    "name": "Ocrema",
+    "img": "stickers/ocrema_178.png",
+    "ata": 90,
+    "def": 60,
+    "vel": 110,
+    "country": "🇯🇵",
+    "countryName": "Japan",
+    "countryCode": "JPN"
+  },
+  {
+    "id": 179,
+    "name": "Ludicolo",
+    "img": "stickers/ludicolo_179.png",
+    "ata": 88,
+    "def": 75,
+    "vel": 70,
+    "country": "🇲🇽",
+    "countryName": "Mexico",
+    "countryCode": "MEX",
+    "region": "Hoenn",
+    "type": "Water"
+  },
+  {
+    "id": 180,
+    "name": "Lomro",
+    "img": "stickers/lomro_180.png",
+    "ata": 88,
+    "def": 70,
+    "vel": 75,
+    "country": "🇮🇹",
+    "countryName": "Italy",
+    "countryCode": "ITA"
+  },
+  {
+    "id": 181,
+    "name": "Skarmory",
+    "img": "stickers/skarmory_181.png",
+    "ata": 70,
+    "def": 120,
+    "vel": 40,
+    "country": "🇵🇾",
+    "countryName": "Paraguay",
+    "countryCode": "PAR",
+    "region": "Johto",
+    "type": "Steel"
+  },
+  {
+    "id": 182,
+    "name": "Haunter",
+    "img": "stickers/haunter_182.png",
+    "ata": 65,
+    "def": 45,
+    "vel": 85,
+    "country": "🇦🇪",
+    "countryName": "UAE",
+    "countryCode": "ARE",
+    "region": "Kanto",
+    "type": "Ghost"
+  },
+  {
+    "id": 183,
+    "name": "Bagon",
+    "img": "stickers/bagon_183.png",
+    "ata": 88,
+    "def": 90,
+    "vel": 75,
+    "region": "Hoenn",
+    "type": "Dragon"
+  },
+  {
+    "id": 184,
+    "name": "Houndoom",
+    "img": "stickers/houndoom_184.png",
+    "ata": 85,
+    "def": 50,
+    "vel": 90,
+    "country": "🇸🇳",
+    "countryName": "Senegal",
+    "countryCode": "SEN",
+    "region": "Johto",
+    "type": "Dark"
+  },
+  {
+    "id": 185,
+    "name": "Qwilfish",
+    "img": "stickers/qwilfish_185.png",
+    "ata": 70,
+    "def": 85,
+    "vel": 60,
+    "country": "🇧🇪",
+    "countryName": "Belgium",
+    "countryCode": "BEL",
+    "region": "Johto",
+    "type": "Water"
+  },
+  {
+    "id": 186,
+    "name": "Sawsbuck",
+    "img": "stickers/sawsbuck_186.png",
+    "ata": 75,
+    "def": 70,
+    "vel": 80,
+    "country": "🇸🇪",
+    "countryName": "Sweden",
+    "countryCode": "SWE",
+    "region": "Unova",
+    "type": "Normal"
+  },
+  {
+    "id": 187,
+    "name": "Avalugg",
+    "img": "stickers/avalugg_187.png",
+    "ata": 88,
+    "def": 80,
+    "vel": 130,
+    "country": "🇺🇦",
+    "countryName": "Ukraine",
+    "countryCode": "UKR",
+    "region": "Kalos",
+    "type": "Ice"
+  },
+  {
+    "id": 188,
+    "name": "Nsler",
+    "img": "stickers/nsler_188.png",
+    "ata": 85,
+    "def": 85,
+    "vel": 50,
+    "country": "🇰🇷",
+    "countryName": "South Korea",
+    "countryCode": "KOR"
+  },
+  {
+    "id": 189,
+    "name": "Scolipede",
+    "img": "stickers/scolipede_189.png",
+    "ata": 100,
+    "def": 60,
+    "vel": 55,
+    "country": "🇰🇷",
+    "countryName": "South Korea",
+    "countryCode": "KOR",
+    "region": "Unova",
+    "type": "Bug"
+  },
+  {
+    "id": 190,
+    "name": "Sandslash",
+    "img": "stickers/sandslash_190.png",
+    "ata": 75,
+    "def": 110,
+    "vel": 65,
+    "region": "Kanto",
+    "type": "Ground"
+  },
+  {
+    "id": 191,
+    "name": "Tentacruel",
+    "img": "stickers/tentacruel_191.png",
+    "ata": 70,
+    "def": 70,
+    "vel": 60,
+    "region": "Kanto",
+    "type": "Water"
+  },
+  {
+    "id": 192,
+    "name": "Bibarel",
+    "img": "stickers/bibarel_192.png",
+    "ata": 60,
+    "def": 80,
+    "vel": 60,
+    "country": "🇦🇪",
+    "countryName": "UAE",
+    "countryCode": "ARE",
+    "region": "Sinnoh",
+    "type": "Normal"
+  },
+  {
+    "id": 193,
+    "name": "Dodrio",
+    "img": "stickers/dodrio_193.png",
+    "ata": 80,
+    "def": 60,
+    "vel": 95,
+    "country": "🇰🇷",
+    "countryName": "South Korea",
+    "countryCode": "KOR",
+    "region": "Kanto",
+    "type": "Normal"
+  },
+  {
+    "id": 194,
+    "name": "Popplio",
+    "img": "stickers/popplio_194.png",
+    "ata": 70,
+    "def": 60,
+    "vel": 90,
+    "country": "🇨🇭",
+    "countryName": "Switzerland",
+    "countryCode": "SUI",
+    "region": "Alola",
+    "type": "Water"
+  },
+  {
+    "id": 195,
+    "name": "Suet",
+    "img": "stickers/suet_195.png",
+    "ata": 88,
+    "def": 75,
+    "vel": 60
+  },
+  {
+    "id": 196,
+    "name": "Yamper",
+    "img": "stickers/yamper_196.png",
+    "ata": 88,
+    "def": 85,
+    "vel": 88,
+    "country": "🇩🇪",
+    "countryName": "Germany",
+    "countryCode": "GER",
+    "region": "Galar",
+    "type": "Electric"
+  },
+  {
+    "id": 197,
+    "name": "Morpeko",
+    "img": "stickers/morpeko_197.png",
+    "ata": 80,
+    "def": 50,
+    "vel": 90,
+    "country": "🇯🇵",
+    "countryName": "Japan",
+    "countryCode": "JPN",
+    "region": "Galar",
+    "type": "Electric"
+  },
+  {
+    "id": 198,
+    "name": "Sinistea",
+    "img": "stickers/sinistea_198.png",
+    "ata": 45,
+    "def": 90,
+    "vel": 30,
+    "country": "🇰🇷",
+    "countryName": "South Korea",
+    "countryCode": "KOR",
+    "region": "Galar",
+    "type": "Ghost"
+  },
+  {
+    "id": 199,
+    "name": "Hatenna",
+    "img": "stickers/hatenna_199.png",
+    "ata": 60,
+    "def": 86,
+    "vel": 85,
+    "country": "🇭🇷",
+    "countryName": "Croatia",
+    "countryCode": "CRO",
+    "region": "Galar",
+    "type": "Psychic"
+  },
+  {
+    "id": 200,
+    "name": "Impidimp",
+    "img": "stickers/impidimp_200.png",
+    "ata": 70,
+    "def": 60,
+    "vel": 80,
+    "region": "Galar",
+    "type": "Dark"
+  },
+  {
+    "id": 201,
+    "name": "Clobbopus",
+    "img": "stickers/clobbopus_201.png",
+    "ata": 80,
+    "def": 70,
+    "vel": 60,
+    "country": "🏴\u000e0067\u000e0062\u000e0077\u000e006c\u000e0073\u000e007f",
+    "countryName": "Wales",
+    "countryCode": "WAL",
+    "region": "Galar",
+    "type": "Fighting"
+  },
+  {
+    "id": 202,
+    "name": "Cossara",
+    "img": "stickers/cossara_202.png",
+    "ata": 60,
+    "def": 70,
+    "vel": 60
+  },
+  {
+    "id": 203,
+    "name": "Rookidee",
+    "img": "stickers/rookidee_203.png",
+    "ata": 60,
+    "def": 60,
+    "vel": 80,
+    "region": "Galar",
+    "type": "Flying"
+  },
+  {
+    "id": 204,
+    "name": "Pincurchin",
+    "img": "stickers/pincurchin_204.png",
+    "ata": 60,
+    "def": 95,
+    "vel": 30,
+    "country": "🇲🇦",
+    "countryName": "Morocco",
+    "countryCode": "MAR",
+    "region": "Galar",
+    "type": "Electric"
+  },
+  {
+    "id": 205,
+    "name": "Asorn",
+    "img": "stickers/asorn_205.png",
+    "ata": 40,
+    "def": 80,
+    "vel": 30,
+    "country": "🇸🇳",
+    "countryName": "Senegal",
+    "countryCode": "SEN"
+  },
+  {
+    "id": 206,
+    "name": "Oorsouaeaan",
+    "img": "stickers/oorsouaeaan_206.png",
+    "ata": 60,
+    "def": 100,
+    "vel": 30,
+    "country": "🇩🇰",
+    "countryName": "Denmark",
+    "countryCode": "DEN"
+  },
+  {
+    "id": 207,
+    "name": "Sizzlipede",
+    "img": "stickers/sizzlipede_207.png",
+    "ata": 88,
+    "def": 65,
+    "vel": 70,
+    "country": "🇵🇱",
+    "countryName": "Poland",
+    "countryCode": "POL",
+    "region": "Galar",
+    "type": "Fire"
+  },
+  {
+    "id": 208,
+    "name": "Arrokuda",
+    "img": "stickers/arrokuda_208.png",
+    "ata": 80,
+    "def": 40,
+    "vel": 90,
+    "country": "🇧🇪",
+    "countryName": "Belgium",
+    "countryCode": "BEL",
+    "region": "Galar",
+    "type": "Water"
+  },
+  {
+    "id": 209,
+    "name": "Tacen",
+    "img": "stickers/tacen_209.png",
+    "ata": 88,
+    "def": 50,
+    "vel": 85
+  },
+  {
+    "id": 210,
+    "name": "Yungoos",
+    "img": "stickers/yungoos_210.png",
+    "ata": 70,
+    "def": 45,
+    "vel": 80,
+    "country": "🇵🇹",
+    "countryName": "Portugal",
+    "countryCode": "POR",
+    "region": "Alola",
+    "type": "Normal"
+  },
+  {
+    "id": 211,
+    "name": "Stufful",
+    "img": "stickers/stufful_211.png",
+    "ata": 80,
+    "def": 60,
+    "vel": 60,
+    "country": "🇦🇺",
+    "countryName": "Australia",
+    "countryCode": "AUS",
+    "region": "Alola",
+    "type": "Normal"
+  },
+  {
+    "id": 212,
+    "name": "Oricorio",
+    "img": "stickers/oricorio_212.png",
+    "ata": 75,
+    "def": 70,
+    "vel": 95,
+    "country": "🇸🇦",
+    "countryName": "Saudi Arabia",
+    "countryCode": "KSA",
+    "region": "Alola",
+    "type": "Fire"
+  },
+  {
+    "id": 213,
+    "name": "Wishiwashi",
+    "img": "stickers/wishiwashi_213.png",
+    "ata": 60,
+    "def": 60,
+    "vel": 80,
+    "country": "🇹🇳",
+    "countryName": "Tunisia",
+    "countryCode": "TUN",
+    "region": "Alola",
+    "type": "Water"
+  },
+  {
+    "id": 214,
+    "name": "Aie",
+    "img": "stickers/aie_214.png",
+    "ata": 60,
+    "def": 40,
+    "vel": 85,
+    "country": "🇶🇦",
+    "countryName": "Qatar",
+    "countryCode": "QAT"
+  },
+  {
+    "id": 215,
+    "name": "Turtonator",
+    "img": "stickers/turtonator_215.png",
+    "ata": 85,
+    "def": 120,
+    "vel": 30,
+    "region": "Alola",
+    "type": "Fire"
   }
 ]
