@@ -29,6 +29,7 @@
 ## opencode.json configuration
 - El archivo `opencode.json` con `context[]` permite cargar TASKS.md y LESSONS.md automáticamente en cada sesión.
 - Los archivos de contexto deben estar en `.opencode/` para mantener el workspace ordenado.
+- **Siempre que se retome una sesión, cargar TASKS.md, LESSONS.md, y revisar `.opencode/plans/` para planes pendientes.**
 
 ## Modal section titles
 - Usar la clase `.stats-title` existente para títulos de sección (`.stats-title` ya tiene el estilo: uppercase, bold, letras espaciadas, color text2).
