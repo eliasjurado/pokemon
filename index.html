@@ -2,15 +2,15 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Album del Mundial Pokémon</title>
 <link rel="manifest" href="manifest.json">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0a0a1a;--surface:#16162a;--surface2:#1e1e3a;--text:#f0f0f8;--text2:#9999bb;--border:rgba(255,255,255,.07);--accent:#6390f0;--success:#4ade80;--radius:14px;--radius-sm:8px;--header-h:120px;--footer-h:70px}
+:root{--bg:#0a0a1a;--surface:#16162a;--surface2:#1e1e3a;--text:#f0f0f8;--text2:#9999bb;--border:rgba(255,255,255,.07);--accent:#6390f0;--success:#4ade80;--radius:14px;--radius-sm:8px}
 html{font-size:16px}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding:150px 12px var(--footer-h)}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding:150px 12px 70px}
 header{position:fixed;top:0;left:0;right:0;background:var(--bg);padding:12px 12px 8px;z-index:100;border-bottom:1px solid var(--border)}
 h1{font-size:clamp(.82rem,4.5vw,1.1rem);white-space:nowrap;background:linear-gradient(135deg,#f7d02c,#ee8130,#6390f0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px}
 .bar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px;align-items:center}
@@ -18,14 +18,17 @@ h1{font-size:clamp(.82rem,4.5vw,1.1rem);white-space:nowrap;background:linear-gra
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
 @keyframes slideIn{from{transform:translateX(30px);opacity:0}to{transform:translateX(0);opacity:1}}
 @keyframes slideInRev{from{transform:translateX(-30px);opacity:0}to{transform:translateX(0);opacity:1}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
 #gallery.slide-next>*{animation:slideIn .25s ease-out}
 #gallery.slide-prev>*{animation:slideInRev .25s ease-out}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;cursor:pointer}
-.card:hover{border-color:var(--accent)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;cursor:pointer;transition:transform .2s,box-shadow .2s;-webkit-tap-highlight-color:transparent}
+.card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.4);border-color:var(--accent)}
+.card:active{transform:scale(.96);border-color:var(--accent)}
 .card-img-wrap{aspect-ratio:1;background:var(--surface2);display:flex;align-items:center;justify-content:center;padding:6px;position:relative}
-.card-img-wrap img{width:100%;height:100%;object-fit:contain}
+.card-img-wrap img{width:100%;height:100%;object-fit:contain;transition:transform .3s;image-rendering:pixelated}
+@media(hover:hover){.card:hover .card-img-wrap img{transform:scale(1.08) translateY(-2px);animation:float 2s ease-in-out infinite}}
 .card-flag{position:absolute;top:4px;right:4px;font-size:.9rem;background:rgba(0,0,0,.5);border-radius:4px;padding:1px 3px}
-
 .card-body{padding:6px 8px}
 .card-name{font-size:.8rem;font-weight:600;margin-bottom:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:uppercase}
 .card-id{font-size:.65rem;color:var(--text2)}
@@ -35,22 +38,57 @@ h1{font-size:clamp(.82rem,4.5vw,1.1rem);white-space:nowrap;background:linear-gra
 .pagination button:disabled{opacity:.3}
 #status{position:fixed;top:10px;right:10px;background:#000;color:#0f0;padding:4px 8px;font-family:monospace;font-size:11px;z-index:9999;border-radius:4px}
 #count{font-size:.75rem;color:var(--text2);margin-left:auto}
+
+/* Modal */
 .modal{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.7);backdrop-filter:blur(6px);align-items:flex-end;justify-content:center}
 .modal.open{display:flex}
-.modal-content{background:var(--surface);border-radius:20px 20px 0 0;width:100%;max-height:90vh;overflow-y:auto}
-.modal-img{background:var(--surface2);padding:20px;display:flex;align-items:center;justify-content:center}
-.modal-img img{max-width:100%;max-height:40vh;object-fit:contain;border-radius:8px}
+.modal-content{background:var(--surface);border-radius:20px 20px 0 0;width:100%;max-height:90vh;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.modal-img{min-height:35vh;display:flex;align-items:center;justify-content:center;background:var(--surface2);padding:20px;position:relative}
+.modal-img img{max-width:100%;max-height:35vh;width:auto;height:auto;object-fit:contain;border-radius:8px;transition:opacity .2s;image-rendering:pixelated;cursor:pointer}
 .modal-body{padding:16px 20px 24px;position:relative}
-.modal-close{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.4);border:none;color:#fff;font-size:1.2rem;width:32px;height:32px;border-radius:50%;cursor:pointer}
-.modal-name{font-size:1.3rem;font-weight:700;margin-bottom:4px;text-transform:uppercase}
-.modal-id{font-size:.85rem;color:var(--text2);margin-bottom:10px}
-.stats-row{display:flex;flex-direction:column;gap:8px;margin-top:12px}
-.stat{display:flex;align-items:center;gap:8px}
-.stat-label{font-size:.75rem;font-weight:700;width:32px;color:var(--text2);text-align:right}
-.stat-bar{flex:1;height:10px;background:var(--surface2);border-radius:5px;overflow:hidden}
-.stat-fill{height:100%;border-radius:5px;background:linear-gradient(90deg, #f44336, #ff9800, #4caf50)}
-.stat-val{font-size:.8rem;font-weight:700;width:28px;color:var(--text)}
-@media(min-width:768px){.modal{align-items:center;padding:16px}.modal-content{max-width:420px;border-radius:14px}}
+.modal-close{position:sticky;top:12px;float:right;margin-right:0;background:rgba(0,0,0,.5);border:none;color:#fff;font-size:1.2rem;width:32px;height:32px;border-radius:50%;cursor:pointer;z-index:10}
+.modal-name{font-size:1.3rem;font-weight:700;margin-bottom:2px;text-transform:uppercase}
+.modal-gus{font-size:.82rem;color:var(--text2);margin-bottom:4px}
+.modal-id{font-size:.75rem;color:var(--text2);margin-bottom:4px}
+
+/* Toggle buttons */
+.img-controls{display:flex;flex-wrap:wrap;justify-content:center;gap:5px;position:absolute;bottom:10px;left:8px;right:8px;z-index:5}
+.img-controls button{background:rgba(0,0,0,.55);color:#fff;border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:4px 10px;font-size:.68rem;cursor:pointer;white-space:nowrap;backdrop-filter:blur(4px);-webkit-tap-highlight-color:transparent}
+.img-controls button:active{background:rgba(99,144,240,.7)}
+.img-controls button.active{background:var(--accent);border-color:var(--accent)}
+.img-controls button:disabled{opacity:.3;cursor:default}
+
+/* Info pills */
+.info-pills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.pill{background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:.72rem;color:var(--text2)}
+.pill strong{color:var(--text);margin-right:3px}
+
+/* Flavor text */
+.flavor{font-size:.82rem;color:var(--text2);line-height:1.5;margin-bottom:12px;font-style:italic;padding:8px 12px;background:var(--surface2);border-radius:var(--radius-sm);border-left:3px solid var(--accent)}
+
+/* Stats */
+.stats-title{font-size:.75rem;color:var(--text2);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.stats-row{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin-bottom:12px}
+.stat{display:flex;flex-direction:column;align-items:center;gap:1px;background:var(--surface2);border-radius:var(--radius-sm);padding:4px 2px}
+.stat-label{font-size:.62rem;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.3px}
+.stat-val{font-size:.9rem;font-weight:800;color:var(--text);line-height:1}
+
+/* Evolution chain */
+.evo-section{margin-bottom:12px}
+.evo-title{font-size:.75rem;color:var(--text2);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.evo-chain{display:flex;flex-wrap:wrap;align-items:center;gap:4px}
+.evo-link{display:flex;align-items:center;gap:4px}
+.evo-item{text-align:center;cursor:pointer;padding:4px;border-radius:var(--radius-sm);border:2px solid transparent;transition:border-color .15s}
+.evo-item:hover{border-color:var(--accent)}
+.evo-item.active{border-color:var(--accent);background:var(--surface2)}
+.evo-item img{width:48px;height:48px;object-fit:contain;display:block;image-rendering:pixelated}
+.evo-item span{font-size:.6rem;color:var(--text2);display:block;max-width:60px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.evo-arrow{color:var(--text2);font-size:1rem;opacity:.5;flex-shrink:0}
+
+/* Collection toggle */
+.coll-btn{display:block;width:100%;padding:12px;margin-top:10px;font-size:.9rem;font-weight:600;border:none;border-radius:var(--radius-sm);cursor:pointer;transition:all .15s}
+
+@media(min-width:768px){.modal{align-items:center;padding:16px}.modal-content{max-width:440px;border-radius:14px}}
 </style>
 </head>
 <body>
@@ -77,12 +115,16 @@ const s = document.createElement('div');
 s.id = 'status';
 s.style.cssText = 'position:fixed;top:10px;right:10px;background:#000;color:#0f0;padding:4px 8px;font-family:monospace;font-size:11px;z-index:9999;border-radius:4px';
 document.body.appendChild(s);
-function adjustPad() { const h = document.querySelector('header').offsetHeight; document.body.style.paddingTop = (h + 17) + 'px'; }
-setTimeout(adjustPad, 50); window.addEventListener('resize', adjustPad);
+function adjustPad(){var h=document.querySelector('header').offsetHeight;document.body.style.paddingTop=(h+17)+'px'}
+setTimeout(adjustPad,50);window.addEventListener('resize',adjustPad);
 
 const TYPES = ['Normal','Fire','Water','Electric','Grass','Ice','Fighting','Poison','Ground','Flying','Psychic','Bug','Rock','Ghost','Dragon','Dark','Steel','Fairy'];
 const REGIONS = ['Kanto','Johto','Hoenn','Sinnoh','Unova','Kalos','Alola','Galar','Paldea'];
 let ALL_COUNTRIES = [];
+
+// Modal state
+  let modalPokemon = null;
+  let viewMode = 'sticker'; // 'sticker' | 'official' | 'shiny'
 
 s.textContent = 'loading...';
 
@@ -110,6 +152,10 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
   function getColl() { try { return JSON.parse(localStorage.getItem('pokemonCollected')||'{}'); } catch(e) { return {}; } }
   function isColl(id) { return !!getColl()[id]; }
   function toggleColl(id) { const c = getColl(); if (c[id]) delete c[id]; else c[id]=1; localStorage.setItem('pokemonCollected', JSON.stringify(c)); }
+
+  function spriteUrl(id,size) { return 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon'+(size==='shiny'?'/shiny':'')+'/'+id+'.png'; }
+  function artworkUrl(id,shiny) { return 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork'+(shiny?'/shiny':'')+'/'+id+'.png'; }
+  function cryUrl(id) { return 'https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/'+id+'.ogg'; }
 
   function render() {
     const coll = getColl();
@@ -153,26 +199,192 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
   }
 
   function openModal(id) {
-    const p = all.find(x => x.id === id);
-    if (!p) return;
+    modalPokemon = all.find(x => x.id === id);
+    if (!modalPokemon) return;
+    viewMode = 'sticker';
+    renderModal();
+    document.getElementById('modal').classList.add('open');
+  }
+
+  function renderModal() {
+    const p = modalPokemon;
+    const d = p.pokeapi_details;
+    const c = isColl(p.id);
+
+    let imgSrc = p.img;
+    if (viewMode === 'official' && d && d.id) {
+      imgSrc = artworkUrl(d.id, false);
+    } else if (viewMode === 'shiny' && d && d.id) {
+      imgSrc = artworkUrl(d.id, true);
+    }
+
+    // Evolution chain HTML
+    let evoHtml = '';
+    if (d && d.evolution_chain) {
+      const chain = d.evolution_chain; // [[[name,id],...], [[name,id],...], ...]
+      let currentLevel = -1;
+      for (let level = 0; level < chain.length; level++) {
+        for (let j = 0; j < chain[level].length; j++) {
+          if (chain[level][j][1] === d.id) currentLevel = level;
+        }
+      }
+
+      const items = [];
+      for (let level = 0; level < chain.length; level++) {
+        const levelPokes = chain[level];
+        for (let j = 0; j < levelPokes.length; j++) {
+          const [name, pid] = levelPokes[j];
+          const isActive = (pid === d.id);
+          const pokeData = all.find(x => x.pokeapi_details && x.pokeapi_details.id === pid);
+          const stickerImg = pokeData ? pokeData.img : null;
+          items.push({name, pid, isActive, level, stickerImg});
+        }
+      }
+
+      // Group by level, render with arrows between levels
+      let currentLevelItems = [];
+      for (let i = 0; i < items.length; i++) {
+        if (i > 0 && items[i].level !== items[i-1].level) {
+          if (currentLevelItems.length > 0) {
+            evoHtml += renderEvoGroup(currentLevelItems);
+            evoHtml += '<span class="evo-arrow">→</span>';
+          }
+          currentLevelItems = [];
+        }
+        currentLevelItems.push(items[i]);
+      }
+      if (currentLevelItems.length > 0) {
+        evoHtml += renderEvoGroup(currentLevelItems);
+      }
+
+      if (evoHtml) {
+        evoHtml = '<div class="evo-section"><div class="evo-title">Cadena Evolutiva</div><div class="evo-chain">' + evoHtml + '</div></div>';
+      }
+    }
+
+    // Stats
+    let statsHtml = '';
+    const statLabels = {'hp':'HP','attack':'ATA','defense':'DEF','special-attack':'SP.ATA','special-defense':'SP.DEF','speed':'VEL'};
+    const statOrder = ['hp','attack','defense','special-attack','special-defense','speed'];
+    if (d && d.stats_full) {
+      statsHtml = '<div class="stats-title">Estadísticas Base</div><div class="stats-row">';
+      for (let si = 0; si < statOrder.length; si++) {
+        const key = statOrder[si];
+        const val = d.stats_full[key] || 0;
+        statsHtml += '<div class="stat"><span class="stat-label">'+statLabels[key]+'</span><span class="stat-val">'+val+'</span></div>';
+      }
+      statsHtml += '</div>';
+    }
+
+    // Info pills
+    const pills = [];
+    if (d && d.genus) pills.push(d.genus);
+    if (d && d.height_m) pills.push(d.height_m+' m');
+    if (d && d.weight_kg) pills.push(d.weight_kg+' kg');
+    if (d && d.abilities) pills.push(d.abilities.map(a => a.replace('-',' ')).join(', '));
+
+    const pillHtml = pills.length ? '<div class="info-pills">'+pills.map(pill => '<span class="pill">'+pill+'</span>').join('')+'</div>' : '';
+
+    // Flavor text
+    const flavorHtml = (d && d.flavor) ? '<div class="flavor">"'+d.flavor+'"</div>' : '';
+
+    // Shiny/official controls
+    const hasOfficial = d && d.id;
+    const hasId = d && d.id;
+    const controlsHtml = hasId ? '<div class="img-controls">' +
+      '<button id="ctrlSticker" class="'+(viewMode==='sticker'?'active':'')+'">✨ Card</button>' +
+      '<button id="ctrlOfficial" class="'+(viewMode==='official'?'active':'')+'">🎨 Oficial</button>' +
+      '<button id="ctrlShiny" class="'+(viewMode==='shiny'?'active':'')+'">⭐ Shiny</button>' +
+      '<button id="ctrlCry">🔊 Grito</button>' +
+    '</div>' : '';
+
     document.getElementById('modalContent').innerHTML =
       '<button class="modal-close" id="mClose">✕</button>'+
-      '<div class="modal-img"><img src="'+p.img+'"></div>'+
+      '<div class="modal-img">'+
+        '<img id="modalImg" src="'+imgSrc+'" onerror="this.src=\''+p.img+'\'">'+
+        controlsHtml+
+      '</div>'+
       '<div class="modal-body">'+
         '<div class="modal-name">'+p.name+'</div>'+
-        '<div class="modal-id">#'+String(p.id).padStart(3,'0')+' · '+p.region+'</div>'+
-        '<div style="font-size:.85rem;color:var(--text2);margin-bottom:8px">Tipo: '+p.type+'</div>'+
-        '<div style="font-size:.85rem;color:var(--text2);margin-bottom:8px">'+p.country+' '+p.countryCode+' · '+p.countryName+'</div>'+
-        '<div class="stats-row">'+
-          '<div class="stat"><span class="stat-label">ATA</span><div class="stat-bar"><div class="stat-fill" style="width:'+p.ata/150*100+'%"></div></div><span class="stat-val">'+p.ata+'</span></div>'+
-          '<div class="stat"><span class="stat-label">DEF</span><div class="stat-bar"><div class="stat-fill" style="width:'+p.def/150*100+'%"></div></div><span class="stat-val">'+p.def+'</span></div>'+
-          '<div class="stat"><span class="stat-label">VEL</span><div class="stat-bar"><div class="stat-fill" style="width:'+p.vel/150*100+'%"></div></div><span class="stat-val">'+p.vel+'</span></div>'+
-        '</div>'+
+        (d && d.genus ? '<div class="modal-gus">'+d.genus+'</div>' : '')+
+        '<div class="modal-id">#'+String(p.id).padStart(3,'0')+' · '+p.region+' · '+p.country+' '+p.countryCode+' · '+p.countryName+'</div>'+
+        pillHtml+
+        flavorHtml+
+        statsHtml+
+        evoHtml+
+        '<button class="coll-btn" id="collBtn" style="background:'+(c?'var(--success)':'var(--surface2)')+';color:'+(c?'#000':'var(--text)')+'">'+(c?'✓ Coleccionado':'Marcar como coleccionado')+'</button>'+
       '</div>';
-    document.getElementById('modal').classList.add('open');
+
+    // Carousel: swipe on image changes view mode
+    const MODES = ['sticker', 'official', 'shiny'];
+    const imgWrap = document.querySelector('.modal-img');
+    let touchX = 0, touchY = 0;
+    if (imgWrap) {
+      imgWrap.addEventListener('touchstart', e => { touchX = e.changedTouches[0].screenX; touchY = e.changedTouches[0].screenY; }, {passive:true});
+      imgWrap.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].screenX - touchX;
+        const dy = e.changedTouches[0].screenY - touchY;
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+          const idx = MODES.indexOf(viewMode);
+          if (dx < 0) viewMode = MODES[(idx + 1) % MODES.length];
+          else viewMode = MODES[(idx - 1 + MODES.length) % MODES.length];
+          renderModal();
+        }
+      }, {passive:true});
+    }
+    // Tap on image plays cry
+    const imgEl = document.getElementById('modalImg');
+    if (imgEl && d && d.id) {
+      imgEl.addEventListener('click', () => {
+        const audio = new Audio(cryUrl(d.id));
+        audio.volume = 0.5;
+        audio.play().catch(() => {});
+      });
+    }
+
+    // Bind controls
     document.getElementById('mClose').addEventListener('click', closeModal);
+    document.getElementById('collBtn').addEventListener('click', () => { toggleColl(p.id); renderModal(); });
+
+    if (document.getElementById('ctrlSticker')) {
+      document.getElementById('ctrlSticker').addEventListener('click', () => { viewMode = 'sticker'; renderModal(); });
+    }
+    if (document.getElementById('ctrlOfficial')) {
+      document.getElementById('ctrlOfficial').addEventListener('click', () => { viewMode = 'official'; renderModal(); });
+    }
+    if (document.getElementById('ctrlShiny')) {
+      document.getElementById('ctrlShiny').addEventListener('click', () => { viewMode = 'shiny'; renderModal(); });
+    }
+    if (document.getElementById('ctrlCry') && d && d.id) {
+      document.getElementById('ctrlCry').addEventListener('click', () => {
+        const audio = new Audio(cryUrl(d.id));
+        audio.volume = 0.5;
+        audio.play().catch(() => {});
+      });
+    }
+
+    // Bind evolution clicks
+    document.querySelectorAll('.evo-item').forEach(el => {
+      el.addEventListener('click', () => {
+        const eid = parseInt(el.dataset.pid);
+        if (eid && eid !== p.id) {
+          closeModal();
+          openModal(eid);
+        }
+      });
+    });
   }
-  function closeModal() { document.getElementById('modal').classList.remove('open'); }
+
+  function renderEvoGroup(items) {
+    if (items.length === 0) return '';
+    return items.map(item => {
+      const pokeData = all.find(x => x.pokeapi_details && x.pokeapi_details.id === item.pid);
+      const img = pokeData && pokeData.img ? pokeData.img : spriteUrl(item.pid);
+      return '<div class="evo-item'+(item.isActive?' active':'')+'" data-pid="'+item.pid+'"><img src="'+img+'" onerror="this.src=\''+spriteUrl(item.pid)+'\'"><span>'+item.name+'</span></div>';
+    }).join('');
+  }
+
+  function closeModal() { document.getElementById('modal').classList.remove('open'); modalPokemon = null; }
   document.getElementById('modal').addEventListener('click', e => { if (e.target.id==='modal') closeModal(); });
   document.addEventListener('keydown', e => { if (e.key==='Escape') closeModal(); });
 
@@ -195,7 +407,7 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
   document.addEventListener('touchstart', e => { x0 = e.changedTouches[0].screenX; }, {passive:true});
   document.addEventListener('touchend', e => {
     const dx = e.changedTouches[0].screenX - x0;
-    if (Math.abs(dx) > 60) {
+    if (Math.abs(dx) > 60 && !document.getElementById('modal').classList.contains('open')) {
       if (dx < 0 && page < totalP) { pageDir = 1; page++; render(); }
       else if (dx > 0 && page > 1) { pageDir = -1; page--; render(); }
     }
