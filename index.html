@@ -157,6 +157,13 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
   function spriteUrl(id,size) { return 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon'+(size==='shiny'?'/shiny':'')+'/'+id+'.png'; }
   function artworkUrl(id,shiny) { return 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork'+(shiny?'/shiny':'')+'/'+id+'.png'; }
   function cryUrl(id) { return 'https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/'+id+'.ogg'; }
+  function placeholderDataUrl(collected) {
+    const bg = collected ? '#0d2818' : '#16162a';
+    const fg = collected ? '#4ade80' : '#3a3a5c';
+    const icon = collected ? '&#x2713;' : '?';
+    const icon2 = collected ? '&#x2605;' : '&#x2694;';
+    return 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="'+bg+'" rx="12"/><circle cx="100" cy="78" r="48" fill="none" stroke="'+fg+'" stroke-width="3"/><path d="M52 78h96" stroke="'+fg+'" stroke-width="3"/><circle cx="100" cy="78" r="12" fill="none" stroke="'+fg+'" stroke-width="3"/><text x="100" y="160" text-anchor="middle" fill="'+fg+'" font-size="48" font-weight="bold" font-family="sans-serif">'+icon+'</text></svg>');
+  }
 
   function render() {
     const coll = getColl();
@@ -173,10 +180,10 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
     for (let i = 0; i < slice.length; i++) {
       const p = slice[i];
       const c = !!coll[p.id];
-      const fallbackUrl = (p.pokeapi_details && p.pokeapi_details.id) ? 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+p.pokeapi_details.id+'.png' : '';
-      const onerr = fallbackUrl ? ' onerror="this.onerror=null;this.src=\''+fallbackUrl+'\'"' : '';
       const fb = p.football;
-      const fbBadge = (fb && fb.jersey) ? '<span class="card-fb">#'+fb.jersey+' '+fb.position+'</span>' : '';
+      const placeholder = placeholderDataUrl(c);
+      const onerr = ' onerror="this.onerror=null;this.src=\''+placeholder+'\'"';
+      const fbBadge = (fb && fb.jersey) ? '<span class="card-fb">#'+fb.jersey+' '+fb.role+'</span>' : '';
       html += '<div class="card" data-id="'+p.id+'"><div class="card-img-wrap"><img src="'+p.img+'" loading="lazy"'+onerr+'><span class="card-flag">'+p.country+'</span></div><div class="card-body"><div class="card-name">'+(c?'✓ ':'')+p.name+'</div><div class="card-id">'+p.type+'</div>'+fbBadge+'</div></div>';
     }
     const gal = document.getElementById('gallery');
@@ -302,7 +309,7 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
         '<span class="pill">📍 '+p.football.position+'</span>',
         '<span class="pill">🎯 '+p.football.role+'</span>'
       ];
-      footballHtml = '<div class="stats-title">⚽ Fútbol</div><div class="info-pills">'+fbPills.join('')+'</div><div class="flavor">'+p.football.advantage+'</div>';
+      footballHtml = '<div class="info-pills" style="margin-bottom:14px">'+fbPills.join('')+'</div><div class="flavor" style="margin-bottom:16px">'+p.football.advantage+'</div><div style="height:1px;background:var(--border);margin-bottom:12px"></div>';
     }
 
     // Shiny/official controls
@@ -318,7 +325,7 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
     document.getElementById('modalContent').innerHTML =
       '<button class="modal-close" id="mClose">✕</button>'+
       '<div class="modal-img">'+
-        '<img id="modalImg" src="'+imgSrc+'" onerror="var s=\''+p.img+'\';this.onerror=function(){if(this.src!==s)this.src=s};this.src=s">'+
+        '<img id="modalImg" src="'+imgSrc+'" onerror="this.onerror=null;this.src=\''+placeholderDataUrl(isColl(p.id))+'\'">'+
         controlsHtml+
       '</div>'+
       '<div class="modal-body">'+
