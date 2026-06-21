@@ -2,21 +2,22 @@
 add_cards.py  —  Procesa imágenes nuevas en origin/ y agrega cards al álbum.
 
 Uso:
-    python add_cards.py
+    python add_cards.py                    # grid 8x4 (32 stickers) en lotes de 10
+    python add_cards.py --grid 5x2         # grid 5x2 (10 stickers)
 
 Flujo:
     1. Escanea origin/ en busca de imágenes PNG no procesadas
-    2. Cropa cada imagen en stickers individuales (grid 8x4 asumido)
+    2. Cropa stickers de a 10 por vez y los procesa
     3. OCR cada sticker con Tesseract (bottom 70px, stats-line detection)
     4. Corrige nombres vs diccionario Pokémon + overrides manuales
     5. Compara contra nombres existentes en pokemon.json
     6. Solo agrega Pokémon verdaderamente nuevos
-    7. Renombra archivos, aplica badge, actualiza pokemon.json
+    7. Renombra archivos, aplica badge, extrae stats, actualiza pokemon.json
 
 Requiere: Python 3.8+, Pillow, pytesseract, rapidfuzz, Tesseract-OCR instalado
 """
 
-import json, os, re, sys, glob
+import json, os, re, sys, glob, argparse
 from pathlib import Path
 from collections import Counter
 
@@ -34,8 +35,9 @@ STICKERS_DIR = "stickers"
 JSON_FILE = "pokemon.json"
 PROCESSED_LOG = "_origin_processed.json"  # registro de imágenes ya procesadas
 
-COLS, ROWS = 8, 4           # grid en cada imagen origen
 W, H = 1536, 1024           # dimensiones esperadas de cada imagen origen
+COLS, ROWS = 8, 4           # grid: 8x4 = 32 stickers por imagen
+BATCH = 10                  # procesar de a 10 stickers para no saturar
 
 # Badge overlay config
 FONT_PATH = r"C:\Windows\Fonts\arialbd.ttf"
@@ -121,25 +123,18 @@ def save_data(data):
     print(f"Guardados {len(data)} Pokémon en {JSON_FILE}")
 
 
-def crop_grid(image_path, sheet_id):
-    """Cropea una imagen de grid 8×4 en 32 stickers individuales."""
-    img = Image.open(image_path)
+def crop_single(img, sheet_id, pos):
+    """Cropea un sticker individual y devuelve ruta temporal."""
     w, h = img.size
     cw, ch = w // COLS, h // ROWS
-    results = []
-
-    for row in range(ROWS):
-        for col in range(COLS):
-            left = col * cw
-            upper = row * ch
-            box = (left, upper, left + cw, upper + ch)
-            crop = img.crop(box)
-            pos = row * COLS + col + 1
-            filename = f"_temp_{sheet_id}_{pos:02d}.png"
-            crop.save(filename)
-            results.append((filename, pos))
-
-    return results
+    pos0 = pos - 1
+    row, col = divmod(pos0, COLS)
+    left = col * cw
+    upper = row * ch
+    crop = img.crop((left, upper, left + cw, upper + ch))
+    filename = f"_temp_{sheet_id}_{pos:02d}.png"
+    crop.save(filename)
+    return filename
 
 
 def extract_name_from_ocr(raw_text):
@@ -306,6 +301,18 @@ def clean_temp_files():
 # ── Main ───────────────────────────────────────────────────────────────────
 
 def main():
+    parser = argparse.ArgumentParser(description='Procesa imágenes nuevas en origin/')
+    parser.add_argument('--grid', default='8x4', help='Grid de la imagen: 8x4 (32 stickers, default) o 5x2 (10 stickers)')
+    args = parser.parse_args()
+
+    global COLS, ROWS
+    try:
+        c, r = args.grid.lower().split('x')
+        COLS, ROWS = int(c), int(r)
+    except Exception:
+        print(f"Error: grid '{args.grid}' inválido. Usá formato como 8x4 o 5x2.")
+        sys.exit(1)
+
     set_tesseract_path()
     processed = load_processed()
     data = load_existing_data()
@@ -320,7 +327,6 @@ def main():
 
     if not origin_files:
         print("No hay imágenes nuevas en origin/. Todo al día.")
-        clean_temp_files()
         return
 
     print(f"Procesando {len(origin_files)} imagen(es) nueva(s): {origin_files}")
@@ -330,72 +336,86 @@ def main():
         img_path = os.path.join(ORIGIN_DIR, img_file)
         print(f"\n--- Procesando: {img_file} ---")
 
-        # 2. Cropear grid
+        # 2. Procesar en lotes de BATCH stickers
         sheet_id = img_file.replace('.png', '').replace(' ', '_')
-        temp_files = crop_grid(img_path, sheet_id)
-        print(f"  Creados {len(temp_files)} stickers temporales")
-
+        img = Image.open(img_path)
+        total = COLS * ROWS
         added_in_sheet = 0
-        for temp_path, pos in temp_files:
-            # 3. OCR
-            raw_name = ocr_sticker(temp_path)
-            corrected = correct_name(raw_name)
 
-            if not corrected:
-                print(f"  [{pos:02d}] OCR fallido: '{raw_name}' -> saltando")
-                os.remove(temp_path)
-                continue
+        for batch_start in range(0, total, BATCH):
+            batch_positions = list(range(batch_start + 1, min(batch_start + BATCH, total) + 1))
+            print(f"  Lote {batch_start // BATCH + 1}: posiciones {batch_positions[0]}-{batch_positions[-1]}")
 
-            # 4. Verificar si es nuevo
-            if corrected in existing_names:
-                print(f"  [{pos:02d}] {corrected} (duplicado, saltando)")
-                os.remove(temp_path)
-                continue
+            temp_batch = []
+            for pos in batch_positions:
+                temp_path = crop_single(img, sheet_id, pos)
+                temp_batch.append((temp_path, pos))
 
-            # 5. Verificar dentro del mismo lote
-            if corrected in [e['name'] for e in new_entries]:
-                print(f"  [{pos:02d}] {corrected} (duplicado en mismo lote, saltando)")
-                os.remove(temp_path)
-                continue
+            for temp_path, pos in temp_batch:
+                # 3. OCR
+                raw_name = ocr_sticker(temp_path)
+                corrected = correct_name(raw_name)
 
-            # 6. Extraer stats (ATA/DEF/VEL)
-            ata, def_, vel = get_stats(temp_path)
-            if not all(v is not None for v in [ata, def_, vel]):
-                print(f"  [{pos:02d}] No se pudieron leer stats -> saltando")
-                os.remove(temp_path)
-                continue
+                if not corrected:
+                    print(f"  [{pos:02d}] OCR fallido: '{raw_name}' -> saltando")
+                    os.remove(temp_path)
+                    continue
 
-            # 7. Crear entry
-            entry = {
-                "id": next_id,
-                "name": corrected.title(),
-                "img": "",
-                "owned": False,
-                "ata": ata,
-                "def": def_,
-                "vel": vel,
-            }
+                # 4. Verificar si es nuevo
+                if corrected in existing_names:
+                    print(f"  [{pos:02d}] {corrected} (duplicado, saltando)")
+                    os.remove(temp_path)
+                    continue
 
-            # Renombrar archivo definitivo
-            final_name = f"{corrected}_{next_id:03d}.png"
-            final_path = os.path.join(STICKERS_DIR, final_name)
-            os.rename(temp_path, final_path)
+                # 5. Verificar dentro del mismo lote
+                if corrected in [e['name'] for e in new_entries]:
+                    print(f"  [{pos:02d}] {corrected} (duplicado en mismo lote, saltando)")
+                    os.remove(temp_path)
+                    continue
 
-            # Aplicar badge
-            apply_badge(final_path, next_id)
+                # 6. Extraer stats (ATA/DEF/VEL)
+                ata, def_, vel = get_stats(temp_path)
+                if not all(v is not None for v in [ata, def_, vel]):
+                    print(f"  [{pos:02d}] No se pudieron leer stats -> saltando")
+                    os.remove(temp_path)
+                    continue
 
-            entry["img"] = final_path
-            new_entries.append(entry)
-            existing_names.add(corrected)
+                # 7. Crear entry
+                entry = {
+                    "id": next_id,
+                    "name": corrected.title(),
+                    "img": "",
+                    "owned": False,
+                    "ata": ata,
+                    "def": def_,
+                    "vel": vel,
+                }
 
-            ocr_raw = raw_name if raw_name != corrected else ""
-            print(f"  [{pos:02d}] #{next_id:03d} {corrected.title()}" +
-                  (f" (OCR: '{raw_name}')" if ocr_raw else ""))
+                # Renombrar archivo definitivo
+                final_name = f"{corrected}_{next_id:03d}.png"
+                final_path = os.path.join(STICKERS_DIR, final_name)
+                os.rename(temp_path, final_path)
 
-            print(f"  [{pos:02d}] #{next_id:03d} {corrected.title()} ATA={ata} DEF={def_} VEL={vel}")
+                # Aplicar badge
+                apply_badge(final_path, next_id)
 
-            next_id += 1
-            added_in_sheet += 1
+                entry["img"] = final_path
+                new_entries.append(entry)
+                existing_names.add(corrected)
+
+                ocr_raw = raw_name if raw_name != corrected else ""
+                print(f"  [{pos:02d}] #{next_id:03d} {corrected.title()}" +
+                      (f" (OCR: '{raw_name}')" if ocr_raw else ""))
+
+                print(f"  [{pos:02d}] #{next_id:03d} {corrected.title()} ATA={ata} DEF={def_} VEL={vel}")
+
+                next_id += 1
+                added_in_sheet += 1
+
+            # Limpiar temporales de este lote
+            for tp, _ in temp_batch:
+                if os.path.exists(tp):
+                    os.remove(tp)
 
         # Marcar imagen como procesada
         processed.add(img_file)
@@ -410,7 +430,6 @@ def main():
     else:
         print("\nNo se encontraron Pokémon nuevos.")
 
-    clean_temp_files()
     print("Listo.")
 
 

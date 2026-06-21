@@ -37,6 +37,12 @@ h1{font-size:1.1rem;background:linear-gradient(135deg,#f7d02c,#ee8130,#6390f0);-
 .modal-close{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.4);border:none;color:#fff;font-size:1.2rem;width:32px;height:32px;border-radius:50%;cursor:pointer}
 .modal-name{font-size:1.3rem;font-weight:700;margin-bottom:4px;text-transform:uppercase}
 .modal-id{font-size:.85rem;color:var(--text2);margin-bottom:10px}
+.stats-row{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.stat{display:flex;align-items:center;gap:8px}
+.stat-label{font-size:.75rem;font-weight:700;width:32px;color:var(--text2);text-align:right}
+.stat-bar{flex:1;height:10px;background:var(--surface2);border-radius:5px;overflow:hidden}
+.stat-fill{height:100%;border-radius:5px;background:linear-gradient(90deg, #f44336, #ff9800, #4caf50)}
+.stat-val{font-size:.8rem;font-weight:700;width:28px;color:var(--text)}
 @media(min-width:768px){.modal{align-items:center;padding:16px}.modal-content{max-width:420px;border-radius:14px}}
 </style>
 </head>
@@ -139,8 +145,13 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
       '<div class="modal-body">'+
         '<div class="modal-name">'+p.name+'</div>'+
         '<div class="modal-id">#'+String(p.id).padStart(3,'0')+' · '+p.region+' '+p.country+'</div>'+
-        '<div style="font-size:.85rem;color:var(--text2);margin-bottom:6px">Tipo: '+p.type+'</div>'+
-        '<div style="font-size:.85rem;color:var(--text2);margin-bottom:6px">Pais: '+p.countryName+'</div>'+
+        '<div style="font-size:.85rem;color:var(--text2);margin-bottom:8px">Tipo: '+p.type+'</div>'+
+        '<div style="font-size:.85rem;color:var(--text2);margin-bottom:8px">Pais: '+p.countryName+'</div>'+
+        '<div class="stats-row">'+
+          '<div class="stat"><span class="stat-label">ATA</span><div class="stat-bar"><div class="stat-fill" style="width:'+p.ata/150*100+'%"></div></div><span class="stat-val">'+p.ata+'</span></div>'+
+          '<div class="stat"><span class="stat-label">DEF</span><div class="stat-bar"><div class="stat-fill" style="width:'+p.def/150*100+'%"></div></div><span class="stat-val">'+p.def+'</span></div>'+
+          '<div class="stat"><span class="stat-label">VEL</span><div class="stat-bar"><div class="stat-fill" style="width:'+p.vel/150*100+'%"></div></div><span class="stat-val">'+p.vel+'</span></div>'+
+        '</div>'+
       '</div>';
     document.getElementById('modal').classList.add('open');
     document.getElementById('mClose').addEventListener('click', closeModal);
