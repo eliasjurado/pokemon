@@ -438,9 +438,11 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
   window.addEventListener('appinstalled', () => { pwaBtn.style.display = 'none'; });
   if (navigator.serviceWorker) {
     navigator.serviceWorker.addEventListener('controllerchange', () => {
-      pwaBtn.style.display = 'block';
-      pwaBtn.textContent = '🔄 Actualizar';
-      pwaBtn.onclick = () => { window.location.reload(); };
+      if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone) {
+        pwaBtn.style.display = 'block';
+        pwaBtn.textContent = '📲 Actualizar App';
+        pwaBtn.onclick = () => { window.location.reload(); };
+      }
     });
   }
 }).catch(e => { s.textContent = 'ERROR: ' + e.message; });
