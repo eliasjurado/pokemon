@@ -24,3 +24,13 @@
 ## Grid de cards
 - El campo `football.role` (ej. "Delantero Centro") puede ser muy largo para la card → usar `text-overflow: ellipsis`.
 - El badge se ve mejor como pill con fondo de color en vez de texto plano.
+- Usar `display: inline-block` + `max-width: 100%` + `text-overflow: ellipsis` para que el badge se adapte al ancho de la card sin desbordar.
+
+## opencode.json configuration
+- El archivo `opencode.json` con `context[]` permite cargar TASKS.md y LESSONS.md automáticamente en cada sesión.
+- Los archivos de contexto deben estar en `.opencode/` para mantener el workspace ordenado.
+
+## Modal section titles
+- Usar la clase `.stats-title` existente para títulos de sección (`.stats-title` ya tiene el estilo: uppercase, bold, letras espaciadas, color text2).
+- No inventar nuevas clases de título cuando ya existe una reutilizable.
+- Las secciones se ordenan: fútbol primero, Pokémon después.

@@ -14,7 +14,9 @@
 - [x] Mostrar dorsal y rol en la grilla de cards
 - [x] Agregar sección de fútbol al modal con título "⚽ Fútbol"
 - [x] Agregar título "📋 Pokémon" a la info propia del Pokémon en el modal
-- [x] Fallback con placeholder (pokeball) para stickers faltantes
+- [x] Fallback con placeholder (pokeball) para stickers faltantes, diferenciando coleccionado vs pendiente
 - [x] Separar visualmente sección de fútbol de info del Pokémon
 - [x] PWA: unificar emoji y texto del botón de actualizar
 - [x] Evitar que se muestre botón de actualizar PWA si no está en standalone
+- [x] Crear .opencode/TASKS.md, .opencode/LESSONS.md y opencode.json como archivo de contexto
+- [x] Badge de fútbol en grilla: cambiar a estilo pill con fondo de color para mejor visibilidad
