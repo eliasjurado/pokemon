@@ -1948,7 +1948,10 @@
     "def": 70,
     "vel": 45,
     "region": "Kalos",
-    "type": "Ghost"
+    "type": "Ghost",
+    "country": "🏳️",
+    "countryCode": "???",
+    "countryName": "Desconocido"
   },
   {
     "id": 141,
@@ -1971,7 +1974,10 @@
     "def": 75,
     "vel": 70,
     "region": "Unova",
-    "type": "Grass"
+    "type": "Grass",
+    "country": "🏳️",
+    "countryCode": "???",
+    "countryName": "Desconocido"
   },
   {
     "id": 143,
@@ -1994,7 +2000,10 @@
     "def": 75,
     "vel": 70,
     "region": "Kanto",
-    "type": "Grass"
+    "type": "Grass",
+    "country": "🏳️",
+    "countryCode": "???",
+    "countryName": "Desconocido"
   },
   {
     "id": 145,
@@ -2026,7 +2035,10 @@
     "def": 120,
     "vel": 40,
     "region": "Johto",
-    "type": "Bug"
+    "type": "Bug",
+    "country": "🏳️",
+    "countryCode": "???",
+    "countryName": "Desconocido"
   },
   {
     "id": 148,
@@ -2036,7 +2048,10 @@
     "def": 85,
     "vel": 60,
     "region": "Unova",
-    "type": "Steel"
+    "type": "Steel",
+    "country": "🏳️",
+    "countryCode": "???",
+    "countryName": "Desconocido"
   },
   {
     "id": 149,
@@ -2083,7 +2098,10 @@
     "img": "stickers/avern_152.png",
     "ata": 88,
     "def": 85,
-    "vel": 90
+    "vel": 90,
+    "country": "🏳️",
+    "countryCode": "???",
+    "countryName": "Desconocido"
   },
   {
     "id": 153,
@@ -2130,7 +2148,10 @@
     "def": 60,
     "vel": 95,
     "region": "Unova",
-    "type": "Normal"
+    "type": "Normal",
+    "country": "🏳️",
+    "countryCode": "???",
+    "countryName": "Desconocido"
   },
   {
     "id": 157,
@@ -2162,7 +2183,10 @@
     "def": 90,
     "vel": 60,
     "region": "Unova",
-    "type": "Bug"
+    "type": "Bug",
+    "country": "🏳️",
+    "countryCode": "???",
+    "countryName": "Desconocido"
   },
   {
     "id": 160,
@@ -2231,7 +2255,10 @@
     "def": 110,
     "vel": 25,
     "region": "Sinnoh",
-    "type": "Steel"
+    "type": "Steel",
+    "country": "🏳️",
+    "countryCode": "???",
+    "countryName": "Desconocido"
   },
   {
     "id": 166,
@@ -2278,7 +2305,10 @@
     "def": 70,
     "vel": 50,
     "region": "Alola",
-    "type": "Fighting"
+    "type": "Fighting",
+    "country": "🏳️",
+    "countryCode": "???",
+    "countryName": "Desconocido"
   },
   {
     "id": 170,
@@ -2351,7 +2381,10 @@
     "def": 70,
     "vel": 60,
     "region": "Unova",
-    "type": "Normal"
+    "type": "Normal",
+    "country": "🏳️",
+    "countryCode": "???",
+    "countryName": "Desconocido"
   },
   {
     "id": 176,
@@ -2448,7 +2481,10 @@
     "def": 90,
     "vel": 75,
     "region": "Hoenn",
-    "type": "Dragon"
+    "type": "Dragon",
+    "country": "🏳️",
+    "countryCode": "???",
+    "countryName": "Desconocido"
   },
   {
     "id": 184,
@@ -2534,7 +2570,10 @@
     "def": 110,
     "vel": 65,
     "region": "Kanto",
-    "type": "Ground"
+    "type": "Ground",
+    "country": "🏳️",
+    "countryCode": "???",
+    "countryName": "Desconocido"
   },
   {
     "id": 191,
@@ -2544,7 +2583,10 @@
     "def": 70,
     "vel": 60,
     "region": "Kanto",
-    "type": "Water"
+    "type": "Water",
+    "country": "🏳️",
+    "countryCode": "???",
+    "countryName": "Desconocido"
   },
   {
     "id": 192,
@@ -2591,7 +2633,10 @@
     "img": "stickers/suet_195.png",
     "ata": 88,
     "def": 75,
-    "vel": 60
+    "vel": 60,
+    "country": "🏳️",
+    "countryCode": "???",
+    "countryName": "Desconocido"
   },
   {
     "id": 196,
@@ -2653,7 +2698,10 @@
     "def": 60,
     "vel": 80,
     "region": "Galar",
-    "type": "Dark"
+    "type": "Dark",
+    "country": "🏳️",
+    "countryCode": "???",
+    "countryName": "Desconocido"
   },
   {
     "id": 201,
@@ -2674,7 +2722,10 @@
     "img": "stickers/cossara_202.png",
     "ata": 60,
     "def": 70,
-    "vel": 60
+    "vel": 60,
+    "country": "🏳️",
+    "countryCode": "???",
+    "countryName": "Desconocido"
   },
   {
     "id": 203,
@@ -2684,7 +2735,10 @@
     "def": 60,
     "vel": 80,
     "region": "Galar",
-    "type": "Flying"
+    "type": "Flying",
+    "country": "🏳️",
+    "countryCode": "???",
+    "countryName": "Desconocido"
   },
   {
     "id": 204,
@@ -2753,7 +2807,10 @@
     "img": "stickers/tacen_209.png",
     "ata": 88,
     "def": 50,
-    "vel": 85
+    "vel": 85,
+    "country": "🏳️",
+    "countryCode": "???",
+    "countryName": "Desconocido"
   },
   {
     "id": 210,
@@ -2826,6 +2883,9 @@
     "def": 120,
     "vel": 30,
     "region": "Alola",
-    "type": "Fire"
+    "type": "Fire",
+    "country": "🏳️",
+    "countryCode": "???",
+    "countryName": "Desconocido"
   }
 ]

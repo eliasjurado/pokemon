@@ -86,7 +86,7 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
   REGIONS.forEach(r => { const o = document.createElement('option'); o.value=r; o.textContent='Region: '+r; selR.appendChild(o); });
   const selC = document.getElementById('fCountry');
   const seen = {};
-  ALL_COUNTRIES = all.filter(p => { if (seen[p.countryCode]) return false; seen[p.countryCode]=1; return true; }).map(p => ({flag:p.country, name: p.countryName, code:p.countryCode})).sort((a,b) => a.name.localeCompare(b.name));
+  ALL_COUNTRIES = all.filter(p => { if (!p.countryCode || p.countryCode==='???' || seen[p.countryCode]) return false; seen[p.countryCode]=1; return true; }).map(p => ({flag:p.country, name: p.countryName, code:p.countryCode})).sort((a,b) => a.name.localeCompare(b.name));
   ALL_COUNTRIES.forEach(c => { const o = document.createElement('option'); o.value=c.flag; o.textContent=c.flag+' '+c.name; selC.appendChild(o); });
 
   function getColl() { try { return JSON.parse(localStorage.getItem('pokemonCollected')||'{}'); } catch(e) { return {}; } }
