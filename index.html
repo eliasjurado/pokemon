@@ -136,7 +136,7 @@ let ALL_COUNTRIES = [];
 
 s.textContent = 'loading...';
 
-fetch('https://api.github.com/repos/eliasjurado/pokemon').then(r=>r.json()).then(d=>{const e=document.getElementById('ghCount');if(d.stargazers_count!==undefined)e.textContent=d.stargazers_count}).catch(()=>{});
+fetch('https://api.github.com/repos/eliasjurado/pokemon?_='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(d=>{const e=document.getElementById('ghCount');if(d.stargazers_count!==undefined)e.textContent=d.stargazers_count}).catch(()=>{});
 
 fetch('pokemon.json').then(r => r.json()).then(all => {
   s.textContent = 'gen ' + all.length;
