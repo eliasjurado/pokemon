@@ -15,6 +15,10 @@ h1{font-size:1.1rem;background:linear-gradient(135deg,#f7d02c,#ee8130,#6390f0);-
 .bar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;align-items:center}
 .bar select,.bar button{background:var(--surface2);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:6px 10px;font-size:.82rem;min-height:36px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:12px}
+@keyframes slideIn{from{transform:translateX(30px);opacity:0}to{transform:translateX(0);opacity:1}}
+@keyframes slideInRev{from{transform:translateX(-30px);opacity:0}to{transform:translateX(0);opacity:1}}
+#gallery.slide-next>*{animation:slideIn .25s ease-out}
+#gallery.slide-prev>*{animation:slideInRev .25s ease-out}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;cursor:pointer}
 .card:hover{border-color:var(--accent)}
 .card-img-wrap{aspect-ratio:1;background:var(--surface2);display:flex;align-items:center;justify-content:center;padding:6px;position:relative}
@@ -63,7 +67,7 @@ h1{font-size:1.1rem;background:linear-gradient(135deg,#f7d02c,#ee8130,#6390f0);-
 <footer style="text-align:center;padding:24px 12px;font-size:.8rem;color:var(--text2);margin-top:20px;border-top:1px solid var(--border)">
   Con amor ❤️ para mis hijos por <a href="https://eliasjurado.com" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">Elias Jurado</a>
 </footer>
-<button id="pwaBtn" style="display:none;position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;border:none;border-radius:24px;padding:10px 20px;font-size:.85rem;font-weight:600;z-index:300;box-shadow:0 4px 16px rgba(0,0,0,.5);cursor:pointer">📲 Instalar App</button>
+<button id="pwaBtn" style="display:none;position:fixed;bottom:24px;right:16px;background:var(--accent);color:#fff;border:none;border-radius:24px;padding:10px 20px;font-size:.85rem;font-weight:600;z-index:300;box-shadow:0 4px 16px rgba(0,0,0,.5);cursor:pointer">📲 Instalar App</button>
 <script>
 const ITEMS = window.innerWidth < 768 ? 4 : 16;
 const s = document.createElement('div');
@@ -94,6 +98,7 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
   function toggleColl(id) { const c = getColl(); if (c[id]) delete c[id]; else c[id]=1; localStorage.setItem('pokemonCollected', JSON.stringify(c)); }
 
   let page = 1;
+  let pageDir = 0;
   let state = {type:'all', region:'all', country:'all'};
   let totalP = 1;
 
@@ -114,7 +119,10 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
       const c = !!coll[p.id];
       html += '<div class="card" data-id="'+p.id+'"><div class="card-img-wrap"><img src="'+p.img+'" loading="lazy"><span class="card-flag">'+p.country+'</span></div><div class="card-body"><div class="card-name">'+(c?'✓ ':'')+p.name+'</div><div class="card-id">'+p.type+'</div></div></div>';
     }
-    document.getElementById('gallery').innerHTML = html;
+    const gal = document.getElementById('gallery');
+    gal.className = 'grid' + (pageDir>0?' slide-next':pageDir<0?' slide-prev':'');
+    gal.innerHTML = html;
+    pageDir = 0;
     const collCount = Object.keys(coll).length;
     document.getElementById('count').textContent = filtered.length+' resultados, '+collCount+'/'+all.length+' coleccionados';
 
@@ -126,7 +134,7 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
     document.getElementById('pagination').innerHTML = ph;
     document.querySelectorAll('.pagination button').forEach(b => {
       if (b.disabled) return;
-      b.addEventListener('click', () => { page = parseInt(b.dataset.p); render(); window.scrollTo(0,0); });
+      b.addEventListener('click', () => { const np = parseInt(b.dataset.p); pageDir = np > page ? 1 : np < page ? -1 : 0; page = np; render(); window.scrollTo(0,0); });
     });
     document.querySelectorAll('.card').forEach(c => {
       c.addEventListener('click', () => { openModal(parseInt(c.dataset.id)); });
@@ -158,11 +166,11 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
   document.getElementById('modal').addEventListener('click', e => { if (e.target.id==='modal') closeModal(); });
   document.addEventListener('keydown', e => { if (e.key==='Escape') closeModal(); });
 
-  document.getElementById('fType').addEventListener('change', e => { state.type = e.target.value; page=1; render(); });
-  document.getElementById('fRegion').addEventListener('change', e => { state.region = e.target.value; page=1; render(); });
-  document.getElementById('fCountry').addEventListener('change', e => { state.country = e.target.value; page=1; render(); });
+  document.getElementById('fType').addEventListener('change', e => { pageDir=0; state.type = e.target.value; page=1; render(); });
+  document.getElementById('fRegion').addEventListener('change', e => { pageDir=0; state.region = e.target.value; page=1; render(); });
+  document.getElementById('fCountry').addEventListener('change', e => { pageDir=0; state.country = e.target.value; page=1; render(); });
   document.getElementById('resetBtn').addEventListener('click', () => {
-    state = {type:'all', region:'all', country:'all'};
+    pageDir=0; state = {type:'all', region:'all', country:'all'};
     document.getElementById('fType').value = 'all';
     document.getElementById('fRegion').value = 'all';
     document.getElementById('fCountry').value = 'all';
@@ -178,8 +186,8 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
   document.addEventListener('touchend', e => {
     const dx = e.changedTouches[0].screenX - x0;
     if (Math.abs(dx) > 60) {
-      if (dx < 0 && page < totalP) { page++; render(); }
-      else if (dx > 0 && page > 1) { page--; render(); }
+      if (dx < 0 && page < totalP) { pageDir = 1; page++; render(); }
+      else if (dx > 0 && page > 1) { pageDir = -1; page--; render(); }
     }
   }, {passive:true});
 
