@@ -97,6 +97,7 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
   const seen = {};
   ALL_COUNTRIES = all.filter(p => { if (!p.countryCode || p.countryCode==='???' || seen[p.countryCode]) return false; seen[p.countryCode]=1; return true; }).map(p => ({flag:p.country, name: p.countryName, code:p.countryCode})).sort((a,b) => a.name.localeCompare(b.name));
   ALL_COUNTRIES.forEach(c => { const o = document.createElement('option'); o.value=c.flag; o.textContent=c.flag+' '+c.name; selC.appendChild(o); });
+  sel.value = state.type; selR.value = state.region; selC.value = state.country;
 
   function getColl() { try { return JSON.parse(localStorage.getItem('pokemonCollected')||'{}'); } catch(e) { return {}; } }
   function isColl(id) { return !!getColl()[id]; }
@@ -104,8 +105,12 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
 
   let page = 1;
   let pageDir = 0;
-  let state = {type:'all', region:'all', country:'all'};
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem('pokemonState')||'{}'); } catch(e) {}
+  let state = saved.state || {type:'all', region:'all', country:'all'};
+  page = saved.page || 1;
   let totalP = 1;
+  function saveState() { localStorage.setItem('pokemonState', JSON.stringify({state, page})); }
 
   function render() {
     const coll = getColl();
@@ -145,6 +150,7 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
       c.addEventListener('click', () => { openModal(parseInt(c.dataset.id)); });
     });
     s.textContent = 'p'+page+'/'+totalP+' ('+slice.length+')';
+    saveState();
   }
 
   function openModal(id) {
