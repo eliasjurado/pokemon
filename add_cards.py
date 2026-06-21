@@ -18,6 +18,7 @@ Requiere: Python 3.8+, Pillow, pytesseract, rapidfuzz, Tesseract-OCR instalado
 
 import json, os, re, sys, glob
 from pathlib import Path
+from collections import Counter
 
 from PIL import Image
 import pytesseract
@@ -220,6 +221,71 @@ def apply_badge(img_path, number):
     Image.alpha_composite(img, overlay).convert('RGB').save(img_path, 'PNG')
 
 
+# ── Stats extraction (ATA/DEF/VEL) ──────────────────────────────────────
+
+MAP_CONS = str.maketrans({'S':'5','s':'5','O':'0','o':'0','G':'6','g':'6',
+                          'l':'1','I':'1','B':'8','b':'8','Z':'2','z':'2'})
+
+MAP_AGGR = str.maketrans({'S':'5','s':'5','O':'0','o':'0','G':'6','g':'6',
+                          'l':'1','I':'1','B':'8','b':'8','Z':'2','z':'2',
+                          'E':'8','e':'8','A':'8','a':'8'})
+
+def clean_stat(s, aggressive=False):
+    m = MAP_AGGR if aggressive else MAP_CONS
+    s = s.translate(m)
+    s = re.sub(r'[^0-9]', '', s)
+    if not s or len(s) > 3:
+        return None
+    candidates = {int(s)}
+    if len(s) == 2 and s[0] == '0':
+        candidates.add(int('8' + s[1]))
+    for c in candidates:
+        if 20 <= c <= 150:
+            return c
+    return None
+
+
+def extract_triple(text, aggressive=False):
+    for line in text.split('\n'):
+        up = line.upper().strip()
+        if not up:
+            continue
+        if not any(kw in up for kw in ['ATA', 'ATS', 'ATR', 'STA', 'AT4', '"TA', 'IA ']):
+            continue
+        nums = []
+        for tok in re.split(r'[\s()\[\]{}\'\".,;:!?=+\\/|@#~`_*-]+', line):
+            c = clean_stat(tok, aggressive)
+            if c:
+                nums.append(c)
+        if len(nums) >= 3:
+            return nums[0], nums[1], nums[2]
+    return None, None, None
+
+
+def get_stats(image_path):
+    """Extrae ATA, DEF, VEL de un sticker usando OCR con voting."""
+    img = Image.open(image_path)
+    w, h = img.size
+    crop = img.crop((0, h - 70, w, h))
+
+    attempts = []
+    for scale in [2, 3]:
+        bw, bh = crop.size
+        big = crop.resize((bw * scale, bh * scale), Image.LANCZOS)
+        for psm in [3, 6]:
+            text = pytesseract.image_to_string(big, config=f'--psm {psm}').strip()
+            for aggressive in [False, True]:
+                triple = extract_triple(text, aggressive)
+                if all(v is not None for v in triple):
+                    attempts.append(triple)
+
+    if not attempts:
+        return None, None, None
+
+    counter = Counter(attempts)
+    return counter.most_common(1)[0][0]
+
+
 def get_existing_names(data):
     """Retorna set de nombres existentes en el JSON."""
     return {item['name'].lower() for item in data}
@@ -292,12 +358,22 @@ def main():
                 os.remove(temp_path)
                 continue
 
-            # 6. Agregar
+            # 6. Extraer stats (ATA/DEF/VEL)
+            ata, def_, vel = get_stats(temp_path)
+            if not all(v is not None for v in [ata, def_, vel]):
+                print(f"  [{pos:02d}] No se pudieron leer stats -> saltando")
+                os.remove(temp_path)
+                continue
+
+            # 7. Crear entry
             entry = {
                 "id": next_id,
                 "name": corrected.title(),
-                "img": "",  # placeholder
-                "owned": False
+                "img": "",
+                "owned": False,
+                "ata": ata,
+                "def": def_,
+                "vel": vel,
             }
 
             # Renombrar archivo definitivo
@@ -315,6 +391,8 @@ def main():
             ocr_raw = raw_name if raw_name != corrected else ""
             print(f"  [{pos:02d}] #{next_id:03d} {corrected.title()}" +
                   (f" (OCR: '{raw_name}')" if ocr_raw else ""))
+
+            print(f"  [{pos:02d}] #{next_id:03d} {corrected.title()} ATA={ata} DEF={def_} VEL={vel}")
 
             next_id += 1
             added_in_sheet += 1
