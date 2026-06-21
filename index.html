@@ -10,7 +10,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#0a0a1a;--surface:#16162a;--surface2:#1e1e3a;--text:#f0f0f8;--text2:#9999bb;--border:rgba(255,255,255,.07);--accent:#6390f0;--success:#4ade80;--radius:14px;--radius-sm:8px;--header-h:120px;--footer-h:70px}
 html{font-size:16px}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding:120px 12px var(--footer-h)}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding:150px 12px var(--footer-h)}
 header{position:fixed;top:0;left:0;right:0;background:var(--bg);padding:12px 12px 8px;z-index:100;border-bottom:1px solid var(--border)}
 h1{font-size:1.1rem;background:linear-gradient(135deg,#f7d02c,#ee8130,#6390f0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px}
 .bar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px;align-items:center}
@@ -77,8 +77,8 @@ const s = document.createElement('div');
 s.id = 'status';
 s.style.cssText = 'position:fixed;top:10px;right:10px;background:#000;color:#0f0;padding:4px 8px;font-family:monospace;font-size:11px;z-index:9999;border-radius:4px';
 document.body.appendChild(s);
-function adjustPad() { const h = document.querySelector('header').offsetHeight; document.body.style.paddingTop = h + 'px'; }
-adjustPad(); window.addEventListener('resize', adjustPad);
+function adjustPad() { const h = document.querySelector('header').offsetHeight; document.body.style.paddingTop = (h + 8) + 'px'; }
+setTimeout(adjustPad, 50); window.addEventListener('resize', adjustPad);
 
 const TYPES = ['Normal','Fire','Water','Electric','Grass','Ice','Fighting','Poison','Ground','Flying','Psychic','Bug','Rock','Ghost','Dragon','Dark','Steel','Fairy'];
 const REGIONS = ['Kanto','Johto','Hoenn','Sinnoh','Unova','Kalos','Alola','Galar','Paldea'];
