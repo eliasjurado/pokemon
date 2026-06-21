@@ -32,6 +32,7 @@ h1{font-size:clamp(.82rem,4.5vw,1.1rem);white-space:nowrap;background:linear-gra
 .card-body{padding:6px 8px}
 .card-name{font-size:.8rem;font-weight:600;margin-bottom:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:uppercase}
 .card-id{font-size:.65rem;color:var(--text2)}
+.card-fb{font-size:.6rem;color:var(--accent);font-weight:600;margin-top:2px}
 .pagination{display:flex;justify-content:center;gap:4px;margin-top:16px;flex-wrap:wrap}
 .pagination button{background:var(--surface2);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:6px 10px;font-size:.8rem;min-width:36px;min-height:36px}
 .pagination button.active{background:var(--accent);border-color:var(--accent)}
@@ -172,7 +173,11 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
     for (let i = 0; i < slice.length; i++) {
       const p = slice[i];
       const c = !!coll[p.id];
-      html += '<div class="card" data-id="'+p.id+'"><div class="card-img-wrap"><img src="'+p.img+'" loading="lazy"><span class="card-flag">'+p.country+'</span></div><div class="card-body"><div class="card-name">'+(c?'✓ ':'')+p.name+'</div><div class="card-id">'+p.type+'</div></div></div>';
+      const fallbackUrl = (p.pokeapi_details && p.pokeapi_details.id) ? 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+p.pokeapi_details.id+'.png' : '';
+      const onerr = fallbackUrl ? ' onerror="this.onerror=null;this.src=\''+fallbackUrl+'\'"' : '';
+      const fb = p.football;
+      const fbBadge = (fb && fb.jersey) ? '<span class="card-fb">#'+fb.jersey+' '+fb.position+'</span>' : '';
+      html += '<div class="card" data-id="'+p.id+'"><div class="card-img-wrap"><img src="'+p.img+'" loading="lazy"'+onerr+'><span class="card-flag">'+p.country+'</span></div><div class="card-body"><div class="card-name">'+(c?'✓ ':'')+p.name+'</div><div class="card-id">'+p.type+'</div>'+fbBadge+'</div></div>';
     }
     const gal = document.getElementById('gallery');
     gal.className = 'grid' + (pageDir>0?' slide-next':pageDir<0?' slide-prev':'');
@@ -288,6 +293,18 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
     // Flavor text
     const flavorHtml = (d && d.flavor) ? '<div class="flavor">"'+d.flavor+'"</div>' : '';
 
+    // Football info
+    let footballHtml = '';
+    if (p.football) {
+      const fbPills = [
+        '<span class="pill">'+p.country+' '+p.football.team+'</span>',
+        '<span class="pill">👕 #'+p.football.jersey+'</span>',
+        '<span class="pill">📍 '+p.football.position+'</span>',
+        '<span class="pill">🎯 '+p.football.role+'</span>'
+      ];
+      footballHtml = '<div class="stats-title">⚽ Fútbol</div><div class="info-pills">'+fbPills.join('')+'</div><div class="flavor">'+p.football.advantage+'</div>';
+    }
+
     // Shiny/official controls
     const hasOfficial = d && d.id;
     const hasId = d && d.id;
@@ -301,13 +318,14 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
     document.getElementById('modalContent').innerHTML =
       '<button class="modal-close" id="mClose">✕</button>'+
       '<div class="modal-img">'+
-        '<img id="modalImg" src="'+imgSrc+'" onerror="this.src=\''+p.img+'\'">'+
+        '<img id="modalImg" src="'+imgSrc+'" onerror="var s=\''+p.img+'\';this.onerror=function(){if(this.src!==s)this.src=s};this.src=s">'+
         controlsHtml+
       '</div>'+
       '<div class="modal-body">'+
         '<div class="modal-name">'+p.name+'</div>'+
         (d && d.genus ? '<div class="modal-gus">'+d.genus+'</div>' : '')+
         '<div class="modal-id">#'+String(p.id).padStart(3,'0')+' · '+p.region+' · '+p.country+' '+p.countryCode+' · '+p.countryName+'</div>'+
+        footballHtml+
         pillHtml+
         flavorHtml+
         statsHtml+

@@ -15,7 +15,7 @@
     "pokeapi_details": {
       "id": 25,
       "height_m": 0.4,
-      "weight_kg": 6.0,
+      "weight_kg": 6,
       "abilities": [
         "static",
         "lightning-rod"
@@ -45,6 +45,13 @@
         ]
       ],
       "pokemon_api_name": "pikachu"
+    },
+    "football": {
+      "team": "Argentina",
+      "position": "RW",
+      "jersey": 7,
+      "role": "Extremo Derecho",
+      "advantage": "Su static recorta hacia adentro y saca disparos potentes al arco"
     }
   },
   {
@@ -99,6 +106,13 @@
         ]
       ],
       "pokemon_api_name": "charizard"
+    },
+    "football": {
+      "team": "Portugal",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su remate potente (90) y su físico (90.5kg) lo hacen imparable"
     }
   },
   {
@@ -141,6 +155,13 @@
         ]
       ],
       "pokemon_api_name": "bulbasaur"
+    },
+    "football": {
+      "team": "Brazil",
+      "position": "LB",
+      "jersey": 6,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su velocidad eléctrica (65) le permite subir y bajar la banda sin descanso"
     }
   },
   {
@@ -158,8 +179,8 @@
     "countryCode": "PAR",
     "pokeapi_details": {
       "id": 150,
-      "height_m": 2.0,
-      "weight_kg": 122.0,
+      "height_m": 2,
+      "weight_kg": 122,
       "abilities": [
         "pressure",
         "unnerve"
@@ -183,6 +204,13 @@
         ]
       ],
       "pokemon_api_name": "mewtwo"
+    },
+    "football": {
+      "team": "Paraguay",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su pressure lo hace rocoso e impasable en el uno contra uno"
     }
   },
   {
@@ -225,6 +253,13 @@
         ]
       ],
       "pokemon_api_name": "scorbunny"
+    },
+    "football": {
+      "team": "England",
+      "position": "LB",
+      "jersey": 6,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su agilidad combina defensa sólida con proyección ofensiva"
     }
   },
   {
@@ -267,6 +302,13 @@
         ]
       ],
       "pokemon_api_name": "fuecoco"
+    },
+    "football": {
+      "team": "Spain",
+      "position": "RW",
+      "jersey": 7,
+      "role": "Extremo Derecho",
+      "advantage": "Su explosividad (78) destruye defensas por la banda derecha"
     }
   },
   {
@@ -285,7 +327,7 @@
     "pokeapi_details": {
       "id": 448,
       "height_m": 1.2,
-      "weight_kg": 54.0,
+      "weight_kg": 54,
       "abilities": [
         "steadfast",
         "inner-focus",
@@ -316,6 +358,13 @@
         ]
       ],
       "pokemon_api_name": "lucario"
+    },
+    "football": {
+      "team": "Switzerland",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su olfato de gol (95) lo pone siempre en el lugar correcto"
     }
   },
   {
@@ -375,6 +424,13 @@
         ]
       ],
       "pokemon_api_name": "gardevoir"
+    },
+    "football": {
+      "team": "Japan",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su potencia de fuego (80) define con precisión quirúrgica frente al arco"
     }
   },
   {
@@ -429,6 +485,13 @@
         ]
       ],
       "pokemon_api_name": "meowscarada"
+    },
+    "football": {
+      "team": "Portugal",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su fuerza bruta (31.2kg) intimida a cualquier delantero rival"
     }
   },
   {
@@ -447,7 +510,7 @@
     "pokeapi_details": {
       "id": 149,
       "height_m": 2.2,
-      "weight_kg": 210.0,
+      "weight_kg": 210,
       "abilities": [
         "inner-focus",
         "multiscale"
@@ -483,6 +546,13 @@
         ]
       ],
       "pokemon_api_name": "dragonite"
+    },
+    "football": {
+      "team": "Norway",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su remate potente (89) y su físico (210kg) lo hacen imparable"
     }
   },
   {
@@ -501,7 +571,7 @@
     "pokeapi_details": {
       "id": 130,
       "height_m": 6.5,
-      "weight_kg": 235.0,
+      "weight_kg": 235,
       "abilities": [
         "intimidate",
         "moxie"
@@ -531,6 +601,13 @@
         ]
       ],
       "pokemon_api_name": "gyarados"
+    },
+    "football": {
+      "team": "Paraguay",
+      "position": "CB",
+      "jersey": 5,
+      "role": "Defensa Central",
+      "advantage": "Su defensa implacable (65) no perdía un duelo"
     }
   },
   {
@@ -585,6 +662,13 @@
         ]
       ],
       "pokemon_api_name": "empoleon"
+    },
+    "football": {
+      "team": "Italy",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su potencia de fuego (88) define con precisión quirúrgica frente al arco"
     }
   },
   {
@@ -603,7 +687,7 @@
     "pokeapi_details": {
       "id": 865,
       "height_m": 0.8,
-      "weight_kg": 117.0,
+      "weight_kg": 117,
       "abilities": [
         "steadfast",
         "scrappy"
@@ -633,6 +717,13 @@
         ]
       ],
       "pokemon_api_name": "sirfetchd"
+    },
+    "football": {
+      "team": "Norway",
+      "position": "LB",
+      "jersey": 6,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su steadfast desborda por la izquierda y centra con precisión milimétrica"
     }
   },
   {
@@ -686,6 +777,13 @@
         ]
       ],
       "pokemon_api_name": "gengar"
+    },
+    "football": {
+      "team": "USA",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su remate potente (85) y su físico (40.5kg) lo hacen imparable"
     }
   },
   {
@@ -704,7 +802,7 @@
     "pokeapi_details": {
       "id": 131,
       "height_m": 2.5,
-      "weight_kg": 220.0,
+      "weight_kg": 220,
       "abilities": [
         "water-absorb",
         "shell-armor",
@@ -729,6 +827,13 @@
         ]
       ],
       "pokemon_api_name": "lapras"
+    },
+    "football": {
+      "team": "Uruguay",
+      "position": "LB",
+      "jersey": 6,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su velocidad eléctrica (85) le permite subir y bajar la banda sin descanso"
     }
   },
   {
@@ -747,7 +852,7 @@
     "pokeapi_details": {
       "id": 392,
       "height_m": 1.2,
-      "weight_kg": 55.0,
+      "weight_kg": 55,
       "abilities": [
         "blaze",
         "iron-fist"
@@ -783,6 +888,13 @@
         ]
       ],
       "pokemon_api_name": "infernape"
+    },
+    "football": {
+      "team": "Colombia",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su potencia de fuego (88) define con precisión quirúrgica frente al arco"
     }
   },
   {
@@ -801,7 +913,7 @@
     "pokeapi_details": {
       "id": 745,
       "height_m": 0.8,
-      "weight_kg": 25.0,
+      "weight_kg": 25,
       "abilities": [
         "keen-eye",
         "sand-rush",
@@ -832,6 +944,13 @@
         ]
       ],
       "pokemon_api_name": "lycanroc-midday"
+    },
+    "football": {
+      "team": "Morocco",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su fuerza bruta (25kg) intimida a cualquier delantero rival"
     }
   },
   {
@@ -887,6 +1006,13 @@
         ]
       ],
       "pokemon_api_name": "tsareena"
+    },
+    "football": {
+      "team": "Senegal",
+      "position": "RB",
+      "jersey": 2,
+      "role": "Lateral Derecho",
+      "advantage": "Su explosividad (80) lo hace imparable en la banda derecha"
     }
   },
   {
@@ -942,6 +1068,13 @@
         ]
       ],
       "pokemon_api_name": "haxorus"
+    },
+    "football": {
+      "team": "UAE",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su olfato de gol (80) lo pone siempre en el lugar correcto"
     }
   },
   {
@@ -960,7 +1093,7 @@
     "pokeapi_details": {
       "id": 849,
       "height_m": 1.6,
-      "weight_kg": 40.0,
+      "weight_kg": 40,
       "abilities": [
         "punk-rock",
         "plus",
@@ -991,6 +1124,13 @@
         ]
       ],
       "pokemon_api_name": "toxtricity-amped"
+    },
+    "football": {
+      "team": "Morocco",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su potencia de fuego (88) define con precisión quirúrgica frente al arco"
     }
   },
   {
@@ -1009,7 +1149,7 @@
     "pokeapi_details": {
       "id": 681,
       "height_m": 1.7,
-      "weight_kg": 53.0,
+      "weight_kg": 53,
       "abilities": [
         "stance-change"
       ],
@@ -1044,6 +1184,13 @@
         ]
       ],
       "pokemon_api_name": "aegislash-shield"
+    },
+    "football": {
+      "team": "Paraguay",
+      "position": "RW",
+      "jersey": 7,
+      "role": "Extremo Derecho",
+      "advantage": "Su explosividad (75) destruye defensas por la banda derecha"
     }
   },
   {
@@ -1062,7 +1209,7 @@
     "pokeapi_details": {
       "id": 475,
       "height_m": 1.6,
-      "weight_kg": 52.0,
+      "weight_kg": 52,
       "abilities": [
         "steadfast",
         "sharpness",
@@ -1103,6 +1250,13 @@
         ]
       ],
       "pokemon_api_name": "gallade"
+    },
+    "football": {
+      "team": "Austria",
+      "position": "RB",
+      "jersey": 2,
+      "role": "Lateral Derecho",
+      "advantage": "Su steadfast le permite recuperar balones y lanzar contragolpes letales"
     }
   },
   {
@@ -1144,6 +1298,13 @@
         ]
       ],
       "pokemon_api_name": "zeraora"
+    },
+    "football": {
+      "team": "Sweden",
+      "position": "LW",
+      "jersey": 11,
+      "role": "Extremo Izquierdo",
+      "advantage": "Su rapidez en el uno contra uno lo convierte en pesadilla de laterales"
     }
   },
   {
@@ -1162,7 +1323,7 @@
     "pokeapi_details": {
       "id": 405,
       "height_m": 1.4,
-      "weight_kg": 42.0,
+      "weight_kg": 42,
       "abilities": [
         "rivalry",
         "intimidate",
@@ -1199,6 +1360,13 @@
         ]
       ],
       "pokemon_api_name": "luxray"
+    },
+    "football": {
+      "team": "Luxembourg",
+      "position": "LW",
+      "jersey": 11,
+      "role": "Extremo Izquierdo",
+      "advantage": "Su velocidad letal (75) desborda defensas por la izquierda sin piedad"
     }
   },
   {
@@ -1217,7 +1385,7 @@
     "pokeapi_details": {
       "id": 715,
       "height_m": 1.5,
-      "weight_kg": 85.0,
+      "weight_kg": 85,
       "abilities": [
         "frisk",
         "infiltrator",
@@ -1248,6 +1416,13 @@
         ]
       ],
       "pokemon_api_name": "noivern"
+    },
+    "football": {
+      "team": "Portugal",
+      "position": "ST",
+      "jersey": 10,
+      "role": "Delantero Centro",
+      "advantage": "Su frisk lo convierte en un cazador implacable dentro del área"
     }
   },
   {
@@ -1303,6 +1478,13 @@
         ]
       ],
       "pokemon_api_name": "kommo-o"
+    },
+    "football": {
+      "team": "Portugal",
+      "position": "ST",
+      "jersey": 11,
+      "role": "Delantero Centro",
+      "advantage": "Su remate potente (75) y su físico (78.2kg) lo hacen imparable"
     }
   },
   {
@@ -1357,6 +1539,13 @@
         ]
       ],
       "pokemon_api_name": "inteleon"
+    },
+    "football": {
+      "team": "South Korea",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su defensa implacable (88) no perdía un duelo"
     }
   },
   {
@@ -1411,6 +1600,13 @@
         ]
       ],
       "pokemon_api_name": "decidueye"
+    },
+    "football": {
+      "team": "Saudi Arabia",
+      "position": "RB",
+      "jersey": 2,
+      "role": "Lateral Derecho",
+      "advantage": "Su overgrow le permite recuperar balones y lanzar contragolpes letales"
     }
   },
   {
@@ -1429,7 +1625,7 @@
     "pokeapi_details": {
       "id": 625,
       "height_m": 1.6,
-      "weight_kg": 70.0,
+      "weight_kg": 70,
       "abilities": [
         "defiant",
         "inner-focus",
@@ -1460,6 +1656,13 @@
         ]
       ],
       "pokemon_api_name": "bisharp"
+    },
+    "football": {
+      "team": "Tunisia",
+      "position": "RW",
+      "jersey": 7,
+      "role": "Extremo Derecho",
+      "advantage": "Su velocidad punta deja atrás a cualquier defensor en el sprint"
     }
   },
   {
@@ -1478,7 +1681,7 @@
     "pokeapi_details": {
       "id": 635,
       "height_m": 1.8,
-      "weight_kg": 160.0,
+      "weight_kg": 160,
       "abilities": [
         "levitate"
       ],
@@ -1513,6 +1716,13 @@
         ]
       ],
       "pokemon_api_name": "hydreigon"
+    },
+    "football": {
+      "team": "Portugal",
+      "position": "ST",
+      "jersey": 12,
+      "role": "Delantero Centro",
+      "advantage": "Su remate potente (85) y su físico (160kg) lo hacen imparable"
     }
   },
   {
@@ -1561,6 +1771,13 @@
         ]
       ],
       "pokemon_api_name": "alcremie"
+    },
+    "football": {
+      "team": "Canada",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su olfato de gol (88) lo pone siempre en el lugar correcto"
     }
   },
   {
@@ -1610,6 +1827,13 @@
         ]
       ],
       "pokemon_api_name": "toxapex"
+    },
+    "football": {
+      "team": "New Zealand",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su merciless lo hace rocoso e impasable en el uno contra uno"
     }
   },
   {
@@ -1653,6 +1877,13 @@
         ]
       ],
       "pokemon_api_name": "eevee"
+    },
+    "football": {
+      "team": "Portugal",
+      "position": "LB",
+      "jersey": 6,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su velocidad eléctrica (75) le permite subir y bajar la banda sin descanso"
     }
   },
   {
@@ -1671,7 +1902,7 @@
     "pokeapi_details": {
       "id": 252,
       "height_m": 0.5,
-      "weight_kg": 5.0,
+      "weight_kg": 5,
       "abilities": [
         "overgrow",
         "unburden"
@@ -1695,6 +1926,13 @@
         ]
       ],
       "pokemon_api_name": "treecko"
+    },
+    "football": {
+      "team": "Brazil",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su remate potente (78) y su físico (5kg) lo hacen imparable"
     }
   },
   {
@@ -1713,7 +1951,7 @@
     "pokeapi_details": {
       "id": 350,
       "height_m": 6.2,
-      "weight_kg": 162.0,
+      "weight_kg": 162,
       "abilities": [
         "marvel-scale",
         "competitive",
@@ -1744,6 +1982,13 @@
         ]
       ],
       "pokemon_api_name": "milotic"
+    },
+    "football": {
+      "team": "France",
+      "position": "LW",
+      "jersey": 11,
+      "role": "Extremo Izquierdo",
+      "advantage": "Su rapidez en el uno contra uno lo convierte en pesadilla de laterales"
     }
   },
   {
@@ -1762,7 +2007,7 @@
     "pokeapi_details": {
       "id": 306,
       "height_m": 2.1,
-      "weight_kg": 360.0,
+      "weight_kg": 360,
       "abilities": [
         "sturdy",
         "rock-head",
@@ -1799,6 +2044,13 @@
         ]
       ],
       "pokemon_api_name": "aggron"
+    },
+    "football": {
+      "team": "Iceland",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su sturdy lo hace rocoso e impasable en el uno contra uno"
     }
   },
   {
@@ -1817,7 +2069,7 @@
     "pokeapi_details": {
       "id": 257,
       "height_m": 1.9,
-      "weight_kg": 52.0,
+      "weight_kg": 52,
       "abilities": [
         "blaze",
         "speed-boost"
@@ -1853,6 +2105,13 @@
         ]
       ],
       "pokemon_api_name": "blaziken"
+    },
+    "football": {
+      "team": "Spain",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su blaze lo convierte en un cazador implacable dentro del área"
     }
   },
   {
@@ -1870,8 +2129,8 @@
     "countryCode": "GER",
     "pokeapi_details": {
       "id": 248,
-      "height_m": 2.0,
-      "weight_kg": 202.0,
+      "height_m": 2,
+      "weight_kg": 202,
       "abilities": [
         "sand-stream",
         "unnerve"
@@ -1907,6 +2166,13 @@
         ]
       ],
       "pokemon_api_name": "tyranitar"
+    },
+    "football": {
+      "team": "Germany",
+      "position": "RB",
+      "jersey": 2,
+      "role": "Lateral Derecho",
+      "advantage": "Su resistencia cubre toda la banda de área a área"
     }
   },
   {
@@ -1961,6 +2227,13 @@
         ]
       ],
       "pokemon_api_name": "samurott"
+    },
+    "football": {
+      "team": "Germany",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su olfato de gol (88) lo pone siempre en el lugar correcto"
     }
   },
   {
@@ -1979,7 +2252,7 @@
     "pokeapi_details": {
       "id": 812,
       "height_m": 2.1,
-      "weight_kg": 90.0,
+      "weight_kg": 90,
       "abilities": [
         "overgrow",
         "grassy-surge"
@@ -2015,6 +2288,13 @@
         ]
       ],
       "pokemon_api_name": "rillaboom"
+    },
+    "football": {
+      "team": "Mexico",
+      "position": "RB",
+      "jersey": 2,
+      "role": "Lateral Derecho",
+      "advantage": "Su overgrow le permite recuperar balones y lanzar contragolpes letales"
     }
   },
   {
@@ -2069,6 +2349,13 @@
         ]
       ],
       "pokemon_api_name": "talonflame"
+    },
+    "football": {
+      "team": "Peru",
+      "position": "RW",
+      "jersey": 7,
+      "role": "Extremo Derecho",
+      "advantage": "Su velocidad punta deja atrás a cualquier defensor en el sprint"
     }
   },
   {
@@ -2087,7 +2374,7 @@
     "pokeapi_details": {
       "id": 888,
       "height_m": 2.8,
-      "weight_kg": 110.0,
+      "weight_kg": 110,
       "abilities": [
         "intrepid-sword"
       ],
@@ -2110,6 +2397,13 @@
         ]
       ],
       "pokemon_api_name": "zacian"
+    },
+    "football": {
+      "team": "Switzerland",
+      "position": "RB",
+      "jersey": 2,
+      "role": "Lateral Derecho",
+      "advantage": "Su explosividad (85) lo hace imparable en la banda derecha"
     }
   },
   {
@@ -2128,7 +2422,7 @@
     "pokeapi_details": {
       "id": 445,
       "height_m": 1.9,
-      "weight_kg": 95.0,
+      "weight_kg": 95,
       "abilities": [
         "sand-veil",
         "rough-skin"
@@ -2164,6 +2458,13 @@
         ]
       ],
       "pokemon_api_name": "garchomp"
+    },
+    "football": {
+      "team": "Peru",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su defensa implacable (90) no perdía un duelo"
     }
   },
   {
@@ -2182,7 +2483,7 @@
     "pokeapi_details": {
       "id": 815,
       "height_m": 1.4,
-      "weight_kg": 33.0,
+      "weight_kg": 33,
       "abilities": [
         "blaze",
         "libero"
@@ -2218,6 +2519,13 @@
         ]
       ],
       "pokemon_api_name": "cinderace"
+    },
+    "football": {
+      "team": "Morocco",
+      "position": "CB",
+      "jersey": 5,
+      "role": "Defensa Central",
+      "advantage": "Su blaze lo hace rocoso e impasable en el uno contra uno"
     }
   },
   {
@@ -2259,6 +2567,13 @@
         ]
       ],
       "pokemon_api_name": "shaymin-land"
+    },
+    "football": {
+      "team": "Senegal",
+      "position": "LB",
+      "jersey": 6,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su velocidad eléctrica (70) le permite subir y bajar la banda sin descanso"
     }
   },
   {
@@ -2277,7 +2592,7 @@
     "pokeapi_details": {
       "id": 637,
       "height_m": 1.6,
-      "weight_kg": 46.0,
+      "weight_kg": 46,
       "abilities": [
         "flame-body",
         "swarm"
@@ -2307,6 +2622,13 @@
         ]
       ],
       "pokemon_api_name": "volcarona"
+    },
+    "football": {
+      "team": "UAE",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su flame body le permite anticipar y cortar cualquier ataque"
     }
   },
   {
@@ -2325,7 +2647,7 @@
     "pokeapi_details": {
       "id": 232,
       "height_m": 1.1,
-      "weight_kg": 120.0,
+      "weight_kg": 120,
       "abilities": [
         "sturdy",
         "sand-veil"
@@ -2355,6 +2677,13 @@
         ]
       ],
       "pokemon_api_name": "donphan"
+    },
+    "football": {
+      "team": "Morocco",
+      "position": "CB",
+      "jersey": 6,
+      "role": "Defensa Central",
+      "advantage": "Su defensa implacable (90) no perdía un duelo"
     }
   },
   {
@@ -2373,7 +2702,7 @@
     "pokeapi_details": {
       "id": 699,
       "height_m": 2.7,
-      "weight_kg": 225.0,
+      "weight_kg": 225,
       "abilities": [
         "refrigerate",
         "snow-warning"
@@ -2403,6 +2732,13 @@
         ]
       ],
       "pokemon_api_name": "aurorus"
+    },
+    "football": {
+      "team": "Belgium",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su potencia de fuego (88) define con precisión quirúrgica frente al arco"
     }
   },
   {
@@ -2421,7 +2757,7 @@
     "pokeapi_details": {
       "id": 468,
       "height_m": 1.5,
-      "weight_kg": 38.0,
+      "weight_kg": 38,
       "abilities": [
         "hustle",
         "serene-grace",
@@ -2458,6 +2794,13 @@
         ]
       ],
       "pokemon_api_name": "togekiss"
+    },
+    "football": {
+      "team": "Sweden",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su hustle lo convierte en un cazador implacable dentro del área"
     }
   },
   {
@@ -2507,6 +2850,13 @@
         ]
       ],
       "pokemon_api_name": "excadrill"
+    },
+    "football": {
+      "team": "Paraguay",
+      "position": "RB",
+      "jersey": 2,
+      "role": "Lateral Derecho",
+      "advantage": "Su resistencia cubre toda la banda de área a área"
     }
   },
   {
@@ -2524,8 +2874,8 @@
     "countryCode": "ECU",
     "pokeapi_details": {
       "id": 887,
-      "height_m": 3.0,
-      "weight_kg": 50.0,
+      "height_m": 3,
+      "weight_kg": 50,
       "abilities": [
         "clear-body",
         "infiltrator",
@@ -2562,6 +2912,13 @@
         ]
       ],
       "pokemon_api_name": "dragapult"
+    },
+    "football": {
+      "team": "Ecuador",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su olfato de gol (85) lo pone siempre en el lugar correcto"
     }
   },
   {
@@ -2580,7 +2937,7 @@
     "pokeapi_details": {
       "id": 230,
       "height_m": 1.8,
-      "weight_kg": 152.0,
+      "weight_kg": 152,
       "abilities": [
         "swift-swim",
         "sniper",
@@ -2617,6 +2974,13 @@
         ]
       ],
       "pokemon_api_name": "kingdra"
+    },
+    "football": {
+      "team": "Angola",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su swift swim lo hace rocoso e impasable en el uno contra uno"
     }
   },
   {
@@ -2671,6 +3035,13 @@
         ]
       ],
       "pokemon_api_name": "salamence"
+    },
+    "football": {
+      "team": "South Korea",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su intimidate lo convierte en un cazador implacable dentro del área"
     }
   },
   {
@@ -2712,6 +3083,13 @@
         ]
       ],
       "pokemon_api_name": "mimikyu-disguised"
+    },
+    "football": {
+      "team": "Qatar",
+      "position": "RB",
+      "jersey": 2,
+      "role": "Lateral Derecho",
+      "advantage": "Su explosividad (55) lo hace imparable en la banda derecha"
     }
   },
   {
@@ -2730,7 +3108,7 @@
     "pokeapi_details": {
       "id": 760,
       "height_m": 2.1,
-      "weight_kg": 135.0,
+      "weight_kg": 135,
       "abilities": [
         "fluffy",
         "klutz",
@@ -2761,6 +3139,13 @@
         ]
       ],
       "pokemon_api_name": "bewear"
+    },
+    "football": {
+      "team": "Canada",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su defensa implacable (80) no perdía un duelo"
     }
   },
   {
@@ -2779,7 +3164,7 @@
     "pokeapi_details": {
       "id": 892,
       "height_m": 1.9,
-      "weight_kg": 105.0,
+      "weight_kg": 105,
       "abilities": [
         "unseen-fist"
       ],
@@ -2808,6 +3193,13 @@
         ]
       ],
       "pokemon_api_name": "urshifu-single-strike"
+    },
+    "football": {
+      "team": "New Zealand",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su potencia de fuego (95) define con precisión quirúrgica frente al arco"
     }
   },
   {
@@ -2826,7 +3218,7 @@
     "pokeapi_details": {
       "id": 7,
       "height_m": 0.5,
-      "weight_kg": 9.0,
+      "weight_kg": 9,
       "abilities": [
         "torrent",
         "rain-dish"
@@ -2850,6 +3242,13 @@
         ]
       ],
       "pokemon_api_name": "squirtle"
+    },
+    "football": {
+      "team": "Argentina",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su torrent lo convierte en un cazador implacable dentro del área"
     }
   },
   {
@@ -2892,6 +3291,13 @@
         ]
       ],
       "pokemon_api_name": "piplup"
+    },
+    "football": {
+      "team": "Peru",
+      "position": "RB",
+      "jersey": 2,
+      "role": "Lateral Derecho",
+      "advantage": "Su torrent le permite recuperar balones y lanzar contragolpes letales"
     }
   },
   {
@@ -2934,6 +3340,13 @@
         ]
       ],
       "pokemon_api_name": "turtwig"
+    },
+    "football": {
+      "team": "Brazil",
+      "position": "LB",
+      "jersey": 7,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su agilidad combina defensa sólida con proyección ofensiva"
     }
   },
   {
@@ -2977,6 +3390,13 @@
         ]
       ],
       "pokemon_api_name": "riolu"
+    },
+    "football": {
+      "team": "Germany",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su steadfast lo hace rocoso e impasable en el uno contra uno"
     }
   },
   {
@@ -2995,7 +3415,7 @@
     "pokeapi_details": {
       "id": 831,
       "height_m": 0.6,
-      "weight_kg": 6.0,
+      "weight_kg": 6,
       "abilities": [
         "fluffy",
         "run-away",
@@ -3020,6 +3440,13 @@
         ]
       ],
       "pokemon_api_name": "wooloo"
+    },
+    "football": {
+      "team": "Paraguay",
+      "position": "CB",
+      "jersey": 6,
+      "role": "Defensa Central",
+      "advantage": "Su fuerza bruta (6kg) intimida a cualquier delantero rival"
     }
   },
   {
@@ -3038,7 +3465,7 @@
     "pokeapi_details": {
       "id": 359,
       "height_m": 1.2,
-      "weight_kg": 47.0,
+      "weight_kg": 47,
       "abilities": [
         "pressure",
         "super-luck",
@@ -3063,6 +3490,13 @@
         ]
       ],
       "pokemon_api_name": "absol"
+    },
+    "football": {
+      "team": "Germany",
+      "position": "CB",
+      "jersey": 5,
+      "role": "Defensa Central",
+      "advantage": "Su pressure le permite anticipar y cortar cualquier ataque"
     }
   },
   {
@@ -3081,7 +3515,7 @@
     "pokeapi_details": {
       "id": 816,
       "height_m": 0.3,
-      "weight_kg": 4.0,
+      "weight_kg": 4,
       "abilities": [
         "torrent",
         "sniper"
@@ -3105,6 +3539,13 @@
         ]
       ],
       "pokemon_api_name": "sobble"
+    },
+    "football": {
+      "team": "Japan",
+      "position": "LB",
+      "jersey": 6,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su velocidad eléctrica (75) le permite subir y bajar la banda sin descanso"
     }
   },
   {
@@ -3147,6 +3588,13 @@
         ]
       ],
       "pokemon_api_name": "rowlet"
+    },
+    "football": {
+      "team": "Mexico",
+      "position": "RB",
+      "jersey": 3,
+      "role": "Lateral Derecho",
+      "advantage": "Su overgrow le permite recuperar balones y lanzar contragolpes letales"
     }
   },
   {
@@ -3189,6 +3637,13 @@
         ]
       ],
       "pokemon_api_name": "mudkip"
+    },
+    "football": {
+      "team": "Croatia",
+      "position": "LB",
+      "jersey": 6,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su agilidad combina defensa sólida con proyección ofensiva"
     }
   },
   {
@@ -3207,7 +3662,7 @@
     "pokeapi_details": {
       "id": 885,
       "height_m": 0.5,
-      "weight_kg": 2.0,
+      "weight_kg": 2,
       "abilities": [
         "clear-body",
         "infiltrator",
@@ -3232,6 +3687,13 @@
         ]
       ],
       "pokemon_api_name": "dreepy"
+    },
+    "football": {
+      "team": "Peru",
+      "position": "CB",
+      "jersey": 5,
+      "role": "Defensa Central",
+      "advantage": "Su clear body le permite anticipar y cortar cualquier ataque"
     }
   },
   {
@@ -3250,7 +3712,7 @@
     "pokeapi_details": {
       "id": 650,
       "height_m": 0.4,
-      "weight_kg": 9.0,
+      "weight_kg": 9,
       "abilities": [
         "overgrow",
         "bulletproof"
@@ -3274,6 +3736,13 @@
         ]
       ],
       "pokemon_api_name": "chespin"
+    },
+    "football": {
+      "team": "Italy",
+      "position": "LB",
+      "jersey": 6,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su overgrow desborda por la izquierda y centra con precisión milimétrica"
     }
   },
   {
@@ -3291,7 +3760,7 @@
     "countryCode": "SUI",
     "pokeapi_details": {
       "id": 712,
-      "height_m": 1.0,
+      "height_m": 1,
       "weight_kg": 99.5,
       "abilities": [
         "own-tempo",
@@ -3317,6 +3786,13 @@
         ]
       ],
       "pokemon_api_name": "bergmite"
+    },
+    "football": {
+      "team": "Switzerland",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su own tempo lo hace rocoso e impasable en el uno contra uno"
     }
   },
   {
@@ -3365,6 +3841,13 @@
         ]
       ],
       "pokemon_api_name": "drizzile"
+    },
+    "football": {
+      "team": "USA",
+      "position": "LB",
+      "jersey": 6,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su velocidad eléctrica (75) le permite subir y bajar la banda sin descanso"
     }
   },
   {
@@ -3417,6 +3900,13 @@
         ]
       ],
       "pokemon_api_name": "froslass"
+    },
+    "football": {
+      "team": "Uruguay",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su snow cloak le permite anticipar y cortar cualquier ataque"
     }
   },
   {
@@ -3435,7 +3925,7 @@
     "pokeapi_details": {
       "id": 814,
       "height_m": 0.6,
-      "weight_kg": 9.0,
+      "weight_kg": 9,
       "abilities": [
         "blaze",
         "libero"
@@ -3465,6 +3955,13 @@
         ]
       ],
       "pokemon_api_name": "raboot"
+    },
+    "football": {
+      "team": "Paraguay",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su olfato de gol (80) lo pone siempre en el lugar correcto"
     }
   },
   {
@@ -3483,7 +3980,7 @@
     "pokeapi_details": {
       "id": 694,
       "height_m": 0.5,
-      "weight_kg": 6.0,
+      "weight_kg": 6,
       "abilities": [
         "dry-skin",
         "sand-veil",
@@ -3508,6 +4005,13 @@
         ]
       ],
       "pokemon_api_name": "helioptile"
+    },
+    "football": {
+      "team": "Senegal",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su potencia de fuego (88) define con precisión quirúrgica frente al arco"
     }
   },
   {
@@ -3526,7 +4030,7 @@
     "pokeapi_details": {
       "id": 451,
       "height_m": 0.8,
-      "weight_kg": 12.0,
+      "weight_kg": 12,
       "abilities": [
         "battle-armor",
         "sniper",
@@ -3551,6 +4055,13 @@
         ]
       ],
       "pokemon_api_name": "skorupi"
+    },
+    "football": {
+      "team": "Portugal",
+      "position": "RW",
+      "jersey": 7,
+      "role": "Extremo Derecho",
+      "advantage": "Su battle armor recorta hacia adentro y saca disparos potentes al arco"
     }
   },
   {
@@ -3594,6 +4105,13 @@
         ]
       ],
       "pokemon_api_name": "litwick"
+    },
+    "football": {
+      "team": "Poland",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su flash fire le permite anticipar y cortar cualquier ataque"
     }
   },
   {
@@ -3611,8 +4129,8 @@
     "countryCode": "BEL",
     "pokeapi_details": {
       "id": 870,
-      "height_m": 3.0,
-      "weight_kg": 62.0,
+      "height_m": 3,
+      "weight_kg": 62,
       "abilities": [
         "battle-armor",
         "defiant"
@@ -3636,6 +4154,13 @@
         ]
       ],
       "pokemon_api_name": "falinks"
+    },
+    "football": {
+      "team": "Belgium",
+      "position": "LB",
+      "jersey": 6,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su velocidad eléctrica (80) le permite subir y bajar la banda sin descanso"
     }
   },
   {
@@ -3654,7 +4179,7 @@
     "pokeapi_details": {
       "id": 900,
       "height_m": 1.8,
-      "weight_kg": 89.0,
+      "weight_kg": 89,
       "abilities": [
         "swarm",
         "sheer-force",
@@ -3689,6 +4214,13 @@
         ]
       ],
       "pokemon_api_name": "kleavor"
+    },
+    "football": {
+      "team": "Austria",
+      "position": "RB",
+      "jersey": 3,
+      "role": "Lateral Derecho",
+      "advantage": "Su swarm le permite recuperar balones y lanzar contragolpes letales"
     }
   },
   {
@@ -3707,7 +4239,7 @@
     "pokeapi_details": {
       "id": 939,
       "height_m": 1.2,
-      "weight_kg": 113.0,
+      "weight_kg": 113,
       "abilities": [
         "electromorphosis",
         "static",
@@ -3738,6 +4270,13 @@
         ]
       ],
       "pokemon_api_name": "bellibolt"
+    },
+    "football": {
+      "team": "Belgium",
+      "position": "ST",
+      "jersey": 10,
+      "role": "Delantero Centro",
+      "advantage": "Su electromorphosis lo convierte en un cazador implacable dentro del área"
     }
   },
   {
@@ -3755,8 +4294,8 @@
     "countryCode": "ECU",
     "pokeapi_details": {
       "id": 357,
-      "height_m": 2.0,
-      "weight_kg": 100.0,
+      "height_m": 2,
+      "weight_kg": 100,
       "abilities": [
         "chlorophyll",
         "solar-power",
@@ -3781,6 +4320,13 @@
         ]
       ],
       "pokemon_api_name": "tropius"
+    },
+    "football": {
+      "team": "Ecuador",
+      "position": "ST",
+      "jersey": 10,
+      "role": "Delantero Centro",
+      "advantage": "Su remate potente (88) y su físico (100kg) lo hacen imparable"
     }
   },
   {
@@ -3799,7 +4345,7 @@
     "pokeapi_details": {
       "id": 823,
       "height_m": 2.2,
-      "weight_kg": 75.0,
+      "weight_kg": 75,
       "abilities": [
         "pressure",
         "unnerve",
@@ -3836,6 +4382,13 @@
         ]
       ],
       "pokemon_api_name": "corviknight"
+    },
+    "football": {
+      "team": "Australia",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su defensa implacable (90) no perdía un duelo"
     }
   },
   {
@@ -3877,6 +4430,13 @@
         ]
       ],
       "pokemon_api_name": "zorua"
+    },
+    "football": {
+      "team": "South Korea",
+      "position": "LW",
+      "jersey": 11,
+      "role": "Extremo Izquierdo",
+      "advantage": "Su rapidez en el uno contra uno lo convierte en pesadilla de laterales"
     }
   },
   {
@@ -3920,6 +4480,13 @@
         ]
       ],
       "pokemon_api_name": "gossifleur"
+    },
+    "football": {
+      "team": "Saudi Arabia",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su cotton down lo convierte en un cazador implacable dentro del área"
     }
   },
   {
@@ -3938,7 +4505,7 @@
     "pokeapi_details": {
       "id": 769,
       "height_m": 0.5,
-      "weight_kg": 70.0,
+      "weight_kg": 70,
       "abilities": [
         "water-compaction",
         "sand-veil"
@@ -3962,6 +4529,13 @@
         ]
       ],
       "pokemon_api_name": "sandygast"
+    },
+    "football": {
+      "team": "Panama",
+      "position": "RB",
+      "jersey": 2,
+      "role": "Lateral Derecho",
+      "advantage": "Su water compaction le permite recuperar balones y lanzar contragolpes letales"
     }
   },
   {
@@ -4010,6 +4584,13 @@
         ]
       ],
       "pokemon_api_name": "salazzle"
+    },
+    "football": {
+      "team": "Qatar",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su olfato de gol (85) lo pone siempre en el lugar correcto"
     }
   },
   {
@@ -4028,7 +4609,7 @@
     "pokeapi_details": {
       "id": 820,
       "height_m": 0.6,
-      "weight_kg": 6.0,
+      "weight_kg": 6,
       "abilities": [
         "cheek-pouch",
         "gluttony"
@@ -4058,6 +4639,13 @@
         ]
       ],
       "pokemon_api_name": "greedent"
+    },
+    "football": {
+      "team": "Canada",
+      "position": "RW",
+      "jersey": 7,
+      "role": "Extremo Derecho",
+      "advantage": "Su explosividad (88) destruye defensas por la banda derecha"
     }
   },
   {
@@ -4076,7 +4664,7 @@
     "pokeapi_details": {
       "id": 497,
       "height_m": 3.3,
-      "weight_kg": 63.0,
+      "weight_kg": 63,
       "abilities": [
         "overgrow",
         "contrary"
@@ -4112,6 +4700,13 @@
         ]
       ],
       "pokemon_api_name": "serperior"
+    },
+    "football": {
+      "team": "Peru",
+      "position": "CB",
+      "jersey": 6,
+      "role": "Defensa Central",
+      "advantage": "Su fuerza bruta (63kg) intimida a cualquier delantero rival"
     }
   },
   {
@@ -4130,7 +4725,7 @@
     "pokeapi_details": {
       "id": 861,
       "height_m": 1.5,
-      "weight_kg": 61.0,
+      "weight_kg": 61,
       "abilities": [
         "prankster",
         "frisk",
@@ -4167,6 +4762,13 @@
         ]
       ],
       "pokemon_api_name": "grimmsnarl"
+    },
+    "football": {
+      "team": "Peru",
+      "position": "CB",
+      "jersey": 8,
+      "role": "Defensa Central",
+      "advantage": "Su prankster le permite anticipar y cortar cualquier ataque"
     }
   },
   {
@@ -4185,7 +4787,7 @@
     "pokeapi_details": {
       "id": 936,
       "height_m": 1.5,
-      "weight_kg": 85.0,
+      "weight_kg": 85,
       "abilities": [
         "flash-fire",
         "weak-armor"
@@ -4219,6 +4821,13 @@
         ]
       ],
       "pokemon_api_name": "armarouge"
+    },
+    "football": {
+      "team": "Armenia",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su olfato de gol (88) lo pone siempre en el lugar correcto"
     }
   },
   {
@@ -4237,7 +4846,7 @@
     "pokeapi_details": {
       "id": 979,
       "height_m": 1.2,
-      "weight_kg": 56.0,
+      "weight_kg": 56,
       "abilities": [
         "vital-spirit",
         "inner-focus",
@@ -4274,6 +4883,13 @@
         ]
       ],
       "pokemon_api_name": "annihilape"
+    },
+    "football": {
+      "team": "Morocco",
+      "position": "RB",
+      "jersey": 2,
+      "role": "Lateral Derecho",
+      "advantage": "Su vital spirit le permite recuperar balones y lanzar contragolpes letales"
     }
   },
   {
@@ -4291,8 +4907,8 @@
     "countryCode": "SEN",
     "pokeapi_details": {
       "id": 983,
-      "height_m": 2.0,
-      "weight_kg": 120.0,
+      "height_m": 2,
+      "weight_kg": 120,
       "abilities": [
         "defiant",
         "supreme-overlord",
@@ -4329,6 +4945,13 @@
         ]
       ],
       "pokemon_api_name": "kingambit"
+    },
+    "football": {
+      "team": "Senegal",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su fuerza bruta (120kg) intimida a cualquier delantero rival"
     }
   },
   {
@@ -4347,7 +4970,7 @@
     "pokeapi_details": {
       "id": 628,
       "height_m": 1.5,
-      "weight_kg": 41.0,
+      "weight_kg": 41,
       "abilities": [
         "keen-eye",
         "sheer-force",
@@ -4378,6 +5001,13 @@
         ]
       ],
       "pokemon_api_name": "braviary"
+    },
+    "football": {
+      "team": "Denmark",
+      "position": "RB",
+      "jersey": 2,
+      "role": "Lateral Derecho",
+      "advantage": "Su explosividad (70) lo hace imparable en la banda derecha"
     }
   },
   {
@@ -4396,7 +5026,7 @@
     "pokeapi_details": {
       "id": 998,
       "height_m": 2.1,
-      "weight_kg": 210.0,
+      "weight_kg": 210,
       "abilities": [
         "thermal-exchange",
         "ice-body"
@@ -4432,6 +5062,13 @@
         ]
       ],
       "pokemon_api_name": "baxcalibur"
+    },
+    "football": {
+      "team": "Austria",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su defensa implacable (90) no perdía un duelo"
     }
   },
   {
@@ -4449,8 +5086,8 @@
     "countryCode": "SUI",
     "pokeapi_details": {
       "id": 695,
-      "height_m": 1.0,
-      "weight_kg": 21.0,
+      "height_m": 1,
+      "weight_kg": 21,
       "abilities": [
         "dry-skin",
         "sand-veil",
@@ -4481,6 +5118,13 @@
         ]
       ],
       "pokemon_api_name": "heliolisk"
+    },
+    "football": {
+      "team": "Switzerland",
+      "position": "ST",
+      "jersey": 10,
+      "role": "Delantero Centro",
+      "advantage": "Su potencia de fuego (88) define con precisión quirúrgica frente al arco"
     }
   },
   {
@@ -4528,6 +5172,13 @@
         ]
       ],
       "pokemon_api_name": "zoroark"
+    },
+    "football": {
+      "team": "Vietnam",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su illusion lo convierte en un cazador implacable dentro del área"
     }
   },
   {
@@ -4545,7 +5196,7 @@
     "countryCode": "ECU",
     "pokeapi_details": {
       "id": 470,
-      "height_m": 1.0,
+      "height_m": 1,
       "weight_kg": 25.5,
       "abilities": [
         "leaf-guard",
@@ -4604,6 +5255,13 @@
         ]
       ],
       "pokemon_api_name": "leafeon"
+    },
+    "football": {
+      "team": "Ecuador",
+      "position": "RB",
+      "jersey": 2,
+      "role": "Lateral Derecho",
+      "advantage": "Su leaf guard le permite recuperar balones y lanzar contragolpes letales"
     }
   },
   {
@@ -4652,6 +5310,13 @@
         ]
       ],
       "pokemon_api_name": "ninetales"
+    },
+    "football": {
+      "team": "Saudi Arabia",
+      "position": "ST",
+      "jersey": 10,
+      "role": "Delantero Centro",
+      "advantage": "Su olfato de gol (88) lo pone siempre en el lugar correcto"
     }
   },
   {
@@ -4669,8 +5334,8 @@
     "countryCode": "POR",
     "pokeapi_details": {
       "id": 330,
-      "height_m": 2.0,
-      "weight_kg": 82.0,
+      "height_m": 2,
+      "weight_kg": 82,
       "abilities": [
         "levitate"
       ],
@@ -4705,6 +5370,13 @@
         ]
       ],
       "pokemon_api_name": "flygon"
+    },
+    "football": {
+      "team": "Portugal",
+      "position": "CB",
+      "jersey": 5,
+      "role": "Defensa Central",
+      "advantage": "Su levitate lo hace rocoso e impasable en el uno contra uno"
     }
   },
   {
@@ -4722,8 +5394,8 @@
     "countryCode": "ARG",
     "pokeapi_details": {
       "id": 134,
-      "height_m": 1.0,
-      "weight_kg": 29.0,
+      "height_m": 1,
+      "weight_kg": 29,
       "abilities": [
         "water-absorb",
         "hydration"
@@ -4781,6 +5453,13 @@
         ]
       ],
       "pokemon_api_name": "vaporeon"
+    },
+    "football": {
+      "team": "Argentina",
+      "position": "LB",
+      "jersey": 6,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su water absorb desborda por la izquierda y centra con precisión milimétrica"
     }
   },
   {
@@ -4799,7 +5478,7 @@
     "pokeapi_details": {
       "id": 658,
       "height_m": 1.5,
-      "weight_kg": 40.0,
+      "weight_kg": 40,
       "abilities": [
         "torrent",
         "protean"
@@ -4835,6 +5514,13 @@
         ]
       ],
       "pokemon_api_name": "greninja"
+    },
+    "football": {
+      "team": "France",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su torrent le permite anticipar y cortar cualquier ataque"
     }
   },
   {
@@ -4853,7 +5539,7 @@
     "pokeapi_details": {
       "id": 655,
       "height_m": 1.5,
-      "weight_kg": 39.0,
+      "weight_kg": 39,
       "abilities": [
         "blaze",
         "magician"
@@ -4889,6 +5575,13 @@
         ]
       ],
       "pokemon_api_name": "delphox"
+    },
+    "football": {
+      "team": "Spain",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su defensa implacable (88) no perdía un duelo"
     }
   },
   {
@@ -4907,7 +5600,7 @@
     "pokeapi_details": {
       "id": 78,
       "height_m": 1.7,
-      "weight_kg": 95.0,
+      "weight_kg": 95,
       "abilities": [
         "run-away",
         "flash-fire",
@@ -4938,6 +5631,13 @@
         ]
       ],
       "pokemon_api_name": "rapidash"
+    },
+    "football": {
+      "team": "Japan",
+      "position": "RW",
+      "jersey": 7,
+      "role": "Extremo Derecho",
+      "advantage": "Su run away recorta hacia adentro y saca disparos potentes al arco"
     }
   },
   {
@@ -4992,6 +5692,13 @@
         ]
       ],
       "pokemon_api_name": "feraligatr"
+    },
+    "football": {
+      "team": "Croatia",
+      "position": "LB",
+      "jersey": 7,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su agilidad combina defensa sólida con proyección ofensiva"
     }
   },
   {
@@ -5047,6 +5754,13 @@
         ]
       ],
       "pokemon_api_name": "roserade"
+    },
+    "football": {
+      "team": "Italy",
+      "position": "RB",
+      "jersey": 2,
+      "role": "Lateral Derecho",
+      "advantage": "Su explosividad (80) lo hace imparable en la banda derecha"
     }
   },
   {
@@ -5101,6 +5815,13 @@
         ]
       ],
       "pokemon_api_name": "staraptor"
+    },
+    "football": {
+      "team": "USA",
+      "position": "LB",
+      "jersey": 7,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su intimidate desborda por la izquierda y centra con precisión milimétrica"
     }
   },
   {
@@ -5119,7 +5840,7 @@
     "pokeapi_details": {
       "id": 59,
       "height_m": 1.9,
-      "weight_kg": 155.0,
+      "weight_kg": 155,
       "abilities": [
         "intimidate",
         "flash-fire",
@@ -5150,6 +5871,13 @@
         ]
       ],
       "pokemon_api_name": "arcanine"
+    },
+    "football": {
+      "team": "Uruguay",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su potencia de fuego (90) define con precisión quirúrgica frente al arco"
     }
   },
   {
@@ -5199,6 +5927,13 @@
         ]
       ],
       "pokemon_api_name": "toxicroak"
+    },
+    "football": {
+      "team": "Colombia",
+      "position": "CDM",
+      "jersey": 5,
+      "role": "Mediocentro Defensivo",
+      "advantage": "Su resistencia (78) le permite barrer todo el mediocampo sin descanso"
     }
   },
   {
@@ -5242,6 +5977,13 @@
         ]
       ],
       "pokemon_api_name": "hawlucha"
+    },
+    "football": {
+      "team": "Senegal",
+      "position": "ST",
+      "jersey": 10,
+      "role": "Delantero Centro",
+      "advantage": "Su remate potente (88) y su físico (21.5kg) lo hacen imparable"
     }
   },
   {
@@ -5260,7 +6002,7 @@
     "pokeapi_details": {
       "id": 462,
       "height_m": 1.2,
-      "weight_kg": 180.0,
+      "weight_kg": 180,
       "abilities": [
         "magnet-pull",
         "sturdy",
@@ -5297,6 +6039,13 @@
         ]
       ],
       "pokemon_api_name": "magnezone"
+    },
+    "football": {
+      "team": "Sweden",
+      "position": "LW",
+      "jersey": 12,
+      "role": "Extremo Izquierdo",
+      "advantage": "Su rapidez en el uno contra uno lo convierte en pesadilla de laterales"
     }
   },
   {
@@ -5315,7 +6064,7 @@
     "pokeapi_details": {
       "id": 461,
       "height_m": 1.1,
-      "weight_kg": 34.0,
+      "weight_kg": 34,
       "abilities": [
         "pressure",
         "pickpocket"
@@ -5349,6 +6098,13 @@
         ]
       ],
       "pokemon_api_name": "weavile"
+    },
+    "football": {
+      "team": "Ukraine",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su pressure lo hace rocoso e impasable en el uno contra uno"
     }
   },
   {
@@ -5397,6 +6153,13 @@
         ]
       ],
       "pokemon_api_name": "darmanitan-standard"
+    },
+    "football": {
+      "team": "Italy",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su fuerza bruta (92.9kg) intimida a cualquier delantero rival"
     }
   },
   {
@@ -5414,7 +6177,7 @@
     "countryCode": "PAN",
     "pokeapi_details": {
       "id": 706,
-      "height_m": 2.0,
+      "height_m": 2,
       "weight_kg": 150.5,
       "abilities": [
         "sap-sipper",
@@ -5452,6 +6215,13 @@
         ]
       ],
       "pokemon_api_name": "goodra"
+    },
+    "football": {
+      "team": "Panama",
+      "position": "RB",
+      "jersey": 3,
+      "role": "Lateral Derecho",
+      "advantage": "Su resistencia cubre toda la banda de área a área"
     }
   },
   {
@@ -5470,7 +6240,7 @@
     "pokeapi_details": {
       "id": 558,
       "height_m": 1.4,
-      "weight_kg": 200.0,
+      "weight_kg": 200,
       "abilities": [
         "sturdy",
         "shell-armor",
@@ -5501,6 +6271,13 @@
         ]
       ],
       "pokemon_api_name": "crustle"
+    },
+    "football": {
+      "team": "New Zealand",
+      "position": "RW",
+      "jersey": 7,
+      "role": "Extremo Derecho",
+      "advantage": "Su explosividad (100) destruye defensas por la banda derecha"
     }
   },
   {
@@ -5543,6 +6320,13 @@
         ]
       ],
       "pokemon_api_name": "charmander"
+    },
+    "football": {
+      "team": "Portugal",
+      "position": "CB",
+      "jersey": 8,
+      "role": "Defensa Central",
+      "advantage": "Su blaze lo hace rocoso e impasable en el uno contra uno"
     }
   },
   {
@@ -5597,6 +6381,13 @@
         ]
       ],
       "pokemon_api_name": "sceptile"
+    },
+    "football": {
+      "team": "Brazil",
+      "position": "LB",
+      "jersey": 8,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su agilidad combina defensa sólida con proyección ofensiva"
     }
   },
   {
@@ -5651,6 +6442,13 @@
         ]
       ],
       "pokemon_api_name": "ampharos"
+    },
+    "football": {
+      "team": "Germany",
+      "position": "LW",
+      "jersey": 11,
+      "role": "Extremo Izquierdo",
+      "advantage": "Su velocidad letal (75) desborda defensas por la izquierda sin piedad"
     }
   },
   {
@@ -5700,6 +6498,13 @@
         ]
       ],
       "pokemon_api_name": "breloom"
+    },
+    "football": {
+      "team": "Portugal",
+      "position": "LB",
+      "jersey": 13,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su effect spore desborda por la izquierda y centra con precisión milimétrica"
     }
   },
   {
@@ -5749,6 +6554,13 @@
         ]
       ],
       "pokemon_api_name": "tinkatuff"
+    },
+    "football": {
+      "team": "Croatia",
+      "position": "RB",
+      "jersey": 2,
+      "role": "Lateral Derecho",
+      "advantage": "Su resistencia cubre toda la banda de área a área"
     }
   },
   {
@@ -5767,7 +6579,7 @@
     "pokeapi_details": {
       "id": 730,
       "height_m": 1.8,
-      "weight_kg": 44.0,
+      "weight_kg": 44,
       "abilities": [
         "torrent",
         "liquid-voice"
@@ -5803,6 +6615,13 @@
         ]
       ],
       "pokemon_api_name": "primarina"
+    },
+    "football": {
+      "team": "Morocco",
+      "position": "ST",
+      "jersey": 10,
+      "role": "Delantero Centro",
+      "advantage": "Su torrent lo convierte en un cazador implacable dentro del área"
     }
   },
   {
@@ -5851,6 +6670,13 @@
         ]
       ],
       "pokemon_api_name": "lurantis"
+    },
+    "football": {
+      "team": "Paraguay",
+      "position": "RB",
+      "jersey": 3,
+      "role": "Lateral Derecho",
+      "advantage": "Su leaf guard le permite recuperar balones y lanzar contragolpes letales"
     }
   },
   {
@@ -5900,6 +6726,13 @@
         ]
       ],
       "pokemon_api_name": "dragalge"
+    },
+    "football": {
+      "team": "Paraguay",
+      "position": "ST",
+      "jersey": 10,
+      "role": "Delantero Centro",
+      "advantage": "Su olfato de gol (85) lo pone siempre en el lugar correcto"
     }
   },
   {
@@ -5918,7 +6751,7 @@
     "pokeapi_details": {
       "id": 1000,
       "height_m": 1.2,
-      "weight_kg": 30.0,
+      "weight_kg": 30,
       "abilities": [
         "good-as-gold"
       ],
@@ -5947,6 +6780,13 @@
         ]
       ],
       "pokemon_api_name": "gholdengo"
+    },
+    "football": {
+      "team": "Austria",
+      "position": "RB",
+      "jersey": 5,
+      "role": "Lateral Derecho",
+      "advantage": "Su explosividad (75) lo hace imparable en la banda derecha"
     }
   },
   {
@@ -6001,6 +6841,13 @@
         ]
       ],
       "pokemon_api_name": "electivire"
+    },
+    "football": {
+      "team": "Sweden",
+      "position": "ST",
+      "jersey": 10,
+      "role": "Delantero Centro",
+      "advantage": "Su motor drive lo convierte en un cazador implacable dentro del área"
     }
   },
   {
@@ -6049,6 +6896,13 @@
         ]
       ],
       "pokemon_api_name": "floatzel"
+    },
+    "football": {
+      "team": "Australia",
+      "position": "CB",
+      "jersey": 5,
+      "role": "Defensa Central",
+      "advantage": "Su swift swim le permite anticipar y cortar cualquier ataque"
     }
   },
   {
@@ -6067,7 +6921,7 @@
     "pokeapi_details": {
       "id": 901,
       "height_m": 2.4,
-      "weight_kg": 290.0,
+      "weight_kg": 290,
       "abilities": [
         "guts",
         "bulletproof",
@@ -6104,6 +6958,13 @@
         ]
       ],
       "pokemon_api_name": "ursaluna"
+    },
+    "football": {
+      "team": "Tunisia",
+      "position": "LB",
+      "jersey": 6,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su velocidad eléctrica (95) le permite subir y bajar la banda sin descanso"
     }
   },
   {
@@ -6122,7 +6983,7 @@
     "pokeapi_details": {
       "id": 937,
       "height_m": 1.6,
-      "weight_kg": 62.0,
+      "weight_kg": 62,
       "abilities": [
         "flash-fire",
         "weak-armor"
@@ -6156,6 +7017,13 @@
         ]
       ],
       "pokemon_api_name": "ceruledge"
+    },
+    "football": {
+      "team": "Qatar",
+      "position": "ST",
+      "jersey": 10,
+      "role": "Delantero Centro",
+      "advantage": "Su potencia de fuego (85) define con precisión quirúrgica frente al arco"
     }
   },
   {
@@ -6199,6 +7067,13 @@
         ]
       ],
       "pokemon_api_name": "mawile"
+    },
+    "football": {
+      "team": "Panama",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su fuerza bruta (11.5kg) intimida a cualquier delantero rival"
     }
   },
   {
@@ -6241,6 +7116,13 @@
         ]
       ],
       "pokemon_api_name": "tapu-koko"
+    },
+    "football": {
+      "team": "Australia",
+      "position": "CB",
+      "jersey": 6,
+      "role": "Defensa Central",
+      "advantage": "Su electric surge le permite anticipar y cortar cualquier ataque"
     }
   },
   {
@@ -6259,7 +7141,7 @@
     "pokeapi_details": {
       "id": 195,
       "height_m": 1.4,
-      "weight_kg": 75.0,
+      "weight_kg": 75,
       "abilities": [
         "damp",
         "water-absorb",
@@ -6294,6 +7176,13 @@
         ]
       ],
       "pokemon_api_name": "quagsire"
+    },
+    "football": {
+      "team": "Argentina",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su defensa implacable (85) no perdía un duelo"
     }
   },
   {
@@ -6352,6 +7241,13 @@
         ]
       ],
       "pokemon_api_name": "bellossom"
+    },
+    "football": {
+      "team": "Portugal",
+      "position": "RB",
+      "jersey": 2,
+      "role": "Lateral Derecho",
+      "advantage": "Su resistencia cubre toda la banda de área a área"
     }
   },
   {
@@ -6407,6 +7303,13 @@
         ]
       ],
       "pokemon_api_name": "hatterene"
+    },
+    "football": {
+      "team": "Japan",
+      "position": "CAM",
+      "jersey": 10,
+      "role": "Mediapunta",
+      "advantage": "Su inteligencia lee el juego y asiste a los delanteros con precisión"
     }
   },
   {
@@ -6425,7 +7328,7 @@
     "pokeapi_details": {
       "id": 593,
       "height_m": 2.2,
-      "weight_kg": 135.0,
+      "weight_kg": 135,
       "abilities": [
         "water-absorb",
         "cursed-body",
@@ -6456,6 +7359,13 @@
         ]
       ],
       "pokemon_api_name": "jellicent-male"
+    },
+    "football": {
+      "team": "Portugal",
+      "position": "CB",
+      "jersey": 14,
+      "role": "Defensa Central",
+      "advantage": "Su water absorb le permite anticipar y cortar cualquier ataque"
     }
   },
   {
@@ -6474,7 +7384,7 @@
     "pokeapi_details": {
       "id": 534,
       "height_m": 1.4,
-      "weight_kg": 87.0,
+      "weight_kg": 87,
       "abilities": [
         "guts",
         "sheer-force",
@@ -6511,6 +7421,13 @@
         ]
       ],
       "pokemon_api_name": "conkeldurr"
+    },
+    "football": {
+      "team": "Netherlands",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su defensa implacable (80) no perdía un duelo"
     }
   },
   {
@@ -6565,6 +7482,13 @@
         ]
       ],
       "pokemon_api_name": "dusknoir"
+    },
+    "football": {
+      "team": "Switzerland",
+      "position": "CB",
+      "jersey": 5,
+      "role": "Defensa Central",
+      "advantage": "Su pressure lo hace rocoso e impasable en el uno contra uno"
     }
   },
   {
@@ -6583,7 +7507,7 @@
     "pokeapi_details": {
       "id": 738,
       "height_m": 1.5,
-      "weight_kg": 45.0,
+      "weight_kg": 45,
       "abilities": [
         "levitate"
       ],
@@ -6618,6 +7542,13 @@
         ]
       ],
       "pokemon_api_name": "vikavolt"
+    },
+    "football": {
+      "team": "Sweden",
+      "position": "LB",
+      "jersey": 6,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su levitate desborda por la izquierda y centra con precisión milimétrica"
     }
   },
   {
@@ -6659,6 +7590,13 @@
         ]
       ],
       "pokemon_api_name": "komala"
+    },
+    "football": {
+      "team": "Australia",
+      "position": "RW",
+      "jersey": 7,
+      "role": "Extremo Derecho",
+      "advantage": "Su velocidad punta deja atrás a cualquier defensor en el sprint"
     }
   },
   {
@@ -6676,7 +7614,7 @@
     "countryCode": "KOR",
     "pokeapi_details": {
       "id": 579,
-      "height_m": 1.0,
+      "height_m": 1,
       "weight_kg": 20.1,
       "abilities": [
         "overcoat",
@@ -6714,6 +7652,13 @@
         ]
       ],
       "pokemon_api_name": "reuniclus"
+    },
+    "football": {
+      "team": "South Korea",
+      "position": "CB",
+      "jersey": 5,
+      "role": "Defensa Central",
+      "advantage": "Su defensa implacable (80) no perdía un duelo"
     }
   },
   {
@@ -6732,7 +7677,7 @@
     "pokeapi_details": {
       "id": 675,
       "height_m": 2.1,
-      "weight_kg": 136.0,
+      "weight_kg": 136,
       "abilities": [
         "iron-fist",
         "mold-breaker",
@@ -6763,6 +7708,13 @@
         ]
       ],
       "pokemon_api_name": "pangoro"
+    },
+    "football": {
+      "team": "Canada",
+      "position": "CB",
+      "jersey": 5,
+      "role": "Defensa Central",
+      "advantage": "Su iron fist lo hace rocoso e impasable en el uno contra uno"
     }
   },
   {
@@ -6774,7 +7726,14 @@
     "vel": 40,
     "country": "🇵🇹",
     "countryName": "Portugal",
-    "countryCode": "POR"
+    "countryCode": "POR",
+    "football": {
+      "team": "Portugal",
+      "position": "ST",
+      "jersey": 15,
+      "role": "Delantero Centro",
+      "advantage": "Su instinto natural lo convierte en un cazador implacable dentro del área"
+    }
   },
   {
     "id": 138,
@@ -6822,6 +7781,13 @@
         ]
       ],
       "pokemon_api_name": "lilligant"
+    },
+    "football": {
+      "team": "Brazil",
+      "position": "ST",
+      "jersey": 10,
+      "role": "Delantero Centro",
+      "advantage": "Su remate potente (88) y su físico (16.3kg) lo hacen imparable"
     }
   },
   {
@@ -6839,7 +7805,7 @@
     "pokeapi_details": {
       "id": 383,
       "height_m": 3.5,
-      "weight_kg": 950.0,
+      "weight_kg": 950,
       "abilities": [
         "drought"
       ],
@@ -6862,6 +7828,13 @@
         ]
       ],
       "pokemon_api_name": "groudon"
+    },
+    "football": {
+      "team": "South Korea",
+      "position": "CB",
+      "jersey": 6,
+      "role": "Defensa Central",
+      "advantage": "Su defensa implacable (80) no perdía un duelo"
     }
   },
   {
@@ -6879,7 +7852,7 @@
     "pokeapi_details": {
       "id": 709,
       "height_m": 1.5,
-      "weight_kg": 71.0,
+      "weight_kg": 71,
       "abilities": [
         "natural-cure",
         "frisk",
@@ -6910,6 +7883,13 @@
         ]
       ],
       "pokemon_api_name": "trevenant"
+    },
+    "football": {
+      "team": "Agente Libre",
+      "position": "—",
+      "jersey": 0,
+      "role": "Sin equipo",
+      "advantage": "Este Pokémon aún no tiene equipo. ¡Necesita ser fichado!"
     }
   },
   {
@@ -6958,6 +7938,13 @@
         ]
       ],
       "pokemon_api_name": "mandibuzz"
+    },
+    "football": {
+      "team": "Mexico",
+      "position": "RW",
+      "jersey": 7,
+      "role": "Extremo Derecho",
+      "advantage": "Su explosividad (105) destruye defensas por la banda derecha"
     }
   },
   {
@@ -7006,6 +7993,13 @@
         ]
       ],
       "pokemon_api_name": "whimsicott"
+    },
+    "football": {
+      "team": "Agente Libre",
+      "position": "—",
+      "jersey": 0,
+      "role": "Sin equipo",
+      "advantage": "Este Pokémon aún no tiene equipo. ¡Necesita ser fichado!"
     }
   },
   {
@@ -7060,6 +8054,13 @@
         ]
       ],
       "pokemon_api_name": "krookodile"
+    },
+    "football": {
+      "team": "South Korea",
+      "position": "CB",
+      "jersey": 7,
+      "role": "Defensa Central",
+      "advantage": "Su defensa implacable (70) no perdía un duelo"
     }
   },
   {
@@ -7113,6 +8114,13 @@
         ]
       ],
       "pokemon_api_name": "victreebel"
+    },
+    "football": {
+      "team": "Agente Libre",
+      "position": "—",
+      "jersey": 0,
+      "role": "Sin equipo",
+      "advantage": "Este Pokémon aún no tiene equipo. ¡Necesita ser fichado!"
     }
   },
   {
@@ -7124,7 +8132,14 @@
     "vel": 65,
     "country": "🇲🇦",
     "countryName": "Morocco",
-    "countryCode": "MAR"
+    "countryCode": "MAR",
+    "football": {
+      "team": "Morocco",
+      "position": "CB",
+      "jersey": 7,
+      "role": "Defensa Central",
+      "advantage": "Su fuerza bruta (50kg) intimida a cualquier delantero rival"
+    }
   },
   {
     "id": 146,
@@ -7135,7 +8150,14 @@
     "vel": 75,
     "country": "🇺🇦",
     "countryName": "Ukraine",
-    "countryCode": "UKR"
+    "countryCode": "UKR",
+    "football": {
+      "team": "Ukraine",
+      "position": "RB",
+      "jersey": 2,
+      "role": "Lateral Derecho",
+      "advantage": "Su resistencia cubre toda la banda de área a área"
+    }
   },
   {
     "id": 147,
@@ -7182,6 +8204,13 @@
         ]
       ],
       "pokemon_api_name": "forretress"
+    },
+    "football": {
+      "team": "Agente Libre",
+      "position": "—",
+      "jersey": 0,
+      "role": "Sin equipo",
+      "advantage": "Este Pokémon aún no tiene equipo. ¡Necesita ser fichado!"
     }
   },
   {
@@ -7199,7 +8228,7 @@
     "pokeapi_details": {
       "id": 600,
       "height_m": 0.6,
-      "weight_kg": 51.0,
+      "weight_kg": 51,
       "abilities": [
         "plus",
         "minus",
@@ -7230,6 +8259,13 @@
         ]
       ],
       "pokemon_api_name": "klang"
+    },
+    "football": {
+      "team": "Agente Libre",
+      "position": "—",
+      "jersey": 0,
+      "role": "Sin equipo",
+      "advantage": "Este Pokémon aún no tiene equipo. ¡Necesita ser fichado!"
     }
   },
   {
@@ -7247,7 +8283,7 @@
     "pokeapi_details": {
       "id": 679,
       "height_m": 0.8,
-      "weight_kg": 2.0,
+      "weight_kg": 2,
       "abilities": [
         "no-guard"
       ],
@@ -7270,6 +8306,13 @@
         ]
       ],
       "pokemon_api_name": "honedge"
+    },
+    "football": {
+      "team": "South Korea",
+      "position": "CB",
+      "jersey": 8,
+      "role": "Defensa Central",
+      "advantage": "Su fuerza bruta (2kg) intimida a cualquier delantero rival"
     }
   },
   {
@@ -7287,7 +8330,7 @@
     "pokeapi_details": {
       "id": 770,
       "height_m": 1.3,
-      "weight_kg": 250.0,
+      "weight_kg": 250,
       "abilities": [
         "water-compaction",
         "sand-veil"
@@ -7317,6 +8360,13 @@
         ]
       ],
       "pokemon_api_name": "palossand"
+    },
+    "football": {
+      "team": "Saudi Arabia",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su water compaction le permite anticipar y cortar cualquier ataque"
     }
   },
   {
@@ -7333,7 +8383,7 @@
     "type": "Ground",
     "pokeapi_details": {
       "id": 552,
-      "height_m": 1.0,
+      "height_m": 1,
       "weight_kg": 33.4,
       "abilities": [
         "intimidate",
@@ -7365,6 +8415,13 @@
         ]
       ],
       "pokemon_api_name": "krokorok"
+    },
+    "football": {
+      "team": "Tunisia",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su defensa implacable (70) no perdía un duelo"
     }
   },
   {
@@ -7376,7 +8433,14 @@
     "vel": 90,
     "country": "🏳️",
     "countryCode": "???",
-    "countryName": "Desconocido"
+    "countryName": "Desconocido",
+    "football": {
+      "team": "Agente Libre",
+      "position": "—",
+      "jersey": 0,
+      "role": "Sin equipo",
+      "advantage": "Este Pokémon aún no tiene equipo. ¡Necesita ser fichado!"
+    }
   },
   {
     "id": 153,
@@ -7418,6 +8482,13 @@
         ]
       ],
       "pokemon_api_name": "stantler"
+    },
+    "football": {
+      "team": "Canada",
+      "position": "ST",
+      "jersey": 10,
+      "role": "Delantero Centro",
+      "advantage": "Su intimidate lo convierte en un cazador implacable dentro del área"
     }
   },
   {
@@ -7429,7 +8500,14 @@
     "vel": 75,
     "country": "🇳🇿",
     "countryName": "New Zealand",
-    "countryCode": "NZL"
+    "countryCode": "NZL",
+    "football": {
+      "team": "New Zealand",
+      "position": "RW",
+      "jersey": 8,
+      "role": "Extremo Derecho",
+      "advantage": "Su instinto natural recorta hacia adentro y saca disparos potentes al arco"
+    }
   },
   {
     "id": 155,
@@ -7446,7 +8524,7 @@
     "pokeapi_details": {
       "id": 578,
       "height_m": 0.6,
-      "weight_kg": 8.0,
+      "weight_kg": 8,
       "abilities": [
         "overcoat",
         "magic-guard",
@@ -7477,6 +8555,13 @@
         ]
       ],
       "pokemon_api_name": "duosion"
+    },
+    "football": {
+      "team": "Argentina",
+      "position": "ST",
+      "jersey": 10,
+      "role": "Delantero Centro",
+      "advantage": "Su olfato de gol (88) lo pone siempre en el lugar correcto"
     }
   },
   {
@@ -7525,6 +8610,13 @@
         ]
       ],
       "pokemon_api_name": "cinccino"
+    },
+    "football": {
+      "team": "Agente Libre",
+      "position": "—",
+      "jersey": 0,
+      "role": "Sin equipo",
+      "advantage": "Este Pokémon aún no tiene equipo. ¡Necesita ser fichado!"
     }
   },
   {
@@ -7536,7 +8628,14 @@
     "vel": 60,
     "country": "🇪🇸",
     "countryName": "Spain",
-    "countryCode": "ESP"
+    "countryCode": "ESP",
+    "football": {
+      "team": "Spain",
+      "position": "CB",
+      "jersey": 5,
+      "role": "Defensa Central",
+      "advantage": "Su fuerza bruta (50kg) intimida a cualquier delantero rival"
+    }
   },
   {
     "id": 158,
@@ -7547,7 +8646,14 @@
     "vel": 60,
     "country": "🇩🇪",
     "countryName": "Germany",
-    "countryCode": "GER"
+    "countryCode": "GER",
+    "football": {
+      "team": "Germany",
+      "position": "CB",
+      "jersey": 6,
+      "role": "Defensa Central",
+      "advantage": "Su instinto natural le permite anticipar y cortar cualquier ataque"
+    }
   },
   {
     "id": 159,
@@ -7595,6 +8701,13 @@
         ]
       ],
       "pokemon_api_name": "galvantula"
+    },
+    "football": {
+      "team": "Agente Libre",
+      "position": "—",
+      "jersey": 0,
+      "role": "Sin equipo",
+      "advantage": "Este Pokémon aún no tiene equipo. ¡Necesita ser fichado!"
     }
   },
   {
@@ -7606,7 +8719,14 @@
     "vel": 70,
     "country": "🇲🇽",
     "countryName": "Mexico",
-    "countryCode": "MEX"
+    "countryCode": "MEX",
+    "football": {
+      "team": "Mexico",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su instinto natural lo hace rocoso e impasable en el uno contra uno"
+    }
   },
   {
     "id": 161,
@@ -7617,7 +8737,14 @@
     "vel": 70,
     "country": "🇭🇷",
     "countryName": "Croatia",
-    "countryCode": "CRO"
+    "countryCode": "CRO",
+    "football": {
+      "team": "Croatia",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su fuerza bruta (50kg) intimida a cualquier delantero rival"
+    }
   },
   {
     "id": 162,
@@ -7628,7 +8755,14 @@
     "vel": 60,
     "country": "🇵🇪",
     "countryName": "Peru",
-    "countryCode": "PER"
+    "countryCode": "PER",
+    "football": {
+      "team": "Peru",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su remate potente (80) y su físico (50kg) lo hacen imparable"
+    }
   },
   {
     "id": 163,
@@ -7681,6 +8815,13 @@
         ]
       ],
       "pokemon_api_name": "typhlosion"
+    },
+    "football": {
+      "team": "USA",
+      "position": "ST",
+      "jersey": 10,
+      "role": "Delantero Centro",
+      "advantage": "Su olfato de gol (88) lo pone siempre en el lugar correcto"
     }
   },
   {
@@ -7729,6 +8870,13 @@
         ]
       ],
       "pokemon_api_name": "hariyama"
+    },
+    "football": {
+      "team": "Denmark",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su thick fat lo hace rocoso e impasable en el uno contra uno"
     }
   },
   {
@@ -7746,7 +8894,7 @@
     "pokeapi_details": {
       "id": 437,
       "height_m": 1.3,
-      "weight_kg": 187.0,
+      "weight_kg": 187,
       "abilities": [
         "levitate",
         "heatproof",
@@ -7777,6 +8925,13 @@
         ]
       ],
       "pokemon_api_name": "bronzong"
+    },
+    "football": {
+      "team": "Agente Libre",
+      "position": "—",
+      "jersey": 0,
+      "role": "Sin equipo",
+      "advantage": "Este Pokémon aún no tiene equipo. ¡Necesita ser fichado!"
     }
   },
   {
@@ -7794,7 +8949,7 @@
     "pokeapi_details": {
       "id": 875,
       "height_m": 1.4,
-      "weight_kg": 89.0,
+      "weight_kg": 89,
       "abilities": [
         "ice-face"
       ],
@@ -7817,6 +8972,13 @@
         ]
       ],
       "pokemon_api_name": "eiscue-ice"
+    },
+    "football": {
+      "team": "Sweden",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su ice face le permite anticipar y cortar cualquier ataque"
     }
   },
   {
@@ -7833,7 +8995,7 @@
     "type": "Grass",
     "pokeapi_details": {
       "id": 459,
-      "height_m": 1.0,
+      "height_m": 1,
       "weight_kg": 50.5,
       "abilities": [
         "snow-warning",
@@ -7858,6 +9020,13 @@
         ]
       ],
       "pokemon_api_name": "snover"
+    },
+    "football": {
+      "team": "Ukraine",
+      "position": "LB",
+      "jersey": 6,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su agilidad combina defensa sólida con proyección ofensiva"
     }
   },
   {
@@ -7869,7 +9038,14 @@
     "vel": 30,
     "country": "🇪🇨",
     "countryName": "Ecuador",
-    "countryCode": "ECU"
+    "countryCode": "ECU",
+    "football": {
+      "team": "Ecuador",
+      "position": "ST",
+      "jersey": 11,
+      "role": "Delantero Centro",
+      "advantage": "Su potencia de fuego (95) define con precisión quirúrgica frente al arco"
+    }
   },
   {
     "id": 169,
@@ -7886,7 +9062,7 @@
     "pokeapi_details": {
       "id": 740,
       "height_m": 1.7,
-      "weight_kg": 180.0,
+      "weight_kg": 180,
       "abilities": [
         "hyper-cutter",
         "iron-fist",
@@ -7917,6 +9093,13 @@
         ]
       ],
       "pokemon_api_name": "crabominable"
+    },
+    "football": {
+      "team": "Agente Libre",
+      "position": "—",
+      "jersey": 0,
+      "role": "Sin equipo",
+      "advantage": "Este Pokémon aún no tiene equipo. ¡Necesita ser fichado!"
     }
   },
   {
@@ -7933,7 +9116,7 @@
     "type": "Fighting",
     "pokeapi_details": {
       "id": 766,
-      "height_m": 2.0,
+      "height_m": 2,
       "weight_kg": 82.8,
       "abilities": [
         "receiver",
@@ -7958,6 +9141,13 @@
         ]
       ],
       "pokemon_api_name": "passimian"
+    },
+    "football": {
+      "team": "South Korea",
+      "position": "ST",
+      "jersey": 10,
+      "role": "Delantero Centro",
+      "advantage": "Su remate potente (80) y su físico (82.8kg) lo hacen imparable"
     }
   },
   {
@@ -7974,8 +9164,8 @@
     "type": "Normal",
     "pokeapi_details": {
       "id": 780,
-      "height_m": 3.0,
-      "weight_kg": 185.0,
+      "height_m": 3,
+      "weight_kg": 185,
       "abilities": [
         "berserk",
         "sap-sipper",
@@ -8000,6 +9190,13 @@
         ]
       ],
       "pokemon_api_name": "drampa"
+    },
+    "football": {
+      "team": "Tunisia",
+      "position": "CB",
+      "jersey": 5,
+      "role": "Defensa Central",
+      "advantage": "Su defensa implacable (70) no perdía un duelo"
     }
   },
   {
@@ -8016,8 +9213,8 @@
     "type": "Steel",
     "pokeapi_details": {
       "id": 879,
-      "height_m": 3.0,
-      "weight_kg": 650.0,
+      "height_m": 3,
+      "weight_kg": 650,
       "abilities": [
         "sheer-force",
         "heavy-metal"
@@ -8047,6 +9244,13 @@
         ]
       ],
       "pokemon_api_name": "copperajah"
+    },
+    "football": {
+      "team": "Canada",
+      "position": "CB",
+      "jersey": 6,
+      "role": "Defensa Central",
+      "advantage": "Su sheer force lo hace rocoso e impasable en el uno contra uno"
     }
   },
   {
@@ -8058,7 +9262,14 @@
     "vel": 60,
     "country": "🇦🇷",
     "countryName": "Argentina",
-    "countryCode": "ARG"
+    "countryCode": "ARG",
+    "football": {
+      "team": "Argentina",
+      "position": "CB",
+      "jersey": 5,
+      "role": "Defensa Central",
+      "advantage": "Su fuerza bruta (50kg) intimida a cualquier delantero rival"
+    }
   },
   {
     "id": 174,
@@ -8075,7 +9286,7 @@
     "pokeapi_details": {
       "id": 214,
       "height_m": 1.5,
-      "weight_kg": 54.0,
+      "weight_kg": 54,
       "abilities": [
         "swarm",
         "guts",
@@ -8100,6 +9311,13 @@
         ]
       ],
       "pokemon_api_name": "heracross"
+    },
+    "football": {
+      "team": "Brazil",
+      "position": "RB",
+      "jersey": 2,
+      "role": "Lateral Derecho",
+      "advantage": "Su explosividad (80) lo hace imparable en la banda derecha"
     }
   },
   {
@@ -8117,7 +9335,7 @@
     "pokeapi_details": {
       "id": 508,
       "height_m": 1.2,
-      "weight_kg": 61.0,
+      "weight_kg": 61,
       "abilities": [
         "intimidate",
         "sand-rush",
@@ -8154,6 +9372,13 @@
         ]
       ],
       "pokemon_api_name": "stoutland"
+    },
+    "football": {
+      "team": "Agente Libre",
+      "position": "—",
+      "jersey": 0,
+      "role": "Sin equipo",
+      "advantage": "Este Pokémon aún no tiene equipo. ¡Necesita ser fichado!"
     }
   },
   {
@@ -8170,7 +9395,7 @@
     "type": "Ghost",
     "pokeapi_details": {
       "id": 609,
-      "height_m": 1.0,
+      "height_m": 1,
       "weight_kg": 34.3,
       "abilities": [
         "flash-fire",
@@ -8208,6 +9433,13 @@
         ]
       ],
       "pokemon_api_name": "chandelure"
+    },
+    "football": {
+      "team": "England",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su potencia de fuego (95) define con precisión quirúrgica frente al arco"
     }
   },
   {
@@ -8225,7 +9457,7 @@
     "pokeapi_details": {
       "id": 65,
       "height_m": 1.5,
-      "weight_kg": 48.0,
+      "weight_kg": 48,
       "abilities": [
         "synchronize",
         "inner-focus",
@@ -8262,6 +9494,13 @@
         ]
       ],
       "pokemon_api_name": "alakazam"
+    },
+    "football": {
+      "team": "Germany",
+      "position": "ST",
+      "jersey": 10,
+      "role": "Delantero Centro",
+      "advantage": "Su synchronize lo convierte en un cazador implacable dentro del área"
     }
   },
   {
@@ -8273,7 +9512,14 @@
     "vel": 110,
     "country": "🇯🇵",
     "countryName": "Japan",
-    "countryCode": "JPN"
+    "countryCode": "JPN",
+    "football": {
+      "team": "Japan",
+      "position": "RW",
+      "jersey": 8,
+      "role": "Extremo Derecho",
+      "advantage": "Su instinto natural recorta hacia adentro y saca disparos potentes al arco"
+    }
   },
   {
     "id": 179,
@@ -8290,7 +9536,7 @@
     "pokeapi_details": {
       "id": 272,
       "height_m": 1.5,
-      "weight_kg": 55.0,
+      "weight_kg": 55,
       "abilities": [
         "swift-swim",
         "rain-dish",
@@ -8327,6 +9573,13 @@
         ]
       ],
       "pokemon_api_name": "ludicolo"
+    },
+    "football": {
+      "team": "Mexico",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su olfato de gol (88) lo pone siempre en el lugar correcto"
     }
   },
   {
@@ -8338,7 +9591,14 @@
     "vel": 75,
     "country": "🇮🇹",
     "countryName": "Italy",
-    "countryCode": "ITA"
+    "countryCode": "ITA",
+    "football": {
+      "team": "Italy",
+      "position": "ST",
+      "jersey": 10,
+      "role": "Delantero Centro",
+      "advantage": "Su potencia de fuego (88) define con precisión quirúrgica frente al arco"
+    }
   },
   {
     "id": 181,
@@ -8380,6 +9640,13 @@
         ]
       ],
       "pokemon_api_name": "skarmory"
+    },
+    "football": {
+      "team": "Paraguay",
+      "position": "CB",
+      "jersey": 8,
+      "role": "Defensa Central",
+      "advantage": "Su fuerza bruta (50.5kg) intimida a cualquier delantero rival"
     }
   },
   {
@@ -8426,6 +9693,13 @@
         ]
       ],
       "pokemon_api_name": "haunter"
+    },
+    "football": {
+      "team": "UAE",
+      "position": "LW",
+      "jersey": 11,
+      "role": "Extremo Izquierdo",
+      "advantage": "Su rapidez en el uno contra uno lo convierte en pesadilla de laterales"
     }
   },
   {
@@ -8467,6 +9741,13 @@
         ]
       ],
       "pokemon_api_name": "bagon"
+    },
+    "football": {
+      "team": "Agente Libre",
+      "position": "—",
+      "jersey": 0,
+      "role": "Sin equipo",
+      "advantage": "Este Pokémon aún no tiene equipo. ¡Necesita ser fichado!"
     }
   },
   {
@@ -8484,7 +9765,7 @@
     "pokeapi_details": {
       "id": 229,
       "height_m": 1.4,
-      "weight_kg": 35.0,
+      "weight_kg": 35,
       "abilities": [
         "early-bird",
         "flash-fire",
@@ -8515,6 +9796,13 @@
         ]
       ],
       "pokemon_api_name": "houndoom"
+    },
+    "football": {
+      "team": "Senegal",
+      "position": "LW",
+      "jersey": 11,
+      "role": "Extremo Izquierdo",
+      "advantage": "Su early bird regatea rivales como conos y encara al arco con decisión"
     }
   },
   {
@@ -8557,6 +9845,13 @@
         ]
       ],
       "pokemon_api_name": "qwilfish"
+    },
+    "football": {
+      "team": "Belgium",
+      "position": "CB",
+      "jersey": 4,
+      "role": "Defensa Central",
+      "advantage": "Su fuerza bruta (3.9kg) intimida a cualquier delantero rival"
     }
   },
   {
@@ -8605,6 +9900,13 @@
         ]
       ],
       "pokemon_api_name": "sawsbuck"
+    },
+    "football": {
+      "team": "Sweden",
+      "position": "RB",
+      "jersey": 2,
+      "role": "Lateral Derecho",
+      "advantage": "Su explosividad (80) lo hace imparable en la banda derecha"
     }
   },
   {
@@ -8621,8 +9923,8 @@
     "type": "Ice",
     "pokeapi_details": {
       "id": 713,
-      "height_m": 2.0,
-      "weight_kg": 505.0,
+      "height_m": 2,
+      "weight_kg": 505,
       "abilities": [
         "own-tempo",
         "ice-body",
@@ -8653,6 +9955,13 @@
         ]
       ],
       "pokemon_api_name": "avalugg"
+    },
+    "football": {
+      "team": "Ukraine",
+      "position": "RW",
+      "jersey": 7,
+      "role": "Extremo Derecho",
+      "advantage": "Su own tempo recorta hacia adentro y saca disparos potentes al arco"
     }
   },
   {
@@ -8664,7 +9973,14 @@
     "vel": 50,
     "country": "🇰🇷",
     "countryName": "South Korea",
-    "countryCode": "KOR"
+    "countryCode": "KOR",
+    "football": {
+      "team": "South Korea",
+      "position": "CB",
+      "jersey": 12,
+      "role": "Defensa Central",
+      "advantage": "Su instinto natural lo hace rocoso e impasable en el uno contra uno"
+    }
   },
   {
     "id": 189,
@@ -8718,6 +10034,13 @@
         ]
       ],
       "pokemon_api_name": "scolipede"
+    },
+    "football": {
+      "team": "South Korea",
+      "position": "ST",
+      "jersey": 13,
+      "role": "Delantero Centro",
+      "advantage": "Su poison point lo convierte en un cazador implacable dentro del área"
     }
   },
   {
@@ -8734,7 +10057,7 @@
     "countryName": "Desconocido",
     "pokeapi_details": {
       "id": 28,
-      "height_m": 1.0,
+      "height_m": 1,
       "weight_kg": 29.5,
       "abilities": [
         "sand-veil",
@@ -8765,6 +10088,13 @@
         ]
       ],
       "pokemon_api_name": "sandslash"
+    },
+    "football": {
+      "team": "Agente Libre",
+      "position": "—",
+      "jersey": 0,
+      "role": "Sin equipo",
+      "advantage": "Este Pokémon aún no tiene equipo. ¡Necesita ser fichado!"
     }
   },
   {
@@ -8782,7 +10112,7 @@
     "pokeapi_details": {
       "id": 73,
       "height_m": 1.6,
-      "weight_kg": 55.0,
+      "weight_kg": 55,
       "abilities": [
         "clear-body",
         "liquid-ooze",
@@ -8813,6 +10143,13 @@
         ]
       ],
       "pokemon_api_name": "tentacruel"
+    },
+    "football": {
+      "team": "Agente Libre",
+      "position": "—",
+      "jersey": 0,
+      "role": "Sin equipo",
+      "advantage": "Este Pokémon aún no tiene equipo. ¡Necesita ser fichado!"
     }
   },
   {
@@ -8829,7 +10166,7 @@
     "type": "Normal",
     "pokeapi_details": {
       "id": 400,
-      "height_m": 1.0,
+      "height_m": 1,
       "weight_kg": 31.5,
       "abilities": [
         "simple",
@@ -8861,6 +10198,13 @@
         ]
       ],
       "pokemon_api_name": "bibarel"
+    },
+    "football": {
+      "team": "UAE",
+      "position": "CB",
+      "jersey": 5,
+      "role": "Defensa Central",
+      "advantage": "Su simple lo hace rocoso e impasable en el uno contra uno"
     }
   },
   {
@@ -8909,6 +10253,13 @@
         ]
       ],
       "pokemon_api_name": "dodrio"
+    },
+    "football": {
+      "team": "South Korea",
+      "position": "RW",
+      "jersey": 14,
+      "role": "Extremo Derecho",
+      "advantage": "Su run away recorta hacia adentro y saca disparos potentes al arco"
     }
   },
   {
@@ -8950,6 +10301,13 @@
         ]
       ],
       "pokemon_api_name": "popplio"
+    },
+    "football": {
+      "team": "Switzerland",
+      "position": "RW",
+      "jersey": 7,
+      "role": "Extremo Derecho",
+      "advantage": "Su velocidad punta deja atrás a cualquier defensor en el sprint"
     }
   },
   {
@@ -8961,7 +10319,14 @@
     "vel": 60,
     "country": "🏳️",
     "countryCode": "???",
-    "countryName": "Desconocido"
+    "countryName": "Desconocido",
+    "football": {
+      "team": "Agente Libre",
+      "position": "—",
+      "jersey": 0,
+      "role": "Sin equipo",
+      "advantage": "Este Pokémon aún no tiene equipo. ¡Necesita ser fichado!"
+    }
   },
   {
     "id": 196,
@@ -9002,6 +10367,13 @@
         ]
       ],
       "pokemon_api_name": "yamper"
+    },
+    "football": {
+      "team": "Germany",
+      "position": "RB",
+      "jersey": 3,
+      "role": "Lateral Derecho",
+      "advantage": "Su ball fetch le permite recuperar balones y lanzar contragolpes letales"
     }
   },
   {
@@ -9019,7 +10391,7 @@
     "pokeapi_details": {
       "id": 877,
       "height_m": 0.3,
-      "weight_kg": 3.0,
+      "weight_kg": 3,
       "abilities": [
         "hunger-switch"
       ],
@@ -9042,6 +10414,13 @@
         ]
       ],
       "pokemon_api_name": "morpeko-full-belly"
+    },
+    "football": {
+      "team": "Japan",
+      "position": "RW",
+      "jersey": 11,
+      "role": "Extremo Derecho",
+      "advantage": "Su velocidad punta deja atrás a cualquier defensor en el sprint"
     }
   },
   {
@@ -9083,6 +10462,13 @@
         ]
       ],
       "pokemon_api_name": "sinistea"
+    },
+    "football": {
+      "team": "South Korea",
+      "position": "CB",
+      "jersey": 15,
+      "role": "Defensa Central",
+      "advantage": "Su weak armor le permite anticipar y cortar cualquier ataque"
     }
   },
   {
@@ -9125,6 +10511,13 @@
         ]
       ],
       "pokemon_api_name": "hatenna"
+    },
+    "football": {
+      "team": "Croatia",
+      "position": "LB",
+      "jersey": 8,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su healer desborda por la izquierda y centra con precisión milimétrica"
     }
   },
   {
@@ -9167,6 +10560,13 @@
         ]
       ],
       "pokemon_api_name": "impidimp"
+    },
+    "football": {
+      "team": "Agente Libre",
+      "position": "—",
+      "jersey": 0,
+      "role": "Sin equipo",
+      "advantage": "Este Pokémon aún no tiene equipo. ¡Necesita ser fichado!"
     }
   },
   {
@@ -9184,7 +10584,7 @@
     "pokeapi_details": {
       "id": 852,
       "height_m": 0.6,
-      "weight_kg": 4.0,
+      "weight_kg": 4,
       "abilities": [
         "limber",
         "technician"
@@ -9208,6 +10608,13 @@
         ]
       ],
       "pokemon_api_name": "clobbopus"
+    },
+    "football": {
+      "team": "Wales",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su limber lo convierte en un cazador implacable dentro del área"
     }
   },
   {
@@ -9219,7 +10626,14 @@
     "vel": 60,
     "country": "🏳️",
     "countryCode": "???",
-    "countryName": "Desconocido"
+    "countryName": "Desconocido",
+    "football": {
+      "team": "Agente Libre",
+      "position": "—",
+      "jersey": 0,
+      "role": "Sin equipo",
+      "advantage": "Este Pokémon aún no tiene equipo. ¡Necesita ser fichado!"
+    }
   },
   {
     "id": 203,
@@ -9261,6 +10675,13 @@
         ]
       ],
       "pokemon_api_name": "rookidee"
+    },
+    "football": {
+      "team": "Agente Libre",
+      "position": "—",
+      "jersey": 0,
+      "role": "Sin equipo",
+      "advantage": "Este Pokémon aún no tiene equipo. ¡Necesita ser fichado!"
     }
   },
   {
@@ -9278,7 +10699,7 @@
     "pokeapi_details": {
       "id": 871,
       "height_m": 0.3,
-      "weight_kg": 1.0,
+      "weight_kg": 1,
       "abilities": [
         "lightning-rod",
         "electric-surge"
@@ -9302,6 +10723,13 @@
         ]
       ],
       "pokemon_api_name": "pincurchin"
+    },
+    "football": {
+      "team": "Morocco",
+      "position": "CB",
+      "jersey": 8,
+      "role": "Defensa Central",
+      "advantage": "Su lightning rod lo hace rocoso e impasable en el uno contra uno"
     }
   },
   {
@@ -9313,7 +10741,14 @@
     "vel": 30,
     "country": "🇸🇳",
     "countryName": "Senegal",
-    "countryCode": "SEN"
+    "countryCode": "SEN",
+    "football": {
+      "team": "Senegal",
+      "position": "CB",
+      "jersey": 5,
+      "role": "Defensa Central",
+      "advantage": "Su fuerza bruta (50kg) intimida a cualquier delantero rival"
+    }
   },
   {
     "id": 206,
@@ -9324,7 +10759,14 @@
     "vel": 30,
     "country": "🇩🇰",
     "countryName": "Denmark",
-    "countryCode": "DEN"
+    "countryCode": "DEN",
+    "football": {
+      "team": "Denmark",
+      "position": "CB",
+      "jersey": 5,
+      "role": "Defensa Central",
+      "advantage": "Su instinto natural le permite anticipar y cortar cualquier ataque"
+    }
   },
   {
     "id": 207,
@@ -9341,7 +10783,7 @@
     "pokeapi_details": {
       "id": 850,
       "height_m": 0.7,
-      "weight_kg": 1.0,
+      "weight_kg": 1,
       "abilities": [
         "flash-fire",
         "white-smoke",
@@ -9366,6 +10808,13 @@
         ]
       ],
       "pokemon_api_name": "sizzlipede"
+    },
+    "football": {
+      "team": "Poland",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su olfato de gol (88) lo pone siempre en el lugar correcto"
     }
   },
   {
@@ -9383,7 +10832,7 @@
     "pokeapi_details": {
       "id": 846,
       "height_m": 0.5,
-      "weight_kg": 1.0,
+      "weight_kg": 1,
       "abilities": [
         "swift-swim",
         "propeller-tail"
@@ -9407,6 +10856,13 @@
         ]
       ],
       "pokemon_api_name": "arrokuda"
+    },
+    "football": {
+      "team": "Belgium",
+      "position": "RW",
+      "jersey": 7,
+      "role": "Extremo Derecho",
+      "advantage": "Su swift swim recorta hacia adentro y saca disparos potentes al arco"
     }
   },
   {
@@ -9418,7 +10874,14 @@
     "vel": 85,
     "country": "🏳️",
     "countryCode": "???",
-    "countryName": "Desconocido"
+    "countryName": "Desconocido",
+    "football": {
+      "team": "Agente Libre",
+      "position": "—",
+      "jersey": 0,
+      "role": "Sin equipo",
+      "advantage": "Este Pokémon aún no tiene equipo. ¡Necesita ser fichado!"
+    }
   },
   {
     "id": 210,
@@ -9435,7 +10898,7 @@
     "pokeapi_details": {
       "id": 734,
       "height_m": 0.4,
-      "weight_kg": 6.0,
+      "weight_kg": 6,
       "abilities": [
         "stakeout",
         "strong-jaw",
@@ -9460,6 +10923,13 @@
         ]
       ],
       "pokemon_api_name": "yungoos"
+    },
+    "football": {
+      "team": "Portugal",
+      "position": "RW",
+      "jersey": 16,
+      "role": "Extremo Derecho",
+      "advantage": "Su explosividad (80) destruye defensas por la banda derecha"
     }
   },
   {
@@ -9502,6 +10972,13 @@
         ]
       ],
       "pokemon_api_name": "stufful"
+    },
+    "football": {
+      "team": "Australia",
+      "position": "ST",
+      "jersey": 9,
+      "role": "Delantero Centro",
+      "advantage": "Su olfato de gol (80) lo pone siempre en el lugar correcto"
     }
   },
   {
@@ -9542,6 +11019,13 @@
         ]
       ],
       "pokemon_api_name": "oricorio-baile"
+    },
+    "football": {
+      "team": "Saudi Arabia",
+      "position": "LW",
+      "jersey": 11,
+      "role": "Extremo Izquierdo",
+      "advantage": "Su rapidez en el uno contra uno lo convierte en pesadilla de laterales"
     }
   },
   {
@@ -9582,6 +11066,13 @@
         ]
       ],
       "pokemon_api_name": "wishiwashi-solo"
+    },
+    "football": {
+      "team": "Tunisia",
+      "position": "LB",
+      "jersey": 8,
+      "role": "Lateral Izquierdo",
+      "advantage": "Su velocidad eléctrica (80) le permite subir y bajar la banda sin descanso"
     }
   },
   {
@@ -9593,7 +11084,14 @@
     "vel": 85,
     "country": "🇶🇦",
     "countryName": "Qatar",
-    "countryCode": "QAT"
+    "countryCode": "QAT",
+    "football": {
+      "team": "Qatar",
+      "position": "RW",
+      "jersey": 7,
+      "role": "Extremo Derecho",
+      "advantage": "Su instinto natural recorta hacia adentro y saca disparos potentes al arco"
+    }
   },
   {
     "id": 215,
@@ -9609,8 +11107,8 @@
     "countryName": "Desconocido",
     "pokeapi_details": {
       "id": 776,
-      "height_m": 2.0,
-      "weight_kg": 212.0,
+      "height_m": 2,
+      "weight_kg": 212,
       "abilities": [
         "shell-armor"
       ],
@@ -9633,6 +11131,13 @@
         ]
       ],
       "pokemon_api_name": "turtonator"
+    },
+    "football": {
+      "team": "Agente Libre",
+      "position": "—",
+      "jersey": 0,
+      "role": "Sin equipo",
+      "advantage": "Este Pokémon aún no tiene equipo. ¡Necesita ser fichado!"
     }
   }
 ]
