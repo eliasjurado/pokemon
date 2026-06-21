@@ -67,18 +67,7 @@ document.body.appendChild(s);
 
 const TYPES = ['Normal','Fire','Water','Electric','Grass','Ice','Fighting','Poison','Ground','Flying','Psychic','Bug','Rock','Ghost','Dragon','Dark','Steel','Fairy'];
 const REGIONS = ['Kanto','Johto','Hoenn','Sinnoh','Unova','Kalos','Alola','Galar','Paldea'];
-const ALL_COUNTRIES = [
-  {flag:'🇯🇵',name:'Japon'},{flag:'🇺🇸',name:'Estados Unidos'},
-  {flag:'🇫🇷',name:'Francia'},{flag:'🇬🇧',name:'Reino Unido'},
-  {flag:'🇪🇸',name:'Espana'},{flag:'🇲🇽',name:'Mexico'},
-  {flag:'🇦🇷',name:'Argentina'},{flag:'🇨🇴',name:'Colombia'},
-  {flag:'🇨🇱',name:'Chile'},{flag:'🇵🇪',name:'Peru'},
-  {flag:'🇧🇷',name:'Brasil'},{flag:'🇩🇪',name:'Alemania'},
-  {flag:'🇮🇹',name:'Italia'},{flag:'🇨🇳',name:'China'},
-  {flag:'🇰🇷',name:'Corea del Sur'},{flag:'🇦🇺',name:'Australia'},
-  {flag:'🇨🇦',name:'Canada'},{flag:'🇮🇳',name:'India'},
-  {flag:'🇿🇦',name:'Sudafrica'},{flag:'🇪🇬',name:'Egipto'}
-];
+let ALL_COUNTRIES = [];
 
 s.textContent = 'loading...';
 
@@ -90,6 +79,8 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
   const selR = document.getElementById('fRegion');
   REGIONS.forEach(r => { const o = document.createElement('option'); o.value=r; o.textContent='Region: '+r; selR.appendChild(o); });
   const selC = document.getElementById('fCountry');
+  const seen = {};
+  ALL_COUNTRIES = all.filter(p => { if (seen[p.countryCode]) return false; seen[p.countryCode]=1; return true; }).map(p => ({flag:p.country, name: p.countryName, code:p.countryCode})).sort((a,b) => a.name.localeCompare(b.name));
   ALL_COUNTRIES.forEach(c => { const o = document.createElement('option'); o.value=c.flag; o.textContent=c.flag+' '+c.name; selC.appendChild(o); });
 
   function getColl() { try { return JSON.parse(localStorage.getItem('pokemonCollected')||'{}'); } catch(e) { return {}; } }
@@ -144,9 +135,9 @@ fetch('pokemon.json').then(r => r.json()).then(all => {
       '<div class="modal-img"><img src="'+p.img+'"></div>'+
       '<div class="modal-body">'+
         '<div class="modal-name">'+p.name+'</div>'+
-        '<div class="modal-id">#'+String(p.id).padStart(3,'0')+' · '+p.region+' '+p.country+'</div>'+
+        '<div class="modal-id">#'+String(p.id).padStart(3,'0')+' · '+p.region+'</div>'+
         '<div style="font-size:.85rem;color:var(--text2);margin-bottom:8px">Tipo: '+p.type+'</div>'+
-        '<div style="font-size:.85rem;color:var(--text2);margin-bottom:8px">Pais: '+p.countryName+'</div>'+
+        '<div style="font-size:.85rem;color:var(--text2);margin-bottom:8px">'+p.country+' '+p.countryCode+' · '+p.countryName+'</div>'+
         '<div class="stats-row">'+
           '<div class="stat"><span class="stat-label">ATA</span><div class="stat-bar"><div class="stat-fill" style="width:'+p.ata/150*100+'%"></div></div><span class="stat-val">'+p.ata+'</span></div>'+
           '<div class="stat"><span class="stat-label">DEF</span><div class="stat-bar"><div class="stat-fill" style="width:'+p.def/150*100+'%"></div></div><span class="stat-val">'+p.def+'</span></div>'+
