@@ -1,9 +1,9 @@
 # Tareas Pendientes
 
 ## Próximas
-- [ ] Agregar filtro por equipo de fútbol en la grilla
-- [ ] Agregar badge de "coleccionado" más visible en la grilla
-- [ ] Optimizar placeholder SVG para cards sin sticker
+- [x] Agregar filtro por equipo de fútbol (Sheet "Filtros", spec 030)
+- [x] Badge "Lo tengo" visible en la grilla (spec 030)
+- [x] Placeholder SVG elegante (components/StickerImage.tsx)
 - [ ] Revisar posiciones de fútbol de algunos Pokémon que puedan estar mal asignadas
 
 ## En progreso

@@ -10,3 +10,9 @@ _archive/
 
 # Origin processed cache at root (process.py recreates as needed)
 _origin_processed.json
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
