@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Check, ChevronLeft } from "lucide-react";
-import { padId, slugOf, type Pokemon } from "@/lib/pokemon";
+import { displayName, padId, slugOf, type Pokemon } from "@/lib/pokemon";
 import { BENCH_JERSEY, FORMATION_ROWS, SQUAD_SIZE, TEAM_LIST, squadOf, type Team } from "@/lib/teams";
 import { useCollection } from "@/lib/collection";
 import { cn } from "@/lib/utils";
@@ -14,7 +14,7 @@ function Slot({ p, have, bench }: { p?: Pokemon; have: boolean; bench?: boolean 
     <li className={cn("flex min-w-0 flex-col items-center", bench ? "w-24" : "w-[21%]", have ? "slot-have" : "slot-missing")}>
       <Link
         href={`/p/${slugOf(p)}/`}
-        aria-label={`${p.name}, dorsal ${p.football?.jersey}, ${p.football?.role}, cromo ${padId(p.id)}${have ? ", coleccionado" : ", te falta"}`}
+        aria-label={`${displayName(p)}, dorsal ${p.football?.jersey}, ${p.football?.role}, cromo ${padId(p.id)}${have ? ", coleccionado" : ", te falta"}`}
         className="card-lift relative block min-h-11 w-full rounded-md"
       >
         <span className="sticker-frame relative block aspect-[180/257] overflow-hidden bg-card">
@@ -27,7 +27,7 @@ function Slot({ p, have, bench }: { p?: Pokemon; have: boolean; bench?: boolean 
           </span>
         )}
       </Link>
-      <span className="mt-1.5 block w-full truncate text-center text-[11px] font-bold leading-tight text-white/95 [text-shadow:0_1px_2px_rgba(0,0,0,.8)]">{p.name}</span>
+      <span className="mt-1.5 block w-full truncate text-center text-[11px] font-bold leading-tight text-white/95 [text-shadow:0_1px_2px_rgba(0,0,0,.8)]">{displayName(p)}</span>
     </li>
   );
 }
