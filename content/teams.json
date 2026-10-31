@@ -1,0 +1,450 @@
+[
+ {
+  "code": "ARG",
+  "name": "Argentina",
+  "flag": "🇦🇷",
+  "colors": [
+   "#75aadb",
+   "#ffffff",
+   "#f6b40e"
+  ],
+  "themes": [
+   "Fighting",
+   "Normal"
+  ]
+ },
+ {
+  "code": "POR",
+  "name": "Portugal",
+  "flag": "🇵🇹",
+  "colors": [
+   "#c8102e",
+   "#046a38",
+   "#ffe000"
+  ],
+  "themes": [
+   "Fire",
+   "Water"
+  ]
+ },
+ {
+  "code": "BRA",
+  "name": "Brasil",
+  "flag": "🇧🇷",
+  "colors": [
+   "#009c3b",
+   "#ffdf00",
+   "#002776"
+  ],
+  "themes": [
+   "Fighting",
+   "Grass"
+  ]
+ },
+ {
+  "code": "FRA",
+  "name": "Francia",
+  "flag": "🇫🇷",
+  "colors": [
+   "#0055a4",
+   "#ffffff",
+   "#ef4135"
+  ],
+  "themes": [
+   "Fairy",
+   "Flying"
+  ]
+ },
+ {
+  "code": "ENG",
+  "name": "Inglaterra",
+  "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+  "colors": [
+   "#1d2a5b",
+   "#ffffff",
+   "#ce1124"
+  ],
+  "themes": [
+   "Steel",
+   "Ghost"
+  ]
+ },
+ {
+  "code": "ESP",
+  "name": "España",
+  "flag": "🇪🇸",
+  "colors": [
+   "#aa151b",
+   "#f1bf00",
+   "#6e0d11"
+  ],
+  "themes": [
+   "Fire",
+   "Fighting"
+  ]
+ },
+ {
+  "code": "GER",
+  "name": "Alemania",
+  "flag": "🇩🇪",
+  "colors": [
+   "#1a1a1a",
+   "#dd0000",
+   "#ffce00"
+  ],
+  "themes": [
+   "Steel",
+   "Electric"
+  ]
+ },
+ {
+  "code": "JPN",
+  "name": "Japón",
+  "flag": "🇯🇵",
+  "colors": [
+   "#bc002d",
+   "#ffffff",
+   "#1b1b3a"
+  ],
+  "themes": [
+   "Dark",
+   "Psychic"
+  ]
+ },
+ {
+  "code": "MEX",
+  "name": "México",
+  "flag": "🇲🇽",
+  "colors": [
+   "#006847",
+   "#ffffff",
+   "#ce1126"
+  ],
+  "themes": [
+   "Poison",
+   "Fire"
+  ]
+ },
+ {
+  "code": "CRO",
+  "name": "Croacia",
+  "flag": "🇭🇷",
+  "colors": [
+   "#d4202a",
+   "#ffffff",
+   "#171796"
+  ],
+  "themes": [
+   "Water",
+   "Ice"
+  ]
+ },
+ {
+  "code": "NED",
+  "name": "Países Bajos",
+  "flag": "🇳🇱",
+  "colors": [
+   "#e8590c",
+   "#21468b",
+   "#ffffff"
+  ],
+  "themes": [
+   "Grass",
+   "Water"
+  ]
+ },
+ {
+  "code": "ITA",
+  "name": "Italia",
+  "flag": "🇮🇹",
+  "colors": [
+   "#0b5fa5",
+   "#ffffff",
+   "#ce2b37"
+  ],
+  "themes": [
+   "Normal",
+   "Fire"
+  ]
+ },
+ {
+  "code": "SUI",
+  "name": "Suiza",
+  "flag": "🇨🇭",
+  "colors": [
+   "#d52b1e",
+   "#ffffff",
+   "#7d1710"
+  ],
+  "themes": [
+   "Ice",
+   "Rock"
+  ]
+ },
+ {
+  "code": "USA",
+  "name": "Estados Unidos",
+  "flag": "🇺🇸",
+  "colors": [
+   "#3c3b6e",
+   "#b22234",
+   "#ffffff"
+  ],
+  "themes": [
+   "Electric",
+   "Normal"
+  ]
+ },
+ {
+  "code": "URU",
+  "name": "Uruguay",
+  "flag": "🇺🇾",
+  "colors": [
+   "#4fb3e8",
+   "#ffffff",
+   "#f7d117"
+  ],
+  "themes": [
+   "Water",
+   "Flying"
+  ]
+ },
+ {
+  "code": "COL",
+  "name": "Colombia",
+  "flag": "🇨🇴",
+  "colors": [
+   "#e6b800",
+   "#003893",
+   "#ce1126"
+  ],
+  "themes": [
+   "Grass",
+   "Bug"
+  ]
+ },
+ {
+  "code": "MAR",
+  "name": "Marruecos",
+  "flag": "🇲🇦",
+  "colors": [
+   "#c1272d",
+   "#006233",
+   "#7a1519"
+  ],
+  "themes": [
+   "Ground",
+   "Dark"
+  ]
+ },
+ {
+  "code": "SEN",
+  "name": "Senegal",
+  "flag": "🇸🇳",
+  "colors": [
+   "#00853f",
+   "#fdef42",
+   "#e31b23"
+  ],
+  "themes": [
+   "Ground",
+   "Fighting"
+  ]
+ },
+ {
+  "code": "DEN",
+  "name": "Dinamarca",
+  "flag": "🇩🇰",
+  "colors": [
+   "#c60c30",
+   "#ffffff",
+   "#7d0a1f"
+  ],
+  "themes": [
+   "Ice",
+   "Fighting"
+  ]
+ },
+ {
+  "code": "POL",
+  "name": "Polonia",
+  "flag": "🇵🇱",
+  "colors": [
+   "#b3122e",
+   "#ffffff",
+   "#5e0a18"
+  ],
+  "themes": [
+   "Fighting",
+   "Dark"
+  ]
+ },
+ {
+  "code": "BEL",
+  "name": "Bélgica",
+  "flag": "🇧🇪",
+  "colors": [
+   "#1a1a1a",
+   "#fae042",
+   "#ed2939"
+  ],
+  "themes": [
+   "Normal",
+   "Fairy"
+  ]
+ },
+ {
+  "code": "AUT",
+  "name": "Austria",
+  "flag": "🇦🇹",
+  "colors": [
+   "#ed2939",
+   "#ffffff",
+   "#8e1620"
+  ],
+  "themes": [
+   "Ice",
+   "Psychic"
+  ]
+ },
+ {
+  "code": "SWE",
+  "name": "Suecia",
+  "flag": "🇸🇪",
+  "colors": [
+   "#006aa7",
+   "#fecc00",
+   "#00406b"
+  ],
+  "themes": [
+   "Ice",
+   "Steel"
+  ]
+ },
+ {
+  "code": "UKR",
+  "name": "Ucrania",
+  "flag": "🇺🇦",
+  "colors": [
+   "#0057b8",
+   "#ffd700",
+   "#00356b"
+  ],
+  "themes": [
+   "Electric",
+   "Fighting"
+  ]
+ },
+ {
+  "code": "ECU",
+  "name": "Ecuador",
+  "flag": "🇪🇨",
+  "colors": [
+   "#e6bd00",
+   "#0033a0",
+   "#ef3340"
+  ],
+  "themes": [
+   "Grass",
+   "Fire"
+  ]
+ },
+ {
+  "code": "AUS",
+  "name": "Australia",
+  "flag": "🇦🇺",
+  "colors": [
+   "#0b2a6b",
+   "#ffcd00",
+   "#00843d"
+  ],
+  "themes": [
+   "Ground",
+   "Poison"
+  ]
+ },
+ {
+  "code": "KOR",
+  "name": "Corea del Sur",
+  "flag": "🇰🇷",
+  "colors": [
+   "#cd2e3a",
+   "#0047a0",
+   "#ffffff"
+  ],
+  "themes": [
+   "Psychic",
+   "Electric"
+  ]
+ },
+ {
+  "code": "KSA",
+  "name": "Arabia Saudita",
+  "flag": "🇸🇦",
+  "colors": [
+   "#006c35",
+   "#ffffff",
+   "#00492a"
+  ],
+  "themes": [
+   "Ground",
+   "Fire"
+  ]
+ },
+ {
+  "code": "TUN",
+  "name": "Túnez",
+  "flag": "🇹🇳",
+  "colors": [
+   "#e70013",
+   "#ffffff",
+   "#8e000c"
+  ],
+  "themes": [
+   "Rock",
+   "Water"
+  ]
+ },
+ {
+  "code": "QAT",
+  "name": "Catar",
+  "flag": "🇶🇦",
+  "colors": [
+   "#8a1538",
+   "#ffffff",
+   "#5a0d25"
+  ],
+  "themes": [
+   "Ground",
+   "Fire"
+  ]
+ },
+ {
+  "code": "CAN",
+  "name": "Canadá",
+  "flag": "🇨🇦",
+  "colors": [
+   "#d80621",
+   "#ffffff",
+   "#7e0314"
+  ],
+  "themes": [
+   "Ice",
+   "Normal"
+  ]
+ },
+ {
+  "code": "NZL",
+  "name": "Nueva Zelanda",
+  "flag": "🇳🇿",
+  "colors": [
+   "#00247d",
+   "#cc142b",
+   "#ffffff"
+  ],
+  "themes": [
+   "Flying",
+   "Psychic"
+  ]
+ }
+]

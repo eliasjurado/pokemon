@@ -7,6 +7,8 @@ export type Football = {
   jersey: number;
   role: string;
   advantage: string;
+  /** Portero suplente (dorsal 12): va en el banquillo, no en el once. */
+  sub?: boolean;
 };
 
 export type Details = {
@@ -26,6 +28,8 @@ export type Pokemon = {
   type?: string;
   region?: string;
   img: string;
+  /** "plantel" = ficha agregada para completar el plantel (sin arte propio hasta que llegue su PNG). */
+  origin?: string;
   country: string; // emoji de bandera (dato de contenido)
   countryName: string;
   countryCode: string;
@@ -36,7 +40,7 @@ export type Pokemon = {
   football?: Football;
 };
 
-export const ALL: Pokemon[] = (raw as Pokemon[]).slice().sort((a, b) => a.id - b.id);
+export const ALL: Pokemon[] = (raw as unknown as Pokemon[]).slice().sort((a, b) => a.id - b.id);
 export const TOTAL = ALL.length;
 
 export const slugOf = (p: Pokemon) => `${p.id}-${p.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
@@ -112,6 +116,7 @@ export const POSITION_ES: Record<string, string> = {
   RB: "Lateral derecho",
   LB: "Lateral izquierdo",
   CDM: "Mediocentro defensivo",
+  CM: "Mediocentro",
   CAM: "Mediapunta",
   RW: "Extremo derecho",
   LW: "Extremo izquierdo",
@@ -133,6 +138,15 @@ const SPR = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/po
 export const spriteUrl = (id: number) => `${SPR}/${id}.png`;
 export const artworkUrl = (id: number, shiny = false) => `${SPR}/other/official-artwork${shiny ? "/shiny" : ""}/${id}.png`;
 export const cryUrl = (id: number) => `https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/${id}.ogg`;
+
+/**
+ * Un cromo es "provisional" mientras no exista su PNG en public/stickers/ (convención: <nombre>_<NNN>.png, ver README).
+ * content/sticker-sizes.json lo regenera scripts/sync-stickers.mjs en cada build (prebuild) a partir de esa carpeta.
+ */
+export const hasSticker = (p: Pokemon) => p.img.split("/").pop()! in (sizes as unknown as Record<string, unknown>);
+export const isProvisional = (p: Pokemon) => !hasSticker(p);
+/** Artwork oficial local (webp ~400px) de PokeAPI, usado por el cromo generado. */
+export const artworkLocal = (p: Pokemon) => `artwork/${p.pokeapi_details?.id}.webp`;
 
 /** Proporción real del cromo (los PNG no son todos iguales: 0.69 a 0.87). */
 export const stickerSize = (p: Pokemon): [number, number] => (sizes as unknown as Record<string, [number, number]>)[p.img.split("/").pop()!] ?? [180, 257];

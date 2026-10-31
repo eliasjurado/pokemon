@@ -4,6 +4,7 @@
   "type": "module",
   "engines": { "node": ">=20" },
   "scripts": {
+    "prebuild": "node scripts/sync-stickers.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "npx serve out",

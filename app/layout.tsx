@@ -4,6 +4,7 @@ import { SwRegister } from "@/components/SwRegister";
 import { PwaButton } from "@/components/PwaButton";
 import { Footer } from "@/components/Footer";
 import { asset } from "@/lib/site";
+import { TOTAL } from "@/lib/pokemon";
 import "./globals.css";
 
 const display = Barlow_Condensed({ subsets: ["latin"], weight: ["600", "700", "800"], variable: "--font-display", display: "swap" });
@@ -12,7 +13,7 @@ const body = Nunito({ subsets: ["latin"], variable: "--font-body", display: "swa
 export const metadata: Metadata = {
   metadataBase: new URL("https://eliasjurado.com"),
   title: { default: "Álbum del Mundial Pokémon", template: "%s · Álbum del Mundial Pokémon" },
-  description: "Colección de 215 cromos Pokémon estilo Mundial: país, región, tipo, equipo de fútbol, estadísticas y más. Hecho en familia.",
+  description: `Colección de ${TOTAL} cromos Pokémon estilo Mundial: país, región, tipo, equipo de fútbol, estadísticas y más. Hecho en familia.`,
   manifest: asset("manifest.webmanifest"),
   icons: { icon: asset("images/logo_192.png"), apple: asset("images/logo_192.png") },
   appleWebApp: { capable: true, title: "Mundial Pokémon", statusBarStyle: "black-translucent" },

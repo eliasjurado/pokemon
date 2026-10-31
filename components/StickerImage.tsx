@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { asset } from "@/lib/site";
-import { padId, stickerSize, type Pokemon } from "@/lib/pokemon";
+import { isProvisional, padId, stickerSize, type Pokemon } from "@/lib/pokemon";
+import { CromoGenerado } from "./CromoGenerado";
 import { cn } from "@/lib/utils";
 
 /** Hueco del álbum cuando falta el sticker: marco dorado, balón de fútbol-pokéball y el número. */
@@ -47,6 +48,7 @@ export function StickerImage({
   }, []);
 
   const label = alt ?? `Cromo ${padId(p.id)} ${p.name}`;
+  if (isProvisional(p)) return <CromoGenerado p={p} className={className} label={alt || undefined} decorative={alt === ""} />;
   if (failed) return <StickerPlaceholder id={p.id} label={label} className={className} />;
   return (
     // eslint-disable-next-line @next/next/no-img-element

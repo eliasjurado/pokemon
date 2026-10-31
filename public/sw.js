@@ -2,8 +2,8 @@
    HTML: network-first (nunca servir páginas viejas). Estáticos propios: stale-while-revalidate con lista de permitidos.
    PokeAPI (imágenes/gritos de raw.githubusercontent.com): cache-first en su propio caché.
    Nunca intercepta /admin /auth /api /login ni payloads RSC (?_rsc= / header RSC). Subir VERSION en cada release.
-   v4: migración a Next.js (estáticos con hash en /_next/static/). */
-var VERSION = 'pokemon-v4';
+   v5: planteles (artwork/*.webp, /equipos/). v4: migración a Next.js (estáticos con hash en /_next/static/). */
+var VERSION = 'pokemon-v5';
 var POKEAPI_CACHE = 'pokeapi-v1';
 var SCOPE = '/pokemon/';
 

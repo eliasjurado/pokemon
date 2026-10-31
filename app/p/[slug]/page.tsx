@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronLeft, ChevronRight, Shirt, Target, MapPin } from "lucide-react";
 import {
-  ALL, POSITION_ES, STAT_ORDER, TYPE_COLOR, byApiId, byId, displayName, padId, regionOf, slugOf, spriteUrl, typeLabel, typeOf, type Pokemon,
+  ALL, isProvisional, POSITION_ES, STAT_ORDER, TYPE_COLOR, byApiId, byId, displayName, padId, regionOf, slugOf, spriteUrl, typeLabel, typeOf, type Pokemon,
 } from "@/lib/pokemon";
 import { asset } from "@/lib/site";
 import { BackLink } from "@/components/BackLink";
@@ -139,6 +139,7 @@ export default async function PokemonPage({ params }: { params: Promise<{ slug: 
         <main id="album" className="mt-2 grid gap-8 pb-28 lg:grid-cols-[26rem_1fr] lg:gap-12 lg:pb-8">
           <div className="lg:sticky lg:top-6 lg:self-start">
             <Viewer p={p} />
+            {isProvisional(p) && <p className="mt-3 text-center text-xs text-muted-foreground">Cromo provisional · tarjeta generada con arte oficial hasta que llegue su cromo</p>}
           </div>
 
           <div className="space-y-5">

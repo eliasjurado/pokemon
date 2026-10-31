@@ -1,0 +1,673 @@
+{
+ "1": {
+  "code": "ARG"
+ },
+ "2": {
+  "code": "POR"
+ },
+ "3": {
+  "code": "BRA"
+ },
+ "4": {
+  "code": "FRA"
+ },
+ "5": {
+  "code": "ENG"
+ },
+ "6": {
+  "code": "ESP"
+ },
+ "7": {
+  "code": "GER"
+ },
+ "8": {
+  "code": "JPN"
+ },
+ "9": {
+  "code": "MEX"
+ },
+ "10": {
+  "code": "CRO"
+ },
+ "11": {
+  "code": "NED"
+ },
+ "12": {
+  "code": "ITA"
+ },
+ "13": {
+  "code": "SUI"
+ },
+ "14": {
+  "code": "USA"
+ },
+ "15": {
+  "code": "URU"
+ },
+ "16": {
+  "code": "COL"
+ },
+ "17": {
+  "code": "MAR"
+ },
+ "18": {
+  "code": "SEN"
+ },
+ "19": {
+  "code": "DEN"
+ },
+ "20": {
+  "code": "POL"
+ },
+ "21": {
+  "code": "BEL"
+ },
+ "22": {
+  "code": "AUT"
+ },
+ "23": {
+  "code": "SWE"
+ },
+ "24": {
+  "code": "UKR"
+ },
+ "25": {
+  "code": "ECU"
+ },
+ "26": {
+  "code": "AUS"
+ },
+ "27": {
+  "code": "KOR"
+ },
+ "28": {
+  "code": "KSA"
+ },
+ "29": {
+  "code": "TUN"
+ },
+ "30": {
+  "code": "QAT"
+ },
+ "31": {
+  "code": "CAN"
+ },
+ "32": {
+  "code": "NZL"
+ },
+ "33": {
+  "code": "POR"
+ },
+ "34": {
+  "code": "BRA"
+ },
+ "35": {
+  "code": "FRA"
+ },
+ "36": {
+  "code": "ENG"
+ },
+ "37": {
+  "code": "ESP"
+ },
+ "38": {
+  "code": "GER"
+ },
+ "39": {
+  "code": "JPN"
+ },
+ "40": {
+  "code": "MEX"
+ },
+ "41": {
+  "code": "ITA"
+ },
+ "42": {
+  "code": "SUI"
+ },
+ "43": {
+  "code": "URU"
+ },
+ "44": {
+  "code": "MAR"
+ },
+ "45": {
+  "code": "SEN"
+ },
+ "46": {
+  "code": "DEN"
+ },
+ "47": {
+  "code": "POL"
+ },
+ "48": {
+  "code": "BEL"
+ },
+ "49": {
+  "code": "SWE"
+ },
+ "50": {
+  "code": "UKR"
+ },
+ "51": {
+  "code": "ECU"
+ },
+ "52": {
+  "code": "AUS"
+ },
+ "53": {
+  "code": "KOR"
+ },
+ "54": {
+  "code": "QAT"
+ },
+ "55": {
+  "code": "CAN"
+ },
+ "56": {
+  "code": "NZL"
+ },
+ "57": {
+  "code": "ARG"
+ },
+ "58": {
+  "code": "POR"
+ },
+ "59": {
+  "code": "BRA"
+ },
+ "60": {
+  "code": "FRA"
+ },
+ "61": {
+  "code": "ENG"
+ },
+ "62": {
+  "code": "GER"
+ },
+ "63": {
+  "code": "JPN"
+ },
+ "64": {
+  "code": "MEX"
+ },
+ "65": {
+  "code": "CRO"
+ },
+ "66": {
+  "code": "NED"
+ },
+ "67": {
+  "code": "ITA"
+ },
+ "68": {
+  "code": "SUI"
+ },
+ "69": {
+  "code": "USA"
+ },
+ "70": {
+  "code": "URU"
+ },
+ "71": {
+  "code": "MAR"
+ },
+ "72": {
+  "code": "SEN"
+ },
+ "73": {
+  "code": "DEN"
+ },
+ "74": {
+  "code": "POL"
+ },
+ "75": {
+  "code": "BEL"
+ },
+ "76": {
+  "code": "AUT"
+ },
+ "77": {
+  "code": "SWE"
+ },
+ "78": {
+  "code": "ECU"
+ },
+ "79": {
+  "code": "AUS"
+ },
+ "80": {
+  "code": "KOR"
+ },
+ "81": {
+  "code": "KSA"
+ },
+ "82": {
+  "code": "TUN"
+ },
+ "83": {
+  "code": "QAT"
+ },
+ "84": {
+  "code": "CAN"
+ },
+ "85": {
+  "code": "MEX"
+ },
+ "86": {
+  "code": "SUI"
+ },
+ "87": {
+  "code": "COL"
+ },
+ "88": {
+  "code": "MAR"
+ },
+ "89": {
+  "code": "SEN"
+ },
+ "90": {
+  "code": "DEN"
+ },
+ "91": {
+  "code": "AUT"
+ },
+ "92": {
+  "code": "SWE"
+ },
+ "93": {
+  "code": "UKR"
+ },
+ "94": {
+  "code": "ECU"
+ },
+ "95": {
+  "code": "KSA"
+ },
+ "96": {
+  "code": "TUN"
+ },
+ "97": {
+  "code": "ARG"
+ },
+ "98": {
+  "code": "FRA"
+ },
+ "99": {
+  "code": "ESP"
+ },
+ "100": {
+  "code": "JPN"
+ },
+ "101": {
+  "code": "CRO"
+ },
+ "102": {
+  "code": "ITA"
+ },
+ "103": {
+  "code": "USA"
+ },
+ "104": {
+  "code": "URU"
+ },
+ "105": {
+  "code": "COL"
+ },
+ "106": {
+  "code": "SEN"
+ },
+ "107": {
+  "code": "SWE"
+ },
+ "108": {
+  "code": "UKR"
+ },
+ "109": {
+  "code": "TUN"
+ },
+ "110": {
+  "code": "QAT"
+ },
+ "111": {
+  "code": "NZL"
+ },
+ "112": {
+  "code": "POR"
+ },
+ "113": {
+  "code": "BRA"
+ },
+ "114": {
+  "code": "GER"
+ },
+ "115": {
+  "code": "MEX"
+ },
+ "116": {
+  "code": "CRO"
+ },
+ "117": {
+  "code": "URU"
+ },
+ "118": {
+  "code": "SEN"
+ },
+ "119": {
+  "code": "DEN"
+ },
+ "120": {
+  "code": "AUT"
+ },
+ "121": {
+  "code": "SWE"
+ },
+ "122": {
+  "code": "AUS"
+ },
+ "123": {
+  "code": "TUN"
+ },
+ "124": {
+  "code": "QAT"
+ },
+ "125": {
+  "code": "CAN"
+ },
+ "126": {
+  "code": "NZL"
+ },
+ "127": {
+  "code": "ARG"
+ },
+ "128": {
+  "code": "POR"
+ },
+ "129": {
+  "code": "JPN"
+ },
+ "130": {
+  "code": "CRO"
+ },
+ "131": {
+  "code": "NED"
+ },
+ "132": {
+  "code": "SUI"
+ },
+ "133": {
+  "code": "SWE"
+ },
+ "134": {
+  "code": "AUS"
+ },
+ "135": {
+  "code": "TUN"
+ },
+ "136": {
+  "code": "CAN"
+ },
+ "137": {
+  "code": "POR",
+  "name": "Torkoal"
+ },
+ "138": {
+  "code": "BRA"
+ },
+ "139": {
+  "code": "ESP",
+  "name": "Gastrodon"
+ },
+ "140": {
+  "code": "GER"
+ },
+ "141": {
+  "code": "MEX"
+ },
+ "142": {
+  "code": "NED"
+ },
+ "143": {
+  "code": "URU"
+ },
+ "144": {
+  "code": "COL"
+ },
+ "145": {
+  "code": "MAR",
+  "name": "Scizor"
+ },
+ "146": {
+  "code": "UKR",
+  "name": "Mismagius"
+ },
+ "147": {
+  "code": "ECU"
+ },
+ "148": {
+  "code": "AUS",
+  "name": "Kangaskhan"
+ },
+ "149": {
+  "code": "KOR"
+ },
+ "150": {
+  "code": "KSA"
+ },
+ "151": {
+  "code": "TUN"
+ },
+ "152": {
+  "code": "QAT",
+  "name": "Noivern"
+ },
+ "153": {
+  "code": "CAN"
+ },
+ "154": {
+  "code": "NZL",
+  "name": "Gabite"
+ },
+ "155": {
+  "code": "ARG",
+  "name": "Serperior"
+ },
+ "156": {
+  "code": "ENG"
+ },
+ "157": {
+  "code": "ESP",
+  "name": "Togekiss"
+ },
+ "158": {
+  "code": "GER",
+  "name": "Zebstrika"
+ },
+ "159": {
+  "code": "JPN"
+ },
+ "160": {
+  "code": "MEX",
+  "name": "Volcarona"
+ },
+ "161": {
+  "code": "CRO",
+  "name": "Salamence"
+ },
+ "162": {
+  "code": "SUI",
+  "name": "Goodra"
+ },
+ "163": {
+  "code": "USA"
+ },
+ "164": {
+  "code": "DEN"
+ },
+ "165": {
+  "code": "POL"
+ },
+ "166": {
+  "code": "SWE"
+ },
+ "167": {
+  "code": "UKR",
+  "name": "Orbeetle"
+ },
+ "168": {
+  "code": "ECU",
+  "name": "Rampardos"
+ },
+ "169": {
+  "code": "AUS"
+ },
+ "170": {
+  "code": "KOR"
+ },
+ "171": {
+  "code": "TUN"
+ },
+ "172": {
+  "code": "CAN"
+ },
+ "173": {
+  "code": "ARG",
+  "name": "Empoleon"
+ },
+ "174": {
+  "code": "BRA"
+ },
+ "175": {
+  "code": "FRA"
+ },
+ "176": {
+  "code": "ENG"
+ },
+ "177": {
+  "code": "GER"
+ },
+ "178": {
+  "code": "JPN",
+  "name": "Greninja"
+ },
+ "179": {
+  "code": "MEX"
+ },
+ "180": {
+  "code": "ITA",
+  "name": "Malamar"
+ },
+ "181": {
+  "code": "SUI"
+ },
+ "182": {
+  "code": "URU"
+ },
+ "183": {
+  "code": "MAR",
+  "name": "Drapion"
+ },
+ "184": {
+  "code": "SEN"
+ },
+ "185": {
+  "code": "BEL"
+ },
+ "186": {
+  "code": "SWE"
+ },
+ "187": {
+  "code": "UKR"
+ },
+ "188": {
+  "code": "ECU",
+  "name": "Kingler"
+ },
+ "189": {
+  "code": "KOR"
+ },
+ "190": {
+  "code": "KSA"
+ },
+ "191": {
+  "code": "TUN"
+ },
+ "192": {
+  "code": "CAN"
+ },
+ "193": {
+  "code": "AUS"
+ },
+ "194": {
+  "code": "ARG"
+ },
+ "195": {
+  "code": "POR",
+  "name": "Litten"
+ },
+ "196": {
+  "code": "GER"
+ },
+ "197": {
+  "code": "JPN"
+ },
+ "198": {
+  "code": "MEX"
+ },
+ "199": {
+  "code": "CRO"
+ },
+ "200": {
+  "code": "NED"
+ },
+ "201": {
+  "code": "SUI"
+ },
+ "202": {
+  "code": "USA",
+  "name": "Gossifleur"
+ },
+ "203": {
+  "code": "URU"
+ },
+ "204": {
+  "code": "MAR"
+ },
+ "205": {
+  "code": "SEN",
+  "name": "Applin"
+ },
+ "206": {
+  "code": "DEN",
+  "name": "Corsola"
+ },
+ "207": {
+  "code": "POL"
+ },
+ "208": {
+  "code": "BEL"
+ },
+ "209": {
+  "code": "AUT",
+  "name": "Milcery"
+ },
+ "210": {
+  "code": "ECU"
+ },
+ "211": {
+  "code": "AUS"
+ },
+ "212": {
+  "code": "KSA"
+ },
+ "213": {
+  "code": "TUN"
+ },
+ "214": {
+  "code": "QAT",
+  "name": "Salandit"
+ },
+ "215": {
+  "code": "NZL"
+ }
+}

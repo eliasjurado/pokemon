@@ -1,6 +1,7 @@
 "use client";
 
-import { Trophy } from "lucide-react";
+import Link from "next/link";
+import { Shield, Trophy } from "lucide-react";
 import { TOTAL } from "@/lib/pokemon";
 import type { View } from "@/lib/filters";
 import { cn } from "@/lib/utils";
@@ -35,7 +36,11 @@ export function ProgressHeader({ count, view, onView }: { count: number; view: V
           </h1>
         </div>
 
-        <section aria-label="Progreso de la colección" className="mt-5 rounded-2xl border border-border bg-card p-4 sm:p-5">
+        <Link href="/equipos/" className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-full border border-gold/60 bg-secondary px-5 text-sm font-bold text-gold hover:bg-gold hover:text-primary-foreground">
+          <Shield className="size-5" aria-hidden="true" /> Equipos y planteles
+        </Link>
+
+        <section aria-label="Progreso de la colección" className="mt-4 rounded-2xl border border-border bg-card p-4 sm:p-5">
           <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-1">
             <p className="tnum font-display leading-none">
               <span className="text-[clamp(3rem,13vw,4.5rem)] font-extrabold text-gold">{count}</span>

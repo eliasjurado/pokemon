@@ -4,7 +4,10 @@
 - [x] Agregar filtro por equipo de fútbol (Sheet "Filtros", spec 030)
 - [x] Badge "Lo tengo" visible en la grilla (spec 030)
 - [x] Placeholder SVG elegante (components/StickerImage.tsx)
-- [ ] Revisar posiciones de fútbol de algunos Pokémon que puedan estar mal asignadas
+- [x] Revisar posiciones de fútbol: reasignadas en 4-3-3 con dorsal único por equipo (spec 031)
+- [x] Spec 031: datos/arte corregidos, 169 fichajes (384 cromos), /equipos/, cromo provisional
+- [ ] Generar con IA el arte de los cromos #216-#384 (soltar `public/stickers/<nombre>_<NNN>.png`)
+- [ ] #1-#136: sus hojas originales no están en origin/ (no se pudo re-recortar)
 
 ## En progreso
 - (ninguna)
